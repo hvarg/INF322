@@ -39,11 +39,11 @@ Los usarios generalmente usan la sistema para administrar sus ramos, ver su hora
 
 Cuando el usario entra https://siga.usm.cl/pag/, la sistema muestra la pagina principal. El usario tiene dos ventanas para iniciar la sesión en Siga. La sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Los dos maneras no son consistentes. 
 
-![Image of pagina_inicial]()
+![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
 
 Si entras información incorrecta, como un nombre de usario que no existe, la sistema no indica el error antes de que el usario presiona la flecha para iniciar la sesión. Mejor sería si el sistema tenía prevención de errores. Iniciando la sesión con información incorrecta, el sistema informa el usario del error sin decirle al usario si el error fue iniciada por el uso de un nombre de usario invalido o por la culpa de una contraseña incorrecta. En este caso, el sistema no apoya al usario para solucionar la problema. 
 
-![Image of error_iniciar]()
+![Image of error_iniciar](https://github.com/hvarg/INF322/blob/master/error_iniciar.png)
 
 Cuando el usario inicia la sesión, la sistema muestra la pagina principal. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina inicial, hay que presionar el botón "volver" abajo a la derecha. Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver". 
 
