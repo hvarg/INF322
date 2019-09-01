@@ -13,18 +13,18 @@
 9. [Evaluación](#evaluacion)
 
 ## Concepto del producto
-Responder a la ¿Para qué fue creado el sistema?
+**Responder a la ¿Para qué fue creado el sistema?**
 
 SIGA es un sistema creado para facilitar la administración de ramos para estudiantes en la USM.
 
 ## Comunidad usuaria
-¿Quien usa el sistema?, edad, sexo, etc
+**¿Quien usa el sistema?, edad, sexo, etc**
 
 Los usarios son estudiantes entre 18-27 años, con que consiste de 70% hombres y 30% mujeres. Generalmente los usarios estudian ingenieria. 
 
 ## Análisis de tareas
-¿Qué hacen generalmente los usuarios en el sistema?
-¿Qué es fácil/difícil de hacer?
+**¿Qué hacen generalmente los usuarios en el sistema?
+¿Qué es fácil/difícil de hacer?**
 
 El uso de el sistema es obligatorio para los estudiantes en la Universidad Técnica Federico Santa María. 
 
@@ -33,9 +33,9 @@ Los usarios generalmente usan la sistema para administrar sus ramos, ver su hora
 
 
 ## Análisis de datos
-¿Qué información muestra el sistema?
+**¿Qué información muestra el sistema?
 ¿Cómo se organiza jerárquicamente? 
-¿Cual puede ser editada?
+¿Cual puede ser editada?**
 
 Cuando el usario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial. El usario tiene dos ventanas para iniciar la sesión en Siga. La sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Los dos maneras no son consistentes. 
 
@@ -52,17 +52,17 @@ Para navigar en la sistema, siempre hay que volver a la pagina principal para el
 ![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
 
 ## Identificación de falencias y oportunidades de mejora
-¿Qué queremos cambiar? 
-¿Por qué?
+**¿Qué queremos cambiar? 
+¿Por qué?**
 
 ## Propuesta
-Seleccionar que partes de la interfaz podemos mejorar.
+**Seleccionar que partes de la interfaz podemos mejorar.**
 
 ## Definición de tareas
-Tareas a cambiar, como funcionaba antes, como funciona ahora.
+**Tareas a cambiar, como funcionaba antes, como funciona ahora.**
 
 ## Diseño
-Nada aún
+**Nada aún**
 
 ## Evaluación
-Nada aún
+**Nada aún**
