@@ -55,6 +55,10 @@ Para navigar en la sistema, siempre hay que volver a la pagina principal para el
 **¿Qué queremos cambiar? 
 ¿Por qué?**
 
+Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, el sistema no indica al usario que no es posible. Mejor sería si la sistema tuviera algún tipo de indicación si esta fuera del tiempo para hacer incribciónes para mejorar la visibilidad del estado del sistema. Una opción sería usar un reloj con un texto diciendo "XX dias hasta que es posible hacer inscripciónes". 
+
+![Image of siga_inscripcion](https://github.com/hvarg/INF322/blob/master/siga_incripcion.png)
+
 ## Propuesta
 **Seleccionar que partes de la interfaz podemos mejorar.**
 
