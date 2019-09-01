@@ -61,7 +61,7 @@ Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, 
 ![Image of siga_inscripcion](https://github.com/hvarg/INF322/blob/master/siga_incripcion.png)
 
 * Cambiar contraseña
-No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?" *Aquí debemos poner capturas de pantalla para cada paso necesario para cambiar contraseña*
+No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?" **Aquí debemos poner capturas de pantalla para cada paso necesario para cambiar contraseña**
 
 ## Propuesta
 **Seleccionar que partes de la interfaz podemos mejorar.**
