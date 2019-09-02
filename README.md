@@ -15,7 +15,7 @@
 ## Concepto del producto
 **Responder a la ¿Para qué fue creado el sistema?**
 
-SIGA es un sistema creado para facilitar la administración de ramos para estudiantes en la USM.
+SIGA es un sistema creado para facilitar la administración de ramos para estudiantes en la USM. Esto para que los alumnos en línea puedan gestionar cosas como registrar su propio asignaturas, ver sus resultados y su horario.
 
 ## Comunidad usuaria
 **¿Quien usa el sistema?, edad, sexo, etc**
@@ -28,9 +28,17 @@ Los usarios son estudiantes entre 18-27 años, con que consiste de 70% hombres y
 
 El uso de el sistema es obligatorio para los estudiantes en la Universidad Técnica Federico Santa María. 
 
+En el comiencza de semstre los usarios usan la sistema para administrar sus ramos, ver su horario personal y ver el horario para asignaturas cuando eligen ramos. A inscribir en una asignatura es facil, pero el problema es sobre descubrir las asignaturas en Siga, y tambien que veer sobre adapte a su horario y planes de carrera
 
-Los usarios generalmente usan la sistema para administrar sus ramos, ver su horario personal y ver el horario para asignaturas cuando eligen ramos. 
+Además, la sistema es usa para ver su resultad por los asignaturas. _**No, se como este es facil o deficil ahora**_
 
+En el final de semstre Siga es usa para evaluar los asignaturas y profesores en la final de cada semestre. _**No, se como este es facil o deficil ahora**_
+
+La página también es utilizada por la administración de la escuela para informar a los alumnos. La página para informar los estudiantes es antes de inciar sesíon, entonces nadie lee la informacion y es dificli obtener la informacíon
+
+Hay una página sobre ficha personal, donde se pueden actualizar su información personal a la escuela. La página es facil a descubir, pero a cambiar algo información es difícil porque no tenemos autoridad.
+
+Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, entonces a usar el sistema es mas dificil.
 
 ## Análisis de datos
 **¿Qué información muestra el sistema?
