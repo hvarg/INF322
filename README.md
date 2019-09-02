@@ -45,7 +45,9 @@ Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, ento
 ¿Cómo se organiza jerárquicamente? 
 ¿Cual puede ser editada?**
 
-Cuando el usario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial. El usario tiene dos ventanas para iniciar la sesión en Siga. La sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Los dos maneras no son consistentes. 
+Cuando el usario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial. En este página hay informacion sobre la sistema, informacion que quien pueden contact sobre la sistema y informacion sobre la escuela. Pero cuando se iniciar la sesión en Siga, no pueden veer este informacion más. Esta información debe estar representada después de han inciar una sesión.
+
+El usario tiene dos ventanas para iniciar la sesión en Siga. La sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Los dos maneras no son consistentes. 
 
 ![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
 
@@ -55,9 +57,10 @@ Si entras información incorrecta, como un nombre de usario que no existe o una 
 
 Cuando el usario inicia la sesión, la sistema muestra la pagina principal. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha. Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver". 
 
-Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. 
-
 ![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
+
+Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Los opciónes son tan muchos, donde algunas son superficiales. Esto podría reorganizarse en una nueva jerarquía. También las opciones sobre la evaluación de cursos podrían representarse cuando se finaliza un curso para el semestre y no todo el semestre.
+
 
 ## Identificación de falencias y oportunidades de mejora
 **¿Qué queremos cambiar? 
