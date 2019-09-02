@@ -76,6 +76,24 @@ Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, 
 
 No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?" **Aquí debemos poner capturas de pantalla para cada paso necesario para cambiar contraseña**
 
+* Botón de volver
+
+No se puede volver a la página principal sin usar el botón *volver*. Te desconectas de la página y tienen que inicializar una nueva sesión. Se espera que pueda ir y venir en una página, por eso puede ser una experiencia irritante al usar el sistema. El botón también debe cambiar al símbolo de una casa, porque simbolo de una casa significa volver en las plataformas digitales
+
+* Informacion
+
+La informacion sobre la escuela debe venir despues de inciar una sesción. Hacer un cuadro de información a la izquierda para las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
+
+* Navegar
+
+La página de navegación debe reestructurarse. Debe haber un menú en el que pueda cambiar su configuración personal para siga, su información personal y poder cerrar sesión. También debería haber opciones de navegación como hay ahora, pero algunos temas deberían fusionarse. Como los que conciernen a tus resultados académicos.
+
+Además, debería haber un cuadro con enlaces a páginas como aula que se usa para dar información en casi todos los cursos.
+
+* Horario Asignaturas
+
+Aquí nos falta un botón de búsqueda para buscar asignaturas que sobre algo. Obtenemos demasiada información, no hay necesidad de saber quién es el profesor o cupos para cada curso. Cuando encontremos el curso que nos gusta, deberíamos poder hacer clic en él para obtener más información en una cuadro a la izquierda en la misma pagina. Aquí está la información sobre el profesor y el horario puede estar. También debe haber un *link* con la dirección de correo electrónico al profesor.
+
 ## Propuesta
 **Seleccionar que partes de la interfaz podemos mejorar.**
 
