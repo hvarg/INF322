@@ -78,7 +78,7 @@ En el sistema, también hay descripciones de cada opción que se muestra cuando 
 ![Imagen_de_Descripción_Breve](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionBreve.png)
 
 ***Figura 5: Descripción más informativa***
-![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionBreve.png)
+![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionmasUtil.png)
 
 **Observación 6: Opciones que no sirven al usuario estan disponible: Aver Figura 6**
 Aveces hay opciones disponibles para elegir, pero cuando se haga clic el próximo página vuelve un noticia que el alumno no tiene aceso a esta opción por tal razón o otra
