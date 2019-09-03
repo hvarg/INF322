@@ -73,7 +73,6 @@ Para navigar en la sistema, siempre hay que volver a la pagina principal para el
 En el sistema, también hay descripciones de cada opción que se muestra cuando el índice está encima del enlace. Algunas descripciones ofrecen más información para cada opción que otras
     Sería mejor tener estas descripciones más visibles para ayudar al usuario entender la función de cada opción, o tener un icon con "?" este símbolo para indicar que hay más información
 
-![Imagen_de_Página_Inutil](https://github.com/hvarg/INF322/blob/master/SIGA_Paginanosirve.png)
 **Observación 6: Opciones que no sirven al usuario estan disponible**
 Aveces hay opciones disponibles para elegir, pero cuando se haga clic el próximo página vuelve un noticia que el alumno no tiene aceso a esta opción por tal razón o otra
     Sería mejor que el usuario no tiene la habilidad de elegir estas opciones y la razón se puede ser mostrado con la descripción
