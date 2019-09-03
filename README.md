@@ -37,7 +37,6 @@ En el final de semstre Siga es usa para evaluar los asignaturas y profesores en 
 La página también es utilizada por la administración de la escuela para informar a los alumnos. La página para informar los estudiantes es antes de inciar sesíon, entonces nadie lee la informacion y es dificli obtener la informacíon
 
 Hay una página sobre ficha personal, donde se pueden actualizar su información personal a la escuela. La página es facil a descubir, pero a cambiar algo información es difícil porque no tenemos autoridad.
-
 Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, entonces a usar el sistema es mas dificil.
 
 ## Análisis de datos
@@ -45,38 +44,48 @@ Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, ento
 ¿Cómo se organiza jerárquicamente? 
 ¿Cual puede ser editada?**
 
-**Observación 1: Disponibilidad de información general de SIGA**
+**Observación 1: Disponibilidad de información general de SIGA: Aver Figura 1**
 Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la escuela. Pero cuando se inicie la sesión en SIGA, no se puede ver esta informacion más.
     Esta información debe estar representada después de han inciar una sesión.
-**Observación 2: Dos formularios para ingresar la cuenta**
+
+**Observación 2: Dos formularios para ingresar la cuenta:  Aver Figura 1**
 El usario tiene dos ventanas para iniciar la sesión en Siga. El sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda.
     Los dos maneras no son consistentes, y sería mejor que el servador distingue entre el sistema que cada ventana representa y no el usuario 
 
+***Figura 1***
 ![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
 
-**Observación 3: Entrar datos para ingresar**
+**Observación 3: Entrar datos para ingresar: Aver Figura 2**
 Si el usuario entre información incorrecta, como un nombre de usario que no existe o una contraseña falsa, el sistema no indica el error antes de que el usario presiona la flecha para iniciar la sesión.  Iniciando la sesión con información incorrecta, el sistema informa el usario del error sin decirle al usario si el error fue iniciada por el uso de un nombre de usario invalido o por la culpa de una contraseña incorrecta. En este caso, el sistema no apoya al usario para solucionar la problema.
     Mejor sería si el sistema tenía prevención de errores.
 
+***Figura 2***
 ![Image of error_iniciar](https://github.com/hvarg/INF322/blob/master/error_iniciar.png)
 
-**Observación 4: Navigación desorganizada de la cuenta**
+**Observación 4: Navigación desorganizada de la cuenta: Aver Figura 3**
 Cuando el usuario inicia la sesión, el sistema muestra la página principal. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha.
     Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver". 
 
+Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Los opciónes son tan muchos, donde algunas son superficiales. Esto podría reorganizarse en una nueva jerarquía. También las opciones sobre la evaluación de cursos podrían representarse cuando se finaliza un curso para el semestre y no todo el semestre.
+***Figura 3***
 ![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
 
-Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Los opciónes son tan muchos, donde algunas son superficiales. Esto podría reorganizarse en una nueva jerarquía. También las opciones sobre la evaluación de cursos podrían representarse cuando se finaliza un curso para el semestre y no todo el semestre.
-
-![Imagen_de_Descripción_Breve](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionBreve.png)
-**Observación 5: Descripciones de opciones en el sistem**
+**Observación 5: Descripciones de opciones en el sistem: Compara Figura 4 a Figura 5**
 En el sistema, también hay descripciones de cada opción que se muestra cuando el índice está encima del enlace. Algunas descripciones ofrecen más información para cada opción que otras
     Sería mejor tener estas descripciones más visibles para ayudar al usuario entender la función de cada opción, o tener un icon con "?" este símbolo para indicar que hay más información
 
-![Imagen_de_Página_Inutil](https://github.com/hvarg/INF322/blob/master/SIGA_Paginanosirve.png)
-**Observación 6: Opciones que no sirven al usuario estan disponible**
+***Figura 4: Descripción más breve y redundante***
+![Imagen_de_Descripción_Breve](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionBreve.png)
+
+***Figura 5: Descripción más informativa***
+![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionBreve.png)
+
+**Observación 6: Opciones que no sirven al usuario estan disponible: Aver Figura 6**
 Aveces hay opciones disponibles para elegir, pero cuando se haga clic el próximo página vuelve un noticia que el alumno no tiene aceso a esta opción por tal razón o otra
     Sería mejor que el usuario no tiene la habilidad de elegir estas opciones y la razón se puede ser mostrado con la descripción
+
+***Figura 6***
+![Imagen_de_Página_Inutil](https://github.com/hvarg/INF322/blob/master/SIGA_Paginanosirve.png)
 
 ## Identificación de falencias y oportunidades de mejora
 **¿Qué queremos cambiar? 
