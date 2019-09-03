@@ -67,6 +67,7 @@ Cuando el usuario inicia la sesión, el sistema muestra la página principal. El
     Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver". 
 
 Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Los opciónes son tan muchos, donde algunas son superficiales. Esto podría reorganizarse en una nueva jerarquía. También las opciones sobre la evaluación de cursos podrían representarse cuando se finaliza un curso para el semestre y no todo el semestre.
+
 ***Figura 3***
 ![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
 
