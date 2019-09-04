@@ -44,23 +44,22 @@ Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, ento
 ¿Cómo se organiza jerárquicamente? 
 ¿Cual puede ser editada?**
 
-**Observación 1: Disponibilidad de información general de SIGA: Aver Figura 1**
-Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la escuela. Pero cuando se inicie la sesión en SIGA, no se puede ver esta informacion más.
-    Esta información debe estar representada después de han inciar una sesión.
 
-**Observación 2: Dos formularios para ingresar la cuenta:  Aver Figura 1**
-El usario tiene dos ventanas para iniciar la sesión en Siga. El sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda.
-    Los dos maneras no son consistentes, y sería mejor que el servador distingue entre el sistema que cada ventana representa y no el usuario 
+
+## Identificación de falencias y oportunidades de mejora
+**¿Qué queremos cambiar? 
+¿Por qué?**
+
+### Noticias
+Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial, a ver Figura 1. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la universidad. Cuando se inicie la sesión en SIGA, no es posible buscar esta informacion de nuevo.
+    Esta información debe estar representada después de han iniciado una sesión.
+
+### Dos maneras para ingresar a la cuenta
+El usario tiene dos ventanas para iniciar la sesión en Siga, a ver Figura 1. El sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Las maneras de ingresar a la cuenta viene de que antiguos y nuevos usarios no están en la misma servidor (?). Sería mejor tener solamente una manera de ingresar a la cuenta, que permite ambos antiguos y nuevos usuario ingresar a Siga. 
 
 ***Figura 1***
 ![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
 
-**Observación 3: Entrar datos para ingresar: Aver Figura 2**
-Si el usuario entre información incorrecta, como un nombre de usario que no existe o una contraseña falsa, el sistema no indica el error antes de que el usario presiona la flecha para iniciar la sesión.  Iniciando la sesión con información incorrecta, el sistema informa el usario del error sin decirle al usario si el error fue iniciada por el uso de un nombre de usario invalido o por la culpa de una contraseña incorrecta. En este caso, el sistema no apoya al usario para solucionar la problema.
-    Mejor sería si el sistema tenía prevención de errores.
-
-***Figura 2***
-![Image of error_iniciar](https://github.com/hvarg/INF322/blob/master/error_iniciar.png)
 
 **Observación 4: Navigación desorganizada de la cuenta: Aver Figura 3**
 Cuando el usuario inicia la sesión, el sistema muestra la página principal. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha.
@@ -87,10 +86,6 @@ Aveces hay opciones disponibles para elegir, pero cuando se haga clic el próxim
 
 ***Figura 6***
 ![Imagen_de_Página_Inutil](https://github.com/hvarg/INF322/blob/master/SIGA_Paginanosirve.png)
-
-## Identificación de falencias y oportunidades de mejora
-**¿Qué queremos cambiar? 
-¿Por qué?**
 
 * Inscripción
 
