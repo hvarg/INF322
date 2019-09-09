@@ -47,31 +47,31 @@ Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, ento
 ![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
  ***Figura 1*** 
  
-Beca de alimentación: Ver los becas del usuario
-Certificados: Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.
-Resumen académico: Ver notas de los cursos y puntos aprobadas.
-Solicitudes Académicas y Peticiones: Hacer cambios en la carrera y administrar cursos no aprobados.
-    - Cambio de carrera
-    - Equivalencias de asignaturas USM (Convalidaciones)
-    - Eximición de Ed. Física y Deporte
-    - Obtención de Fecha de Grado de Bachiller
-    - Obtención de Fecha de Grado de Licenciado
-    - Obtención de Fecha y Calidad de Egreso
-    - Oportunidades. Terceras...
-    - Reconocer cursos de otras entidades educacionales
-    - Retiro Definitivo
-Planes de carrera: Ver el plan (cursos) de los semestres para cada carrera.
-Avance curricular: Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes. 
-Inscripción: Inscibirse en ramos, soló es posible durante el tiempo de inscripción.
-Cambio de mención: Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización.
-Postulación Intercambio: Enviar su solicitud para ir al intercambio.
-Horario asignaturas: Ver el horario de cada asignatura dictada el semestre actual. 
-Asignaturas inscritas - Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.
-Correo y Credencial USM - RUT, nombre, correo USM y código QR Credencial.
-Horario personal - Horario personal para los asignaturas inscritas del usuario.
-Deuda - Deuda para pagar del usuario.
-Autorización académica - Inscripciónes que han requerido autorización y la razón de ellos.
-Consulta de Pagarés - algo sobre dinero.
+Beca de alimentación: Ver los becas del usuario  
+Certificados: Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.  
+Resumen académico: Ver notas de los cursos y puntos aprobadas.  
+Solicitudes Académicas y Peticiones: Hacer cambios en la carrera y administrar cursos no aprobados.  
+    - Cambio de carrera  
+    - Equivalencias de asignaturas USM (Convalidaciones)  
+    - Eximición de Ed. Física y Deporte  
+    - Obtención de Fecha de Grado de Bachiller  
+    - Obtención de Fecha de Grado de Licenciado  
+    - Obtención de Fecha y Calidad de Egreso  
+    - Oportunidades. Terceras...  
+    - Reconocer cursos de otras entidades educacionales  
+    - Retiro Definitivo  
+Planes de carrera: Ver el plan (cursos) de los semestres para cada carrera.  
+Avance curricular: Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes.   
+Inscripción: Inscibirse en ramos, soló es posible durante el tiempo de inscripción.  
+Cambio de mención: Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización.  
+Postulación Intercambio: Enviar su solicitud para ir al intercambio.  
+Horario asignaturas: Ver el horario de cada asignatura dictada el semestre actual.   
+Asignaturas inscritas - Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.  
+Correo y Credencial USM - RUT, nombre, correo USM y código QR Credencial.  
+Horario personal - Horario personal para los asignaturas inscritas del usuario.  
+Deuda - Deuda para pagar del usuario.  
+Autorización académica - Inscripciónes que han requerido autorización y la razón de ellos.  
+Consulta de Pagarés - algo sobre dinero.  
 
 ## Identificación de falencias y oportunidades de mejora
 **¿Qué queremos cambiar? 
@@ -97,17 +97,17 @@ Cuando el usuario inicia la sesión, el sistema muestra la página principal, co
 ### Jerarquía
 Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. 
 
+#### Noticias
+Noticias relevantes para el usuario, cómo fechas para el semestre o notas ingresadas de evaluaciónes.  
+
 #### Usuario
 ##### Ficha Personal
 Información sobre el usuario, la información que antes estaba en Ficha Personal pero también incluyendo la información de Correo y Credencial USM.
 ##### Asignaturas
 ##### Cerrar sesión (el logout)
 
-#### Noticias
-Noticias relevantes para el usuario, cómo fechas para el semestre o notas ingresadas de evaluaciónes. 
-
 #### Administrar carrera
-Hacer cambios y avanza en su carrera. 
+Hacer cambios y avanza en su carrera. Solicitudes al ususarios externo.
 ##### Inscripción
 Inscibirse en ramos, soló es posible durante el tiempo de inscripción.
 ##### Cambio de carrera
@@ -149,12 +149,6 @@ Horario personal para los asignaturas inscritas del usuario.
 ##### Autorización académica
 Inscripciónes que han requerido autorización y la razón de ellos.
 
-
-##### Horario asignaturas
-Ver el horario de cada asignatura dictada el semestre actual. 
-##### Planes de carrera 
-Ver el plan (cursos) de los semestres para cada carrera. 
-
 #### Economía
 ##### Becas
 Administrar y ver los becas de alimentación del usuario. 
@@ -163,33 +157,11 @@ Los deudas a la universidad del usuario.
 ##### Consulta de Pagares
 Trato de pagar - economía. 
 
-Left:
-*Beca de alimentación - ver los becas del usuario*
-*Certificados - Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.*
-*Resumen académico - Ver notas de los cursos y puntos aprobadas. *
-*Solicitudes Académicas y Peticiones - Hacer cambios en la carrera y administrar cursos no aprobados.* 
-*Cambio de carrera*
-*Equivalencias de asignaturas USM (Convalidaciones)*
-*Eximición de Ed. Física y Deporte*
-*Obtención de Fecha de Grado de Bachiller
-Obtención de Fecha de Grado de Licenciado
-Obtención de Fecha y Calidad de Egreso*
-*Oportunidades. Terceras...*
-*Reconocer cursos de otras entidades educacionales*
-*Retiro Definitivo*
-
-*Planes de carrera - Ver el plan (cursos) de los semestres para cada carrera.*
-*Avance curricular - Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes. *
-*Inscripción - Inscibirse en ramos, soló es posible durante el tiempo de inscripción.*
-*Cambio de mención - Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización.*
-*Postulación Intercambio - Enviar su solicitud para ir al intercambio.*
-*Horario asignaturas - Ver el horario de cada asignatura dictada el semestre actual. *
-*Asignaturas inscritas - Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.*
-*Correo y Credencial USM - RUT, nombre, correo USM y código QR Credencial.*
-*Horario personal - Horario personal para los asignaturas inscritas del usuario.* 
-*Deuda - Deuda para pagar del usuario.*
-*Autorización académica - Inscripciónes que han requerido autorización y la razón de ellos.* 
-*Consulta de Pagarés - algo sobre dinero.*
+#### Información carreras y asignaturas
+##### Horario asignaturas
+Ver el horario de cada asignatura dictada el semestre actual. 
+##### Planes de carrera 
+Ver el plan (cursos) de los semestres para cada carrera. 
 
 
 
