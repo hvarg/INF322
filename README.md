@@ -91,8 +91,66 @@ El usario tiene dos ventanas para iniciar la sesión en Siga, como se muestra en
 ### Navigación desorganizada - Maybe change the photo to show the volver
 Cuando el usuario inicia la sesión, el sistema muestra la página principal, como se muestra en  Figura 1. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha. 
     Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver" y cambiar el "volver" al nombre de la pagína principal. 
-    
 
+
+
+
+
+**Observación 5: Descripciones de opciones en el sistem: Compara Figura 4 a Figura 5**
+En el sistema, también hay descripciones de cada opción que se muestra cuando el índice está encima del enlace. Algunas descripciones ofrecen más información para cada opción que otras
+    Sería mejor tener estas descripciones más visibles para ayudar al usuario entender la función de cada opción, o tener un icon con "?" este símbolo para indicar que hay más información
+
+***Figura 4: Descripción más breve y redundante***
+![Imagen_de_Descripción_Breve](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionBreve.png)
+
+***Figura 5: Descripción más informativa***
+![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionmasUtil.png)
+
+**Observación 6: Opciones que no sirven al usuario estan disponible: Aver Figura 6**
+Aveces hay opciones disponibles para elegir, pero cuando se haga clic el próximo página vuelve un noticia que el alumno no tiene aceso a esta opción por tal razón o otra
+    Sería mejor que el usuario no tiene la habilidad de elegir estas opciones y la razón se puede ser mostrado con la descripción
+
+***Figura 6***
+![Imagen_de_Página_Inutil](https://github.com/hvarg/INF322/blob/master/SIGA_Paginanosirve.png)
+
+* Inscripción
+
+Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, el sistema no indica al usario que no es posible. Mejor sería si la sistema tuviera algún tipo de indicación si esta fuera del tiempo para hacer incribciónes para mejorar la visibilidad del estado del sistema. Una opción sería usar un reloj con un texto diciendo "XX dias hasta que es posible hacer inscripciónes". 
+
+![Image of siga_inscripcion](https://github.com/hvarg/INF322/blob/master/siga_incripcion.png)
+
+* Cambiar contraseña
+
+No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?" **Aquí debemos poner capturas de pantalla para cada paso necesario para cambiar contraseña**
+
+* Botón de volver
+
+No se puede volver a la página principal sin usar el botón *volver*. Te desconectas de la página y tienen que inicializar una nueva sesión. Se espera que pueda ir y venir en una página, por eso puede ser una experiencia irritante al usar el sistema. El botón también debe cambiar al símbolo de una casa, porque simbolo de una casa significa volver en las plataformas digitales
+
+* Información
+
+La informacion sobre la escuela debe venir despues de inciar una sesción. Hacer un cuadro de información a la izquierda para las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
+
+* Navegar
+
+La página de navegación debe reestructurarse. Debe haber un menú en el que pueda cambiar su configuración personal para siga, su información personal y poder cerrar sesión. También debería haber opciones de navegación como hay ahora, pero algunos temas deberían fusionarse. Como los que conciernen a tus resultados académicos.
+
+Además, debería haber un cuadro con enlaces a páginas como aula que se usa para dar información en casi todos los cursos.
+
+* Horario Asignaturas
+
+Aquí nos falta un botón de búsqueda para buscar asignaturas que sobre algo. Obtenemos demasiada información, no hay necesidad de saber quién es el profesor o cupos para cada curso. Cuando encontremos el curso que nos gusta, deberíamos poder hacer clic en él para obtener más información en una cuadro a la izquierda en la misma pagina. Aquí está la información sobre el profesor y el horario puede estar. También debe haber un *link* con la dirección de correo electrónico al profesor.
+
+* Seguridad de ficha personal
+
+Hasta este punto es muy fácil a cambiar fichas personales y verlos cuando se tenga aceso a una cuenta. Se debe requiere al usuario confirmar su identidad cuando quiera ver o cambiar las fichas.  En cualquier otro caso, se debe ocultar esta información.
+
+* Notificación de perdir sesión
+
+Debe ser una opción para notificar al usuario que la sesión estaría perdida por una falta de actividad para que el usuario confirme su presencia y continua la sesión sin entrar su información de nuevo.
+
+## Propuesta
+**Seleccionar que partes de la interfaz podemos mejorar.**
 
 ### Jerarquía
 Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. 
@@ -162,66 +220,6 @@ Trato de pagar - economía.
 Ver el horario de cada asignatura dictada el semestre actual. 
 * **Planes de carrera**   
 Ver el plan (cursos) de los semestres para cada carrera. 
-
-
-
-
-
-**Observación 5: Descripciones de opciones en el sistem: Compara Figura 4 a Figura 5**
-En el sistema, también hay descripciones de cada opción que se muestra cuando el índice está encima del enlace. Algunas descripciones ofrecen más información para cada opción que otras
-    Sería mejor tener estas descripciones más visibles para ayudar al usuario entender la función de cada opción, o tener un icon con "?" este símbolo para indicar que hay más información
-
-***Figura 4: Descripción más breve y redundante***
-![Imagen_de_Descripción_Breve](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionBreve.png)
-
-***Figura 5: Descripción más informativa***
-![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionmasUtil.png)
-
-**Observación 6: Opciones que no sirven al usuario estan disponible: Aver Figura 6**
-Aveces hay opciones disponibles para elegir, pero cuando se haga clic el próximo página vuelve un noticia que el alumno no tiene aceso a esta opción por tal razón o otra
-    Sería mejor que el usuario no tiene la habilidad de elegir estas opciones y la razón se puede ser mostrado con la descripción
-
-***Figura 6***
-![Imagen_de_Página_Inutil](https://github.com/hvarg/INF322/blob/master/SIGA_Paginanosirve.png)
-
-* Inscripción
-
-Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, el sistema no indica al usario que no es posible. Mejor sería si la sistema tuviera algún tipo de indicación si esta fuera del tiempo para hacer incribciónes para mejorar la visibilidad del estado del sistema. Una opción sería usar un reloj con un texto diciendo "XX dias hasta que es posible hacer inscripciónes". 
-
-![Image of siga_inscripcion](https://github.com/hvarg/INF322/blob/master/siga_incripcion.png)
-
-* Cambiar contraseña
-
-No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?" **Aquí debemos poner capturas de pantalla para cada paso necesario para cambiar contraseña**
-
-* Botón de volver
-
-No se puede volver a la página principal sin usar el botón *volver*. Te desconectas de la página y tienen que inicializar una nueva sesión. Se espera que pueda ir y venir en una página, por eso puede ser una experiencia irritante al usar el sistema. El botón también debe cambiar al símbolo de una casa, porque simbolo de una casa significa volver en las plataformas digitales
-
-* Información
-
-La informacion sobre la escuela debe venir despues de inciar una sesción. Hacer un cuadro de información a la izquierda para las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
-
-* Navegar
-
-La página de navegación debe reestructurarse. Debe haber un menú en el que pueda cambiar su configuración personal para siga, su información personal y poder cerrar sesión. También debería haber opciones de navegación como hay ahora, pero algunos temas deberían fusionarse. Como los que conciernen a tus resultados académicos.
-
-Además, debería haber un cuadro con enlaces a páginas como aula que se usa para dar información en casi todos los cursos.
-
-* Horario Asignaturas
-
-Aquí nos falta un botón de búsqueda para buscar asignaturas que sobre algo. Obtenemos demasiada información, no hay necesidad de saber quién es el profesor o cupos para cada curso. Cuando encontremos el curso que nos gusta, deberíamos poder hacer clic en él para obtener más información en una cuadro a la izquierda en la misma pagina. Aquí está la información sobre el profesor y el horario puede estar. También debe haber un *link* con la dirección de correo electrónico al profesor.
-
-* Seguridad de ficha personal
-
-Hasta este punto es muy fácil a cambiar fichas personales y verlos cuando se tenga aceso a una cuenta. Se debe requiere al usuario confirmar su identidad cuando quiera ver o cambiar las fichas.  En cualquier otro caso, se debe ocultar esta información.
-
-* Notificación de perdir sesión
-
-Debe ser una opción para notificar al usuario que la sesión estaría perdida por una falta de actividad para que el usuario confirme su presencia y continua la sesión sin entrar su información de nuevo.
-
-## Propuesta
-**Seleccionar que partes de la interfaz podemos mejorar.**
 
 ## Definición de tareas
 **Tareas a cambiar, como funcionaba antes, como funciona ahora.**
