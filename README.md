@@ -97,11 +97,11 @@ Cuando el usuario inicia la sesión, el sistema muestra la página principal, co
 ### Jerarquía
 Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. 
 
-#### Noticias
+#### * Noticias
 Noticias relevantes para el usuario, cómo fechas para el semestre o notas ingresadas de evaluaciónes.  
 
-#### Usuario
-##### Ficha Personal
+#### * Usuario
+#####   * Ficha Personal
 Información sobre el usuario, la información que antes estaba en Ficha Personal pero también incluyendo la información de Correo y Credencial USM.
 ##### Asignaturas
 ##### Cerrar sesión (el logout)
