@@ -44,6 +44,9 @@ Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, ento
 ¿Cómo se organiza jerárquicamente? 
 ¿Cual puede ser editada?**
 
+![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
+ ***Figura 1*** 
+ 
 Beca de alimentación: Ver los becas del usuario
 Certificados: Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.
 Resumen académico: Ver notas de los cursos y puntos aprobadas.
@@ -75,7 +78,7 @@ Consulta de Pagarés - algo sobre dinero.
 ¿Por qué?**
 
 ### Noticias
-Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial, como se muestra en Figura 1. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la universidad. Cuando se inicie la sesión en SIGA, no es posible buscar esta informacion de nuevo.
+Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial, como se muestra en Figura 2. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la universidad. Cuando se inicie la sesión en SIGA, no es posible buscar esta informacion de nuevo.
     Esta información debe estar representada después de han iniciado una sesión y dentro de la sesión hay que tener la opción de volver a ver las noticias. 
 
 ### Ingreso
@@ -83,14 +86,13 @@ El usario tiene dos ventanas para iniciar la sesión en Siga, como se muestra en
 
 
 ![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
-***Figura 1***
+***Figura 2***
 
-### Navigación desorganizada
-Cuando el usuario inicia la sesión, el sistema muestra la página principal, como se muestra en  Figura 2. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha. 
+### Navigación desorganizada - Maybe change the photo to show the volver
+Cuando el usuario inicia la sesión, el sistema muestra la página principal, como se muestra en  Figura 1. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha. 
     Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver" y cambiar el "volver" al nombre de la pagína principal. 
     
-![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
- ***Figura 2***
+
 
 ### Jerarquía
 Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. 
@@ -103,8 +105,6 @@ Información sobre el usuario, la información que antes estaba en Ficha Persona
 
 #### Noticias
 Noticias relevantes para el usuario, cómo fechas para el semestre o notas ingresadas de evaluaciónes. 
-
-
 
 #### Administrar carrera
 Hacer cambios y avanza en su carrera. 
