@@ -125,7 +125,7 @@ Hacer cambios y avanza en su carrera. Solicitudes al ususarios externo.
  * **Retomar asignaturas**  
  Oportunidad para cursar nuevamente la asignatura (por tercera vez o más).
  * **Obtención de Fecha**  
- - Solicitar para obtención de fecha. Eliga la opción en una barra de desplazamiento. 
+ Solicitar para obtención de fecha. Eliga la opción en una barra de desplazamiento.  
   ⋅⋅* **Obtención de Fecha de Grado de Bachiller**  
   ⋅⋅* **Obtención de Fecha de Grado de Licenciado**  
   ⋅⋅* **Obtención de Fecha y Calidad de Egreso**  
