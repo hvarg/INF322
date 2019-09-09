@@ -108,30 +108,30 @@ Información sobre el usuario, la información que antes estaba en Ficha Persona
 
 #### Administrar carrera
 Hacer cambios y avanza en su carrera. Solicitudes al ususarios externo.
- * **Inscripción**
+ * **Inscripción**  
  Inscibirse en ramos, soló es posible durante el tiempo de inscripción.
- * **Cambio de carrera**
+ * **Cambio de carrera**  
  Realice un Cambio de Carrera, Mención, Plan o Campus/Sede. Recuerde indicar si tiene alguna beca o ayuda MINEDUC.
- * **Matrícula Sin Ramos**
+ * **Matrícula Sin Ramos**  
  Para solicitar matrícula sin ramos. 
- * **Postulación Intercambio**
+ * **Postulación Intercambio**  
  Enviar su solicitud para ir al intercambio.
- * **Equivalencias de asignaturas USM**
+ * **Equivalencias de asignaturas USM**  
  Solicitar para Convalidar asignaturas aprobadas en la misma universidad.
- * **Reconocer asignaturas**
+ * **Reconocer asignaturas**  
  Reconocer asignaturas aprobadas en otra Institución o Universidad. Equivalencias de asignaturas fuera de USM.
- * **Eximición de Ed. Física y Deporte**
+ * **Eximición de Ed. Física y Deporte**  
  Solicitar eximición de Ed. Física y Deporte. 
- * **Retomar asignaturas**
+ * **Retomar asignaturas**  
  Oportunidad para cursar nuevamente la asignatura (por tercera vez o más).
- * **Obtención de Fecha**
+ * **Obtención de Fecha**  
  Solicitar para obtención de fecha. Eliga la opción en una barra de desplazamiento. 
-  ..* **Obtención de Fecha de Grado de Bachiller**
-  ..* **Obtención de Fecha de Grado de Licenciado
-  ..* **Obtención de Fecha y Calidad de Egreso
- * **Cambio de mención
+  ⋅⋅* **Obtención de Fecha de Grado de Bachiller**  
+  ⋅⋅* **Obtención de Fecha de Grado de Licenciado**  
+  ⋅⋅* **Obtención de Fecha y Calidad de Egreso**  
+ * **Cambio de mención**  
  Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización. 
- * **Retiro Definitivo
+ * **Retiro Definitivo**  
  Abandonar los estudios en la USM antes de que termina la carrera. 
 
 #### Mi educación
