@@ -135,32 +135,32 @@ Hacer cambios y avanza en su carrera. Solicitudes al ususarios externo.
  Abandonar los estudios en la USM antes de que termina la carrera. 
 
 #### Mi educación
-##### Resumen académico
+* **Resumen académico**  
 Ver notas de los cursos y puntos aprobadas.
-##### Certificados
+* **Certificados**  
 Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.
 *Para preguntar martes: Que tipo de certificados son?*
-##### Avance curricular 
+* **Avance curricular**   
 Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes.
-##### Asignaturas inscritas
+* **Asignaturas inscritas**  
 Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.
-##### Horario personal
+* **Horario personal**  
 Horario personal para los asignaturas inscritas del usuario.
-##### Autorización académica
+* **Autorización académica**  
 Inscripciónes que han requerido autorización y la razón de ellos.
 
 #### Economía
-##### Becas
+* **Becas**  
 Administrar y ver los becas de alimentación del usuario. 
-##### Deuda
+* **Deuda**  
 Los deudas a la universidad del usuario. 
-##### Consulta de Pagares
+* **Consulta de Pagares**  
 Trato de pagar - economía. 
 
 #### Información carreras y asignaturas
-##### Horario asignaturas
+* **Horario asignaturas**  
 Ver el horario de cada asignatura dictada el semestre actual. 
-##### Planes de carrera 
+* **Planes de carrera**   
 Ver el plan (cursos) de los semestres para cada carrera. 
 
 
