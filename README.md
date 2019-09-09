@@ -164,10 +164,11 @@ Información sobre el usuario, la información que antes estaba en Ficha Persona
 * **Asignaturas**  
 * **Cerrar sesión (el logout)**  
 
-#### Administrar carrera
+#### Solicitudes externos para administrar carrera
 Hacer cambios y avanza en su carrera. Solicitudes al ususarios externo.
- * **Inscripción**  
- Inscibirse en ramos, soló es posible durante el tiempo de inscripción.
+ * **Certificados**  
+ Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.
+ *Para preguntar martes: Que tipo de certificados son?*
  * **Cambio de carrera**  
  Realice un Cambio de Carrera, Mención, Plan o Campus/Sede. Recuerde indicar si tiene alguna beca o ayuda MINEDUC.
  * **Matrícula Sin Ramos**  
@@ -193,11 +194,10 @@ Hacer cambios y avanza en su carrera. Solicitudes al ususarios externo.
  Abandonar los estudios en la USM antes de que termina la carrera. 
 
 #### Mi educación
+* **Inscripción**  
+Inscibirse en ramos, soló es posible durante el tiempo de inscripción.
 * **Resumen académico**  
 Ver notas de los cursos y puntos aprobadas.
-* **Certificados**  
-Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.
-*Para preguntar martes: Que tipo de certificados son?*
 * **Avance curricular**   
 Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes.
 * **Asignaturas inscritas**  
