@@ -43,6 +43,7 @@ Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, ento
 **¿Qué información muestra el sistema?
 ¿Cómo se organiza jerárquicamente? 
 ¿Cual puede ser editada?**
+La información que el sistema muestra en la pagina principal se indica en Figura 1. 
 
 ![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
  ***Figura 1*** 
