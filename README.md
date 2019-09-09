@@ -30,9 +30,9 @@ El uso de el sistema es obligatorio para los estudiantes en la Universidad Técn
 
 En el comiencza de semstre los usuarios usan la sistema para administrar sus ramos, ver su horario personal y ver el horario para asignaturas cuando eligen ramos. A inscribir en una asignatura es fácil, pero el problema es sobre descubrir las asignaturas en SIGA, y tambien que ver sobre adapte a su horario y planes de carrera
 
-Además, la sistema es usa para ver su resultad por los asignaturas. _**No, se como este es facil o deficil ahora**_
+Además, la sistema es usa para ver su resultad por los asignaturas. 
 
-En el final de semstre Siga es usa para evaluar los asignaturas y profesores en la final de cada semestre. _**No, se como este es facil o deficil ahora**_
+En el final de semstre Siga es usa para evaluar los asignaturas y profesores en la final de cada semestre.
 
 La página también es utilizada por la administración de la escuela para informar a los alumnos. La página para informar los estudiantes es antes de inciar sesíon, entonces nadie lee la informacion y es dificli obtener la informacíon
 
@@ -44,31 +44,156 @@ Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, ento
 ¿Cómo se organiza jerárquicamente? 
 ¿Cual puede ser editada?**
 
-
+Beca de alimentación: Ver los becas del usuario
+Certificados: Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.
+Resumen académico: Ver notas de los cursos y puntos aprobadas.
+Solicitudes Académicas y Peticiones: Hacer cambios en la carrera y administrar cursos no aprobados.
+    - Cambio de carrera
+    - Equivalencias de asignaturas USM (Convalidaciones)
+    - Eximición de Ed. Física y Deporte
+    - Obtención de Fecha de Grado de Bachiller
+    - Obtención de Fecha de Grado de Licenciado
+    - Obtención de Fecha y Calidad de Egreso
+    - Oportunidades. Terceras...
+    - Reconocer cursos de otras entidades educacionales
+    - Retiro Definitivo
+Planes de carrera: Ver el plan (cursos) de los semestres para cada carrera.
+Avance curricular: Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes. 
+Inscripción: Inscibirse en ramos, soló es posible durante el tiempo de inscripción.
+Cambio de mención: Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización.
+Postulación Intercambio: Enviar su solicitud para ir al intercambio.
+Horario asignaturas: Ver el horario de cada asignatura dictada el semestre actual. 
+Asignaturas inscritas - Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.
+Correo y Credencial USM - RUT, nombre, correo USM y código QR Credencial.
+Horario personal - Horario personal para los asignaturas inscritas del usuario.
+Deuda - Deuda para pagar del usuario.
+Autorización académica - Inscripciónes que han requerido autorización y la razón de ellos.
+Consulta de Pagarés - algo sobre dinero.
 
 ## Identificación de falencias y oportunidades de mejora
 **¿Qué queremos cambiar? 
 ¿Por qué?**
 
 ### Noticias
-Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial, a ver Figura 1. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la universidad. Cuando se inicie la sesión en SIGA, no es posible buscar esta informacion de nuevo.
-    Esta información debe estar representada después de han iniciado una sesión.
+Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial, como se muestra en Figura 1. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la universidad. Cuando se inicie la sesión en SIGA, no es posible buscar esta informacion de nuevo.
+    Esta información debe estar representada después de han iniciado una sesión y dentro de la sesión hay que tener la opción de volver a ver las noticias. 
 
-### Dos maneras para ingresar a la cuenta
-El usario tiene dos ventanas para iniciar la sesión en Siga, a ver Figura 1. El sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Las maneras de ingresar a la cuenta viene de que antiguos y nuevos usarios no están en la misma servidor (?). Sería mejor tener solamente una manera de ingresar a la cuenta, que permite ambos antiguos y nuevos usuario ingresar a Siga. 
+### Ingreso
+El usario tiene dos ventanas para iniciar la sesión en Siga, como se muestra en  Figura 1. El sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Las maneras de ingresar a la cuenta viene de que antiguos y nuevos usarios no están en la misma servidor (?). Sería mejor tener solamente una manera de ingresar a la cuenta, que permite ambos antiguos y nuevos usuario ingresar a Siga. 
 
-***Figura 1***
+
 ![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
+***Figura 1***
 
-
-**Observación 4: Navigación desorganizada de la cuenta: Aver Figura 3**
-Cuando el usuario inicia la sesión, el sistema muestra la página principal. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha.
-    Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver". 
-
-Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Los opciónes son tan muchos, donde algunas son superficiales. Esto podría reorganizarse en una nueva jerarquía. También las opciones sobre la evaluación de cursos podrían representarse cuando se finaliza un curso para el semestre y no todo el semestre.
-
-***Figura 3***
+### Navigación desorganizada
+Cuando el usuario inicia la sesión, el sistema muestra la página principal, como se muestra en  Figura 2. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha. 
+    Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver" y cambiar el "volver" al nombre de la pagína principal. 
+    
 ![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
+ ***Figura 2***
+
+### Jerarquía
+Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. 
+
+#### Usuario
+##### Ficha Personal
+Información sobre el usuario, la información que antes estaba en Ficha Personal pero también incluyendo la información de Correo y Credencial USM.
+##### Asignaturas
+##### Cerrar sesión (el logout)
+
+#### Noticias
+Noticias relevantes para el usuario, cómo fechas para el semestre o notas ingresadas de evaluaciónes. 
+
+
+
+#### Administrar carrera
+Hacer cambios y avanza en su carrera. 
+##### Inscripción
+Inscibirse en ramos, soló es posible durante el tiempo de inscripción.
+##### Cambio de carrera
+Realice un Cambio de Carrera, Mención, Plan o Campus/Sede. Recuerde indicar si tiene alguna beca o ayuda MINEDUC.
+##### Matrícula Sin Ramos
+Para solicitar matrícula sin ramos. 
+##### Postulación Intercambio
+Enviar su solicitud para ir al intercambio.
+##### Equivalencias de asignaturas USM 
+Solicitar para Convalidar asignaturas aprobadas en la misma universidad.
+##### Reconocer asignaturas
+Reconocer asignaturas aprobadas en otra Institución o Universidad. Equivalencias de asignaturas fuera de USM.
+##### Eximición de Ed. Física y Deporte
+Solicitar eximición de Ed. Física y Deporte. 
+##### Retomar asignaturas
+Oportunidad para cursar nuevamente la asignatura (por tercera vez o más).
+##### Obtención de Fecha
+Solicitar para obtención de fecha. Eliga la opción en una barra de desplazamiento. 
+###### Obtención de Fecha de Grado de Bachiller
+###### Obtención de Fecha de Grado de Licenciado
+###### Obtención de Fecha y Calidad de Egreso
+##### Cambio de mención
+Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización. 
+##### Retiro Definitivo
+Abandonar los estudios en la USM antes de que termina la carrera. 
+
+#### Mi educación
+##### Resumen académico
+Ver notas de los cursos y puntos aprobadas.
+##### Certificados
+Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.
+*Para preguntar martes: Que tipo de certificados son?*
+##### Avance curricular 
+Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes.
+##### Asignaturas inscritas
+Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.
+##### Horario personal
+Horario personal para los asignaturas inscritas del usuario.
+##### Autorización académica
+Inscripciónes que han requerido autorización y la razón de ellos.
+
+
+##### Horario asignaturas
+Ver el horario de cada asignatura dictada el semestre actual. 
+##### Planes de carrera 
+Ver el plan (cursos) de los semestres para cada carrera. 
+
+#### Economía
+##### Becas
+Administrar y ver los becas de alimentación del usuario. 
+##### Deuda
+Los deudas a la universidad del usuario. 
+##### Consulta de Pagares
+Trato de pagar - economía. 
+
+Left:
+*Beca de alimentación - ver los becas del usuario*
+*Certificados - Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.*
+*Resumen académico - Ver notas de los cursos y puntos aprobadas. *
+*Solicitudes Académicas y Peticiones - Hacer cambios en la carrera y administrar cursos no aprobados.* 
+*Cambio de carrera*
+*Equivalencias de asignaturas USM (Convalidaciones)*
+*Eximición de Ed. Física y Deporte*
+*Obtención de Fecha de Grado de Bachiller
+Obtención de Fecha de Grado de Licenciado
+Obtención de Fecha y Calidad de Egreso*
+*Oportunidades. Terceras...*
+*Reconocer cursos de otras entidades educacionales*
+*Retiro Definitivo*
+
+*Planes de carrera - Ver el plan (cursos) de los semestres para cada carrera.*
+*Avance curricular - Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes. *
+*Inscripción - Inscibirse en ramos, soló es posible durante el tiempo de inscripción.*
+*Cambio de mención - Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización.*
+*Postulación Intercambio - Enviar su solicitud para ir al intercambio.*
+*Horario asignaturas - Ver el horario de cada asignatura dictada el semestre actual. *
+*Asignaturas inscritas - Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.*
+*Correo y Credencial USM - RUT, nombre, correo USM y código QR Credencial.*
+*Horario personal - Horario personal para los asignaturas inscritas del usuario.* 
+*Deuda - Deuda para pagar del usuario.*
+*Autorización académica - Inscripciónes que han requerido autorización y la razón de ellos.* 
+*Consulta de Pagarés - algo sobre dinero.*
+
+
+
+
 
 **Observación 5: Descripciones de opciones en el sistem: Compara Figura 4 a Figura 5**
 En el sistema, también hay descripciones de cada opción que se muestra cuando el índice está encima del enlace. Algunas descripciones ofrecen más información para cada opción que otras
