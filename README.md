@@ -20,7 +20,7 @@ SIGA es un sistema creado para facilitar la administración de ramos para estudi
 ## Comunidad usuaria
 **¿Quien usa el sistema?, edad, sexo, etc**
 
-Los usarios son estudiantes entre 18-27 años, con que consiste de 70% hombres y 30% mujeres. Generalmente los usarios estudian ingenieria. 
+Los usarios son estudiantes entre 18-27 años, con que consiste de 70% hombres y 30% mujeres. Generalmente los usarios estudian ingeniería. 
 
 ## Análisis de tareas
 **¿Qué hacen generalmente los usuarios en el sistema?
@@ -28,50 +28,73 @@ Los usarios son estudiantes entre 18-27 años, con que consiste de 70% hombres y
 
 El uso de el sistema es obligatorio para los estudiantes en la Universidad Técnica Federico Santa María. 
 
-En el comiencza de semstre los usuarios usan la sistema para administrar sus ramos, ver su horario personal y ver el horario para asignaturas cuando eligen ramos. A inscribir en una asignatura es fácil, pero el problema es sobre descubrir las asignaturas en SIGA, y tambien que ver sobre adapte a su horario y planes de carrera
+Al principo del semstre los usuarios usan la sistema para administrar sus ramos, ver su horario personal y ver el horario para asignaturas cuando eligen ramos. Inscribir asignaturas es fácil pero adaptar su horario, descubrir las asignaturas en SIGA y descubrir los planes de carrera es dificil.
 
-Además, la sistema es usa para ver su resultad por los asignaturas. _**No, se como este es facil o deficil ahora**_
+Además, la sistema es usa para ver su resultado por los asignaturas. 
 
-En el final de semstre Siga es usa para evaluar los asignaturas y profesores en la final de cada semestre. _**No, se como este es facil o deficil ahora**_
+En el final de semstre se usa Siga para evaluar los asignaturas y profesores en la final de cada semestre.
 
-La página también es utilizada por la administración de la escuela para informar a los alumnos. La página para informar los estudiantes es antes de inciar sesíon, entonces nadie lee la informacion y es dificli obtener la informacíon
+La página también es utilizada por la administración de la escuela para informar a los alumnos. La página para noticias se ve antes de se inicia la sesíon. Esto hace que muchas de los usuarios no leen la información y por eso es dificil obtener la información.  
 
-Hay una página sobre ficha personal, donde se pueden actualizar su información personal a la escuela. La página es facil a descubir, pero a cambiar algo información es difícil porque no tenemos autoridad.
-Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, entonces a usar el sistema es mas dificil.
+Hay una página sobre ficha personal, donde se pueden actualizar su información personal a la escuela. Es facil descubir la pagina, pero cambiar algúna información es difícil porque los usuarios, sea los alumnos, no tienen autoridad para hacer cambios. Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, entonces usar el sistema es mas dificil.
+
+En general la sistema es dificil entender, por que falta apoyo al usuario. Esta apoyo podría ser información que indica los funciónes con un breve explicación. 
 
 ## Análisis de datos
 **¿Qué información muestra el sistema?
 ¿Cómo se organiza jerárquicamente? 
 ¿Cual puede ser editada?**
+La información que el sistema muestra en la pagina principal se indica en Figura 1. 
 
-**Observación 1: Disponibilidad de información general de SIGA: Aver Figura 1**
-Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la escuela. Pero cuando se inicie la sesión en SIGA, no se puede ver esta informacion más.
-    Esta información debe estar representada después de han inciar una sesión.
-
-**Observación 2: Dos formularios para ingresar la cuenta:  Aver Figura 1**
-El usario tiene dos ventanas para iniciar la sesión en Siga. El sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda.
-    Los dos maneras no son consistentes, y sería mejor que el servador distingue entre el sistema que cada ventana representa y no el usuario 
-
-***Figura 1***
-![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
-
-**Observación 3: Entrar datos para ingresar: Aver Figura 2**
-Si el usuario entre información incorrecta, como un nombre de usario que no existe o una contraseña falsa, el sistema no indica el error antes de que el usario presiona la flecha para iniciar la sesión.  Iniciando la sesión con información incorrecta, el sistema informa el usario del error sin decirle al usario si el error fue iniciada por el uso de un nombre de usario invalido o por la culpa de una contraseña incorrecta. En este caso, el sistema no apoya al usario para solucionar la problema.
-    Mejor sería si el sistema tenía prevención de errores.
-
-***Figura 2***
-![Image of error_iniciar](https://github.com/hvarg/INF322/blob/master/error_iniciar.png)
-
-**Observación 4: Navigación desorganizada de la cuenta: Aver Figura 3**
-Cuando el usuario inicia la sesión, el sistema muestra la página principal. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha.
-    Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver". 
-
-Para navigar en la sistema, siempre hay que volver a la pagina principal para eligir nueva opción. Los opciónes son tan muchos, donde algunas son superficiales. Esto podría reorganizarse en una nueva jerarquía. También las opciones sobre la evaluación de cursos podrían representarse cuando se finaliza un curso para el semestre y no todo el semestre.
-
-***Figura 3***
 ![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
+ ***Figura 1*** 
+ 
+Beca de alimentación: Ver los becas del usuario  
+Certificados: Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.  
+Resumen académico: Ver notas de los cursos y puntos aprobadas.  
+Solicitudes Académicas y Peticiones: Hacer cambios en la carrera y administrar cursos no aprobados.  
+    - Cambio de carrera  
+    - Equivalencias de asignaturas USM (Convalidaciones)  
+    - Eximición de Ed. Física y Deporte  
+    - Obtención de Fecha de Grado de Bachiller  
+    - Obtención de Fecha de Grado de Licenciado  
+    - Obtención de Fecha y Calidad de Egreso  
+    - Oportunidades. Terceras...  
+    - Reconocer cursos de otras entidades educacionales  
+    - Retiro Definitivo  
+Planes de carrera: Ver el plan (cursos) de los semestres para cada carrera.  
+Avance curricular: Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes.   
+Inscripción: Inscibirse en ramos, soló es posible durante el tiempo de inscripción.  
+Cambio de mención: Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización.  
+Postulación Intercambio: Enviar su solicitud para ir al intercambio.  
+Horario asignaturas: Ver el horario de cada asignatura dictada el semestre actual.   
+Asignaturas inscritas - Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.  
+Correo y Credencial USM - RUT, nombre, correo USM y código QR Credencial.  
+Horario personal - Horario personal para los asignaturas inscritas del usuario.  
+Deuda - Deuda para pagar del usuario.  
+Autorización académica - Inscripciónes que han requerido autorización y la razón de ellos.  
+Consulta de Pagarés - algo sobre dinero.  
 
-**Observación 5: Descripciones de opciones en el sistem: Compara Figura 4 a Figura 5**
+## Identificación de falencias y oportunidades de mejora
+**¿Qué queremos cambiar? 
+¿Por qué?**
+
+### Noticias
+Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial, como se muestra en Figura 2. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la universidad. Cuando se inicie la sesión en SIGA, no es posible buscar esta informacion de nuevo.
+    Esta información debe estar representada después de han iniciado una sesión y dentro de la sesión hay que tener la opción de volver a ver las noticias. 
+
+### Ingreso
+El usario tiene dos ventanas para iniciar la sesión en Siga, como se muestra en  Figura 2. El sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Las maneras de ingresar a la cuenta viene de que antiguos y nuevos usarios no están en la misma servidor (?). Sería mejor tener solamente una manera de ingresar a la cuenta, que permite ambos antiguos y nuevos usuario ingresar a Siga. 
+
+
+![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
+***Figura 2***
+
+### Navigación desorganizada - Maybe change the photo to show the volver
+Cuando el usuario inicia la sesión, el sistema muestra la página principal, como se muestra en  Figura 1. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha. 
+    Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver" y cambiar el "volver" al nombre de la pagína principal. 
+
+### Descripciones de opciones en el sistema: Compara Figura 4 a Figura 5**
 En el sistema, también hay descripciones de cada opción que se muestra cuando el índice está encima del enlace. Algunas descripciones ofrecen más información para cada opción que otras
     Sería mejor tener estas descripciones más visibles para ayudar al usuario entender la función de cada opción, o tener un icon con "?" este símbolo para indicar que hay más información
 
@@ -87,10 +110,6 @@ Aveces hay opciones disponibles para elegir, pero cuando se haga clic el próxim
 
 ***Figura 6***
 ![Imagen_de_Página_Inutil](https://github.com/hvarg/INF322/blob/master/SIGA_Paginanosirve.png)
-
-## Identificación de falencias y oportunidades de mejora
-**¿Qué queremos cambiar? 
-¿Por qué?**
 
 * Inscripción
 
@@ -158,7 +177,75 @@ El menú siempre debe estar abierto mostrando los temas principales. Esto es par
 
 En el centro de la página encontrarás la parte principal. Aquí recibirás noticias de la escuela o información sobre fechas importantes que debes recordar.
 
-*Si no hay información debe ... *
+
+### Jerarquía
+En la pagina principal hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. 
+
+#### Noticias
+Noticias relevantes para el usuario, cómo fechas para el semestre o notas ingresadas de evaluaciónes.  
+
+#### Usuario  
+* **Ficha Personal**  
+Información sobre el usuario, la información que antes estaba en Ficha Personal pero también incluyendo la información de Correo y Credencial USM.  
+* **Asignaturas**  
+* **Cerrar sesión (el logout)**  
+
+#### Solicitudes externos para administrar carrera
+Hacer cambios y avanza en su carrera. Solicitudes al ususarios externo.
+ * **Certificados**  
+ Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.
+ *Para preguntar martes: Que tipo de certificados son?*
+ * **Cambio de carrera**  
+ Realice un Cambio de Carrera, Mención, Plan o Campus/Sede. Recuerde indicar si tiene alguna beca o ayuda MINEDUC.
+ * **Matrícula Sin Ramos**  
+ Para solicitar matrícula sin ramos. 
+ * **Postulación Intercambio**  
+ Enviar su solicitud para ir al intercambio.
+ * **Equivalencias de asignaturas USM**  
+ Solicitar para Convalidar asignaturas aprobadas en la misma universidad.
+ * **Reconocer asignaturas**  
+ Reconocer asignaturas aprobadas en otra Institución o Universidad. Equivalencias de asignaturas fuera de USM.
+ * **Eximición de Ed. Física y Deporte**  
+ Solicitar eximición de Ed. Física y Deporte. 
+ * **Retomar asignaturas**  
+ Oportunidad para cursar nuevamente la asignatura (por tercera vez o más).
+ * **Obtención de Fecha**  
+ Solicitar para obtención de fecha. Eliga la opción en una barra de desplazamiento.  
+  ⋅⋅* **Obtención de Fecha de Grado de Bachiller**  
+  ⋅⋅* **Obtención de Fecha de Grado de Licenciado**  
+  ⋅⋅* **Obtención de Fecha y Calidad de Egreso**  
+ * **Cambio de mención**  
+ Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización. 
+ * **Retiro Definitivo**  
+ Abandonar los estudios en la USM antes de que termina la carrera. 
+
+#### Mi educación
+* **Inscripción**  
+Inscibirse en ramos, soló es posible durante el tiempo de inscripción.
+* **Resumen académico**  
+Ver notas de los cursos y puntos aprobadas.
+* **Avance curricular**   
+Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes.
+* **Asignaturas inscritas**  
+Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.
+* **Horario personal**  
+Horario personal para los asignaturas inscritas del usuario.
+* **Autorización académica**  
+Inscripciónes que han requerido autorización y la razón de ellos.
+
+#### Economía
+* **Becas**  
+Administrar y ver los becas de alimentación del usuario. 
+* **Deuda**  
+Los deudas a la universidad del usuario. 
+* **Consulta de Pagares**  
+Trato de pagar - economía. 
+
+#### Información carreras y asignaturas
+* **Horario asignaturas**  
+Ver el horario de cada asignatura dictada el semestre actual. 
+* **Planes de carrera**   
+Ver el plan (cursos) de los semestres para cada carrera. 
 
 ## Definición de tareas
 **Tareas a cambiar, como funcionaba antes, como funciona ahora.**
