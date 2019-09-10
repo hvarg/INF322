@@ -146,10 +146,17 @@ En el centro debe haber un motor de búsqueda para buscar cosas que desea encont
 
 En la derecha habrá una imagen con su nombre, que muestra en qué cuenta ha iniciado sesión. Esto también mostrará un menú haciendo clic en él. El menú contendrá opciones con respecto a su fecha personal, su horaria y su asginaturas. Al lado de su nombre y imagen, hay una icon de salir para cerrar sesión.
 
-
 #### El menú
 
-#### Noticias
+El menú principal estaría en el lado izquierdo de la página. Solo debe contener el tema general, como inscripsion, resultados y peticion. Donde todos los temas deben tener un logo que propósito de los temas. Cuando haga clic en uno de los temas, aparecerán más opciones. Sin embargo, deberían aparecer en el área parte principal. También podría ser una frase corta bajo los subtemas para explicar allí propósito.
+
+El menú siempre debe estar abierto mostrando los temas principales. Esto es para obtener una continuación del diseño en la página. También facilitará la navegación sin tener que volver a la página de inicio cada vez.
+
+#### Parte principal
+
+En el centro de la página encontrarás la parte principal. Aquí recibirás noticias de la escuela o información sobre fechas importantes que debes recordar.
+
+*Si no hay información debe ... *
 
 ## Definición de tareas
 **Tareas a cambiar, como funcionaba antes, como funciona ahora.**
