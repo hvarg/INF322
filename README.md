@@ -150,6 +150,34 @@ Debe ser una opción para notificar al usuario que la sesión estaría perdida p
 ## Propuesta
 **Seleccionar que partes de la interfaz podemos mejorar.**
 
+### Pagina primera para iniciar sesión
+En la primera página nos gustaría tener solo la nueva opción para iniciar una sesión. Esto debe estar en el medio de la página para que sea fácil acceder desde la computadora y el teléfono.
+
+### Pagina principal
+
+La página principal debe estar formada por tres partes; el borde superior, un menú en el lado izquierdo y un pequeño espacio para noticas.
+
+![Image_of_page_strukture](https://github.com/hvarg/INF322/blob/master/Estructura.png)
+
+#### El borde superior
+
+En el izquierdo del borde superior debe haber el logo de USM con SIGA, esto es para mostrar la página en la que se encuentra. Al lado del logotipo debe haber un ícono de una casa para ir a la pagina principal. Aun cuando estás en la página principal, tiene una continuidad en el borde.
+
+En el centro debe haber un motor de búsqueda para buscar cosas que desea encontrar en la página. Consistirá en un cuadro de búsqueda y un logo de lupa.
+
+En la derecha habrá una imagen con su nombre, que muestra en qué cuenta ha iniciado sesión. Esto también mostrará un menú haciendo clic en él. El menú contendrá opciones con respecto a su fecha personal, su horaria y su asginaturas. Al lado de su nombre y imagen, hay una icon de salir para cerrar sesión.
+
+#### El menú
+
+El menú principal estaría en el lado izquierdo de la página. Solo debe contener el tema general, como inscripsion, resultados y peticion. Donde todos los temas deben tener un logo que propósito de los temas. Cuando haga clic en uno de los temas, aparecerán más opciones. Sin embargo, deberían aparecer en el área parte principal. También podría ser una frase corta bajo los subtemas para explicar allí propósito.
+
+El menú siempre debe estar abierto mostrando los temas principales. Esto es para obtener una continuación del diseño en la página. También facilitará la navegación sin tener que volver a la página de inicio cada vez.
+
+#### Parte principal
+
+En el centro de la página encontrarás la parte principal. Aquí recibirás noticias de la escuela o información sobre fechas importantes que debes recordar.
+
+
 ### Jerarquía
 En la pagina principal hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. 
 
