@@ -131,6 +131,19 @@ Debe ser una opción para notificar al usuario que la sesión estaría perdida p
 ## Propuesta
 **Seleccionar que partes de la interfaz podemos mejorar.**
 
+### Pagina primera para iniciar sesión
+En la primera página nos gustaría tener solo la nueva opción para iniciar una sesión. Esto debe estar en el medio de la página para que sea fácil acceder desde la computadora y el teléfono.
+
+### Pagina principal
+
+La página principal debe estar formada por tres partes; el borde superior, un menú en el lado izquierdo y un pequeño espacio para noticas.
+
+#### El borde superior
+
+#### El menú
+
+#### Noticias
+
 ## Definición de tareas
 **Tareas a cambiar, como funcionaba antes, como funciona ahora.**
 
