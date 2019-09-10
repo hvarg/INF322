@@ -138,6 +138,8 @@ En la primera página nos gustaría tener solo la nueva opción para iniciar una
 
 La página principal debe estar formada por tres partes; el borde superior, un menú en el lado izquierdo y un pequeño espacio para noticas.
 
+![Image_of_page_strukture](https://github.com/hvarg/INF322/blob/master/Estructura.png)
+
 #### El borde superior
 
 En el izquierdo del borde superior debe haber el logo de USM con SIGA, esto es para mostrar la página en la que se encuentra. Al lado del logotipo debe haber un ícono de una casa para ir a la pagina principal. Aun cuando estás en la página principal, tiene una continuidad en el borde.
