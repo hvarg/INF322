@@ -140,6 +140,13 @@ La página principal debe estar formada por tres partes; el borde superior, un m
 
 #### El borde superior
 
+En el izquierdo del borde superior debe haber el logo de USM con SIGA, esto es para mostrar la página en la que se encuentra. Al lado del logotipo debe haber un ícono de una casa para ir a la pagina principal. Aun cuando estás en la página principal, tiene una continuidad en el borde.
+
+En el centro debe haber un motor de búsqueda para buscar cosas que desea encontrar en la página. Consistirá en un cuadro de búsqueda y un logo de lupa.
+
+En la derecha habrá una imagen con su nombre, que muestra en qué cuenta ha iniciado sesión. Esto también mostrará un menú haciendo clic en él. El menú contendrá opciones con respecto a su fecha personal, su horaria y su asginaturas. Al lado de su nombre y imagen, hay una icon de salir para cerrar sesión.
+
+
 #### El menú
 
 #### Noticias
