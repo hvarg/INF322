@@ -20,7 +20,7 @@ SIGA es un sistema creado para facilitar la administración de ramos para estudi
 ## Comunidad usuaria
 **¿Quien usa el sistema?, edad, sexo, etc**
 
-Los usarios son estudiantes entre 18-27 años, con que consiste de 70% hombres y 30% mujeres. Generalmente los usarios estudian ingenieria. 
+Los usarios son estudiantes entre 18-27 años, con que consiste de 70% hombres y 30% mujeres. Generalmente los usarios estudian ingeniería. 
 
 ## Análisis de tareas
 **¿Qué hacen generalmente los usuarios en el sistema?
@@ -28,16 +28,17 @@ Los usarios son estudiantes entre 18-27 años, con que consiste de 70% hombres y
 
 El uso de el sistema es obligatorio para los estudiantes en la Universidad Técnica Federico Santa María. 
 
-En el comiencza de semstre los usuarios usan la sistema para administrar sus ramos, ver su horario personal y ver el horario para asignaturas cuando eligen ramos. A inscribir en una asignatura es fácil, pero el problema es sobre descubrir las asignaturas en SIGA, y tambien que ver sobre adapte a su horario y planes de carrera
+Al principo del semstre los usuarios usan la sistema para administrar sus ramos, ver su horario personal y ver el horario para asignaturas cuando eligen ramos. Inscribir asignaturas es fácil pero adaptar su horario, descubrir las asignaturas en SIGA y descubrir los planes de carrera es dificil.
 
-Además, la sistema es usa para ver su resultad por los asignaturas. 
+Además, la sistema es usa para ver su resultado por los asignaturas. 
 
-En el final de semstre Siga es usa para evaluar los asignaturas y profesores en la final de cada semestre.
+En el final de semstre se usa Siga para evaluar los asignaturas y profesores en la final de cada semestre.
 
-La página también es utilizada por la administración de la escuela para informar a los alumnos. La página para informar los estudiantes es antes de inciar sesíon, entonces nadie lee la informacion y es dificli obtener la informacíon
+La página también es utilizada por la administración de la escuela para informar a los alumnos. La página para noticias se ve antes de se inicia la sesíon. Esto hace que muchas de los usuarios no leen la información y por eso es dificil obtener la información.  
 
-Hay una página sobre ficha personal, donde se pueden actualizar su información personal a la escuela. La página es facil a descubir, pero a cambiar algo información es difícil porque no tenemos autoridad.
-Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, entonces a usar el sistema es mas dificil.
+Hay una página sobre ficha personal, donde se pueden actualizar su información personal a la escuela. Es facil descubir la pagina, pero cambiar algúna información es difícil porque los usuarios, sea los alumnos, no tienen autoridad para hacer cambios. Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, entonces usar el sistema es mas dificil.
+
+En general la sistema es dificil entender, por que falta apoyo al usuario. Esta apoyo podría ser información que indica los funciónes con un breve explicación. 
 
 ## Análisis de datos
 **¿Qué información muestra el sistema?
@@ -83,7 +84,7 @@ Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina i
     Esta información debe estar representada después de han iniciado una sesión y dentro de la sesión hay que tener la opción de volver a ver las noticias. 
 
 ### Ingreso
-El usario tiene dos ventanas para iniciar la sesión en Siga, como se muestra en  Figura 1. El sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Las maneras de ingresar a la cuenta viene de que antiguos y nuevos usarios no están en la misma servidor (?). Sería mejor tener solamente una manera de ingresar a la cuenta, que permite ambos antiguos y nuevos usuario ingresar a Siga. 
+El usario tiene dos ventanas para iniciar la sesión en Siga, como se muestra en  Figura 2. El sistema no explica cual es la diferencia entre las dos maneras de iniciar la sesión, y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda. Las maneras de ingresar a la cuenta viene de que antiguos y nuevos usarios no están en la misma servidor (?). Sería mejor tener solamente una manera de ingresar a la cuenta, que permite ambos antiguos y nuevos usuario ingresar a Siga. 
 
 
 ![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
@@ -93,11 +94,7 @@ El usario tiene dos ventanas para iniciar la sesión en Siga, como se muestra en
 Cuando el usuario inicia la sesión, el sistema muestra la página principal, como se muestra en  Figura 1. El sistema muestra el nombre del usario arriba por la izquierda. La pagina principal, el home page, no tiene algún nombre. Cada vez que el usario sigue con algún tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha. 
     Mejor sería usar algún referencia al mundo real como una casa al lado del texto "volver" y cambiar el "volver" al nombre de la pagína principal. 
 
-
-
-
-
-**Observación 5: Descripciones de opciones en el sistem: Compara Figura 4 a Figura 5**
+### Descripciones de opciones en el sistema: Compara Figura 4 a Figura 5**
 En el sistema, también hay descripciones de cada opción que se muestra cuando el índice está encima del enlace. Algunas descripciones ofrecen más información para cada opción que otras
     Sería mejor tener estas descripciones más visibles para ayudar al usuario entender la función de cada opción, o tener un icon con "?" este símbolo para indicar que hay más información
 
