@@ -155,7 +155,7 @@ En la primera página nos gustaría tener solo la nueva opción para iniciar una
 
 ### Pagina principal
 
-La página principal debe estar formada por tres partes; el borde superior, un menú en el lado izquierdo y un pequeño espacio para noticas.
+En la pagina principal hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. En está jerarquía, Usuario estará arriba en el borde superios a la derecha, y Noticias, Ramos y Solicitudes externos estarán en una jerarquía a la izquierda.
 
 ![Image_of_page_strukture](https://github.com/hvarg/INF322/blob/master/Estructura.png)
 
@@ -165,23 +165,9 @@ En el izquierdo del borde superior debe haber el logo de USM con SIGA, esto es p
 
 En el centro debe haber un motor de búsqueda para buscar cosas que desea encontrar en la página. Consistirá en un cuadro de búsqueda y un logo de lupa.
 
-En la derecha habrá una imagen con su nombre, que muestra en qué cuenta ha iniciado sesión. Esto también mostrará un menú haciendo clic en él. El menú contendrá opciones con respecto a su fecha personal, su horaria y su asginaturas. Al lado de su nombre y imagen, hay una icon de salir para cerrar sesión.
+En la derecha habrá una imagen con su nombre, que muestra en qué cuenta ha iniciado sesión. Esto también mostrará un menú haciendo un clic. El menú de usarios, contendrá opciones con respecto a su ficha personal, su becas y mas opciones que estan explicada en los puntos  abajo. (Al lado de su nombre y imagen, hay una icon de salir para cerrar sesión.)
 
-#### El menú
-
-El menú principal estaría en el lado izquierdo de la página. Solo debe contener el tema general, como inscripsion, resultados y peticion. Donde todos los temas deben tener un logo que propósito de los temas. Cuando haga clic en uno de los temas, aparecerán más opciones. Sin embargo, deberían aparecer en el área parte principal. También podría ser una frase corta bajo los subtemas para explicar allí propósito.
-
-El menú siempre debe estar abierto mostrando los temas principales. Esto es para obtener una continuación del diseño en la página. También facilitará la navegación sin tener que volver a la página de inicio cada vez.
-
-#### Parte principal
-
-En el centro de la página encontrarás la parte principal. Aquí recibirás noticias de la escuela o información sobre fechas importantes que debes recordar.
-
-
-### Jerarquía
-En la pagina principal hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. En está jerarquía, Usuario estará arriba a la derecha, y Noticias, Ramos y Solicitudes externos estarán en una jerarquía a la izquierda.
-
-#### Usuario  
+###### Usuario  
 * **Ficha Personal**
 Incluye la información que antes estaba en Ficha Personal y Correo y Credencial USM
 * **Plan Académico**
@@ -194,10 +180,19 @@ Los deudas a la universidad del usuario.
 Trato de pagar - economía. 
 * **Cerrar sesión (el logout)**  
 
-#### Noticias
+#### El menú
+
+El menú principal estaría en el lado izquierdo de la página. Solo debe contener el tema general, como ramos, solicitudes externos y noticias. Donde todos los temas deben tener un logo que propósito de los temas. Cuando haga clic en uno de los temas, aparecerán más opciones. Sin embargo, deberían aparecer en el área parte principal. También podría ser una frase corta bajo los subtemas para explicar allí propósito.
+
+El menú siempre debe estar abierto mostrando los temas principales. Esto es para obtener una continuación del diseño en la página. También facilitará la navegación sin tener que volver a la página de inicio cada vez.
+
+A abajo es una explicasjon de la nueva jerarquía para el menú principal, aqui habemos cambio opciones para tener una menu mas facil a entender. 
+
+##### Jerarquía
+###### Noticias
 Noticias relevantes para el usuario, cómo fechas para el semestre o notas ingresadas de evaluaciónes.  
 
-#### Ramos
+###### Ramos
 * **Busqueda de ramos**
 Incluyendo la funcionalidad/información que antes estaba en Horario Asignaturas y Planes de Carrera.
 Aquí hay que ver el horario de cada asignatura dictada el semestre actual y también ver el plan (cursos) de los semestres para cada carrera. 
@@ -206,7 +201,7 @@ Ver información sobre las asignaturas inscritas, comó las siglas, nombre del c
 * **Inscripción**
 Inscibirse en ramos, soló es posible durante el tiempo de inscripción. Necesita una explicación fuera del tiempo de inscripción. Es importante que el usuario puede elegir cuales días quiere tener clases, por ejemplo que cada día tiene un checkbox y desde allí solo muestra los ramos que no tiene clases estas días. 
 
-#### Solicitudes externos
+###### Solicitudes externos
 * **Certificados**  
 * **Cambio de mención**  
 Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización. 
@@ -214,7 +209,10 @@ Cambio de Mención/Especialización, dónde el alumno puede cambiar especializac
 * **Matrícula Sin Ramos**
 * **Autorización académica**
 
+#### Parte principal
 
+En el centro de la página encontrarás la parte principal. Auqi va a abrir los paginas que su han hecho un clic en el menú.
+Tambien van a recibir noticias de la escuela o información sobre fechas importantes que debes recorda, cuando hay algonas.
 
 ## Definición de tareas
 **Tareas a cambiar, como funcionaba antes, como funciona ahora.**
