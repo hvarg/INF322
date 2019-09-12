@@ -150,24 +150,24 @@ Debe ser una opción para notificar al usuario que la sesión estaría perdida p
 ## Propuesta
 **Seleccionar que partes de la interfaz podemos mejorar.**
 
-### Pagina primera para iniciar sesión
+### primera pagina  para iniciar sesión
 En la primera página nos gustaría tener solo la nueva opción para iniciar una sesión. Esto debe estar en el medio de la página para que sea fácil acceder desde la computadora y el teléfono.
 
 ### Pagina principal
 
-En la pagina principal hay demasiado opciónes que se puede reorganizar en una nueva jerarquía. En está jerarquía, Usuario estará arriba en el borde superios a la derecha, y Noticias, Ramos y Solicitudes externos estarán en una jerarquía a la izquierda.
+En la pagina principal hay demasiadas opciónes que se pueden reorganizar en una nueva jerarquía. En está jerarquía, Usuario estará arriba en el borde superior a la derecha, y Noticias, Ramos y Solicitudes externos estarán en una jerarquía a la izquierda.
 
 ![Image_of_page_strukture](https://github.com/hvarg/INF322/blob/master/Estructura.png)
 
 #### El borde superior
 
-En el izquierdo del borde superior debe haber el logo de USM con SIGA, esto es para mostrar la página en la que se encuentra. Al lado del logotipo debe haber un ícono de una casa para ir a la pagina principal. Aun cuando estás en la página principal, tiene una continuidad en el borde.
+En la izquierda del borde superior debe haber el logo de USM con SIGA, esto es para mostrar la página en la que se encuentra. Al lado del logo debe haber un ícono de una casa para ir a la pagina principal. Aún cuando estás en la página principal, tiene una continuidad en el borde.
 
-En el centro debe haber un motor de búsqueda para buscar cosas que desea encontrar en la página. Consistirá en un cuadro de búsqueda y un logo de lupa.
+En el centro debe haber un motor de busca para buscar cosas que desea encontrar en la página. Consistirá en un cuadro de busca y un logo de lupa.
 
 En la derecha habrá una imagen con su nombre, que muestra en qué cuenta ha iniciado sesión. Esto también mostrará un menú haciendo un clic. El menú de usarios, contendrá opciones con respecto a su ficha personal, su becas y mas opciones que estan explicada en los puntos  abajo. (Al lado de su nombre y imagen, hay una icon de salir para cerrar sesión.)
 
-###### Usuario  
+##### Usuario  
 * **Ficha Personal**
 Incluye la información que antes estaba en Ficha Personal y Correo y Credencial USM
 * **Plan Académico**
@@ -182,11 +182,11 @@ Trato de pagar - economía.
 
 #### El menú
 
-El menú principal estaría en el lado izquierdo de la página. Solo debe contener el tema general, como ramos, solicitudes externos y noticias. Donde todos los temas deben tener un logo que propósito de los temas. Cuando haga clic en uno de los temas, aparecerán más opciones. Sin embargo, deberían aparecer en el área parte principal. También podría ser una frase corta bajo los subtemas para explicar allí propósito.
+El menú principal estaría en el lado izquierdo de la página. Solo debe contener el tema general, como ramos, solicitudes externos y noticias. Donde todos los temas deben tener un logo de su propósito. Cuando haga clic en uno de los temas, aparecerán más opciones. Sin embargo, deberían aparecer en el área central. También podría ser una frase corta bajo los subtemas para explicar allí propósito.
 
 El menú siempre debe estar abierto mostrando los temas principales. Esto es para obtener una continuación del diseño en la página. También facilitará la navegación sin tener que volver a la página de inicio cada vez.
 
-A abajo es una explicasjon de la nueva jerarquía para el menú principal, aqui habemos cambio opciones para tener una menu mas facil a entender. 
+Abajo es una explicasion de la nueva jerarquía para el menú principal, aqui habemos cambiado opciones para tener un menú mas facil a entender. 
 
 ##### Jerarquía
 ###### Noticias
@@ -211,8 +211,8 @@ Cambio de Mención/Especialización, dónde el alumno puede cambiar especializac
 
 #### Parte principal
 
-En el centro de la página encontrarás la parte principal. Auqi va a abrir los paginas que su han hecho un clic en el menú.
-Tambien van a recibir noticias de la escuela o información sobre fechas importantes que debes recorda, cuando hay algonas.
+En el centro de la página encontrarás la parte principal. Aquí va a abrir los paginas en que el usuario ha hecho un clic en el menú.
+Tambien van a recibir noticias de la escuela o información sobre fechas importantes que debes recordar, cuando hay algonas.
 
 ## Definición de tareas
 **Tareas a cambiar, como funcionaba antes, como funciona ahora.**
