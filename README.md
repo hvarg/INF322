@@ -15,7 +15,7 @@
 ## Concepto del producto
 **Responder a la ¿Para qué fue creado el sistema?**
 
-SIGA es un sistema creado para facilitar la administración de ramos para estudiantes en la USM. Esto para que los alumnos en línea puedan gestionar cosas como registrar su propio asignaturas, ver sus resultados y su horario.
+SIGA es un sistema creado para facilitar la administración de ramos para estudiantes en la Universidad Técnica Federico Santa María (UTFSM). Esto para que los alumnos en línea puedan gestionar cosas como registrar su propio asignaturas, ver sus resultados y su horario.
 
 ## Comunidad usuaria
 **¿Quien usa el sistema?, edad, sexo, etc**
@@ -26,7 +26,7 @@ Los usarios son estudiantes entre 18-27 años, con que consiste de 70% hombres y
 **¿Qué hacen generalmente los usuarios en el sistema?
 ¿Qué es fácil/difícil de hacer?**
 
-El uso de el sistema es obligatorio para los estudiantes en la Universidad Técnica Federico Santa María. 
+El uso de el sistema es obligatorio para los estudiantes en UTFSM. 
 
 Al principo del semstre los usuarios usan la sistema para administrar sus ramos, ver su horario personal y ver el horario para asignaturas cuando eligen ramos. Inscribir asignaturas es fácil pero adaptar su horario, descubrir las asignaturas en SIGA y descubrir los planes de carrera es dificil.
 
