@@ -52,16 +52,7 @@ La información que el sistema muestra en la pagina principal se indica en Figur
 Beca de alimentación: Ver los becas del usuario  
 Certificados: Los certificados deberán ser solicitados personalmente en Oficina Asuntos Internacionales.  
 Resumen académico: Ver notas de los cursos y puntos aprobadas.  
-Solicitudes Académicas y Peticiones: Hacer cambios en la carrera y administrar cursos no aprobados.  
-    - Cambio de carrera  
-    - Equivalencias de asignaturas USM (Convalidaciones)  
-    - Eximición de Ed. Física y Deporte  
-    - Obtención de Fecha de Grado de Bachiller  
-    - Obtención de Fecha de Grado de Licenciado  
-    - Obtención de Fecha y Calidad de Egreso  
-    - Oportunidades. Terceras...  
-    - Reconocer cursos de otras entidades educacionales  
-    - Retiro Definitivo  
+Solicitudes Académicas y Peticiones: Hacer cambios en la carrera y administrar cursos no aprobados.   
 Planes de carrera: Ver el plan (cursos) de los semestres para cada carrera.  
 Avance curricular: Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes.   
 Inscripción: Inscibirse en ramos, soló es posible durante el tiempo de inscripción.  
