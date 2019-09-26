@@ -119,7 +119,12 @@ Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, 
 
 * Cambiar contraseña
 
-No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?" **Aquí debemos poner capturas de pantalla para cada paso necesario para cambiar contraseña**
+No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?", cómo muestra Figura 8. Desde allá, hay que presionar "https://pasaporte.usm.cl/id/", y esto te lleva al interfaz en Figura 9 dónde tienes que presionar "Cambiar Contraseña". Presionar esto, te lleva al interfaz de Figura 10, dónde tienes que inscribir tus credenciales. Cuando lo has hecho, finalmente llevas al paso en Figura 11 donde puedes cambiar la contraseña. 
+
+FIGURA 8 para cambiar contraseña
+FIGURA 9 para cambiar contraseña
+FIGURA 10 para cambiar contraseña
+FIGURA 11 para cambiar contraseña
 
 * Botón de volver
 
