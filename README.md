@@ -79,11 +79,6 @@ Consulta de Pagarés - algo sobre dinero.
 **¿Qué queremos cambiar? 
 ¿Por qué?**
 
-
-La página principal debe reestructurarse. Debe haber un menú en el que pueda cambiar su configuración personal para siga, su información personal y poder cerrar sesión. También debería haber opciones de navegación como hay ahora, pero algunos temas deberían fusionarse. Como los que conciernen a tus resultados académicos.
-
-Además, debería haber un cuadro con enlaces a páginas como aula que se usa para dar información en casi todos los cursos.
-
 ### Noticias
 Cuando el usuario entra https://siga.usm.cl/pag/, la sistema muestra la pagina inicial, como se muestra en Figura 2. En este página hay informacion sobre el sistema, informacion de los que pueden contactar sobre el sistema y información sobre la universidad. Cuando se inicie la sesión en SIGA, no es posible buscar esta informacion de nuevo.
     Esta información debe estar representada después de han iniciado una sesión y dentro de la sesión hay que tener la opción de volver a ver las noticias. 
