@@ -165,7 +165,7 @@ Trato de pagar - economía.
 
 El menú principal estaría en el lado izquierdo de la página. Solo debe contener el tema general, como ramos, solicitudes externos y noticias. Donde todos los temas deben tener un logo de su propósito. Cuando haga clic en uno de los temas, aparecerán más opciones. Sin embargo, deberían aparecer en el área central. También podría ser una frase corta bajo los subtemas para explicar allí propósito.
 
-El menú siempre debe estar abierto mostrando los temas principales. Esto es para obtener una continuación del diseño en la página. También facilitará la navegación sin tener que volver a la página de inicio cada vez.
+El menú siempre debe estar abierto mostrando los temas principales. Tambien la opcion que han entrada, va estar en una otro color para indicar donde estan. Esto es para facilitar y obtener una continuación del diseño en la página. También facilitará la navegación sin tener que volver a la página de inicio cada vez.
 
 Abajo es una explicasion de la nueva jerarquía para el menú principal, aqui habemos cambiado opciones para tener un menú mas facil a entender. 
 
