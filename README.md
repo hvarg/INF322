@@ -112,9 +112,9 @@ FIGURA 9 para cambiar contraseña
 FIGURA 10 para cambiar contraseña
 FIGURA 11 para cambiar contraseña
 
-* Información
+* Noticias
 
-La informacion sobre la escuela debe venir despues de inciar una sesción. Hacer un cuadro de información a la izquierda para las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
+La informacion sobre la escuela y noticias solamente se puede leer cuando ya no has iniciado una sesión, que hace que nadie lo lee. Las noticias y información debe venir despues de inciar una sesción. Las noticias debe estar en una cuadra en el nueva menu a la izuierda, donde el menu contiene las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
 
 * Horario Asignaturas
 
