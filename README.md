@@ -97,13 +97,13 @@ En el sistema, también hay descripciones de cada opción que se muestra cuando 
 ***Figura 5: Descripción más informativa***
 ![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionmasUtil.png)
 
-* Inscripción
+### Inscripción
 
 Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, el sistema no indica al usario que no es posible. Mejor sería si la sistema tuviera algún tipo de indicación si esta fuera del tiempo para hacer incribciónes para mejorar la visibilidad del estado del sistema. Una opción sería usar un reloj con un texto diciendo "XX dias hasta que es posible hacer inscripciónes". 
 
 ![Image of siga_inscripcion](https://github.com/hvarg/INF322/blob/master/siga_incripcion.png)
 
-* Cambiar contraseña
+### Cambiar contraseña
 
 No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?", cómo muestra Figura 8. Desde allá, hay que presionar "https://pasaporte.usm.cl/id/", y esto te lleva al interfaz en Figura 9 dónde tienes que presionar "Cambiar Contraseña". Presionar esto, te lleva al interfaz de Figura 10, dónde tienes que inscribir tus credenciales. Cuando lo has hecho, finalmente llevas al paso en Figura 11 donde puedes cambiar la contraseña. 
 
@@ -112,19 +112,19 @@ FIGURA 9 para cambiar contraseña
 FIGURA 10 para cambiar contraseña
 FIGURA 11 para cambiar contraseña
 
-* Noticias
+### Noticias
 
 La informacion sobre la escuela y noticias solamente se puede leer cuando ya no has iniciado una sesión, que hace que nadie lo lee. Las noticias y información debe venir despues de inciar una sesción. Las noticias debe estar en una cuadra en el nueva menu a la izuierda, donde el menu contiene las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
 
-* Horario Asignaturas
+### Horario Asignaturas
 
 Aquí nos falta un botón de búsqueda para buscar asignaturas que sobre algo. Obtenemos demasiada información, no hay necesidad de saber quién es el profesor o cupos para cada curso. Cuando encontremos el curso que nos gusta, deberíamos poder hacer clic en él para obtener más información en una cuadro a la izquierda en la misma pagina. Aquí está la información sobre el profesor y el horario puede estar. También debe haber un *link* con la dirección de correo electrónico al profesor.
 
-* Seguridad de ficha personal
+### Seguridad de ficha personal
 
 Hasta este punto es muy fácil a cambiar fichas personales y verlos cuando se tenga aceso a una cuenta. Se debe requiere al usuario confirmar su identidad cuando quiera ver o cambiar las fichas.  En cualquier otro caso, se debe ocultar esta información.
 
-* Notificación de perdir sesión
+### Notificación de perdir sesión
 
 Debe ser una opción para notificar al usuario que la sesión estaría perdida por una falta de actividad para que el usuario confirme su presencia y continua la sesión sin entrar su información de nuevo.
 
