@@ -104,13 +104,6 @@ En el sistema, también hay descripciones de cada opción que se muestra cuando 
 ***Figura 5: Descripción más informativa***
 ![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionmasUtil.png)
 
-**Observación 6: Opciones que no sirven al usuario estan disponible: Aver Figura 6**
-Aveces hay opciones disponibles para elegir, pero cuando se haga clic el próximo página vuelve un noticia que el alumno no tiene aceso a esta opción por tal razón o otra
-    Sería mejor que el usuario no tiene la habilidad de elegir estas opciones y la razón se puede ser mostrado con la descripción
-
-***Figura 6***
-![Imagen_de_Página_Inutil](https://github.com/hvarg/INF322/blob/master/SIGA_Paginanosirve.png)
-
 * Inscripción
 
 Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, el sistema no indica al usario que no es posible. Mejor sería si la sistema tuviera algún tipo de indicación si esta fuera del tiempo para hacer incribciónes para mejorar la visibilidad del estado del sistema. Una opción sería usar un reloj con un texto diciendo "XX dias hasta que es posible hacer inscripciónes". 
