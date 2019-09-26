@@ -90,6 +90,8 @@ Cuando el usuario inicia la sesión, el sistema muestra la página principal, co
 
 Si no se usa el botón *volver*, se le desconecta de la página y hay que inicializar una nueva sesión. Se espera que pueda ir y venir en una página, por eso puede ser una experiencia irritante al usar el sistema. 
 
+P: Mejor sería usar alguna referencia al mundo real, como una casa, al lado del texto "volver" y cambiar el "volver" al nombre de la pagína principal. En este manera, sería más fácil para el usuario para entender adonde en la página los butones le dirigen.
+
 ### Descripciones de opciones en el sistema: Compara Figura 4 a Figura 5**
 En el sistema, también hay descripciones de cada opción que se muestra cuando el índice está encima del enlace. Algunas descripciones ofrecen más información para cada opción que otras. Debe cambiar este aspecto del sistema porque no le informa al usuario consitentemente la función de cada opción del sistema.
 
@@ -114,8 +116,8 @@ FIGURA 9 para cambiar contraseña
 FIGURA 10 para cambiar contraseña
 FIGURA 11 para cambiar contraseña
 
-### P: Noticias
-Las noticias y información debe venir despues de inciar una sesción. Las noticias debe estar en una cuadra en el nueva menu a la izuierda, donde el menu contiene las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
+### Noticias
+P: Las noticias y información debe venir despues de inciar una sesción. Las noticias debe estar en una cuadra en el nueva menu a la izuierda, donde el menu contiene las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
 
 ### Horario Asignaturas
 En esta parte del SIGA, nos falta búsquedor de asignaturas. Además, cuando se busque asignaturas, se obtenga demasiado información (esto es el profesor o cupos para cada curso).  Esta cantidad de información además puede confudir al usuario o causar demoras inecesarias en el proceso de buscar
@@ -125,8 +127,12 @@ P: Cuando se encuentra el curso que nos gusta, se debería hacer clic en la resu
 ### Demasiado visibilidad de ficha personal
 Es demasiado fácil a cambiar fichas personales y verlos cuando se tenga aceso a una cuenta.
 
+P: El SIGA debe notificar al usuario que su sesión estaría perdida por una falta de actividad para que el usuario pueda confirmar su presencia y continua la sesión y no pedir la sesión y entrar su información de nuevo.
+
 ### Falta de entender límites temporales de sistem
 El usuario puede pedir su sesión, pero no hay información del límite del tiempo que queda al usuario hasta se le pierde su sesión por una falta de actividad.  Entonces, puede irritar al usuario cuando tiene que entrar su información de nuevo.
+
+P: El SIGA debe notificar al usuario que su sesión estaría perdida por una falta de actividad para que el usuario pueda confirmar su presencia y continua la sesión y no pedir la sesión y entrar su información de nuevo.
 
 ## Propuesta
 **Seleccionar que partes de la interfaz podemos mejorar.**
@@ -197,19 +203,6 @@ Cambio de Mención/Especialización, dónde el alumno puede cambiar especializac
 
 En el centro de la página encontrarás la parte principal. Aquí va a abrir los paginas en que el usuario ha hecho un clic en el menú.
 Tambien van a recibir noticias de la escuela o información sobre fechas importantes que debes recordar, cuando hay algonas.
-
-#### Descripciones consistentes
-Sería mejor tener estas descripciones más visibles para ayudar al usuario entender la función de cada opción, o tener un icon con "?" este símbolo para indicar que hay más información
-
-#### Notificación de tiempo para sesión
-El SIGA debe notificar al usuario que su sesión estaría perdida por una falta de actividad para que el usuario pueda confirmar su presencia y continua la sesión y no pedir la sesión y entrar su información de nuevo.
-
-#### Obstáculos a la visibilidad de ficha
-Se debe requerer al usuario confirmar su identidad cuando quiera ver o cambiar las fichas.  En cualquier otro caso, se debe ocultar esta información.
-
-#### Butones con funcionalidad más clara
-Mejor sería usar alguna referencia al mundo real, como una casa, al lado del texto "volver" y cambiar el "volver" al nombre de la pagína principal. En este manera, sería más fácil para el usuario para entender adonde en la página los butones le dirigen.
-
 
 ## Definición de tareas
 **Tareas a cambiar, como funcionaba antes, como funciona ahora.**
