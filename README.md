@@ -144,7 +144,7 @@ En la pagina principal hay demasiadas opciónes que se pueden reorganizar en una
 
 En la izquierda del borde superior debe haber el logo de USM con SIGA, esto es para mostrar la página en la que se encuentra. Al lado del logo debe haber un ícono de una casa para ir a la pagina principal. Aún cuando estás en la página principal, tiene una continuidad en el borde.
 
-En el centro debe haber un motor de busca para buscar cosas que desea encontrar en la página. Consistirá en un cuadro de busca y un logo de lupa.
+En el centro debe haber un motor de busca para buscar cosas que desea encontrar en la página. Consistirá en un cuadro de busca y un logo de lupa. Cuando buscas por ejemplo "inscripción", el menú a la izquierda va a indicar donde estas, porque el titulo "Ramos" va a abrirse y el titulo "Inscripción" toma  otra color para indicar que ahora estás en "Inscripción". 
 
 En la derecha habrá una imagen con su nombre, que muestra en qué cuenta ha iniciado sesión. Esto también mostrará un menú haciendo un clic. El menú de usarios, contendrá opciones con respecto a su ficha personal, su becas y mas opciones que estan explicada en los puntos  abajo. (Al lado de su nombre y imagen, hay una icon de salir para cerrar sesión.)
 
