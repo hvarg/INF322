@@ -111,10 +111,18 @@ P: Mejor sería si la sistema tuviera algún tipo de indicación si esta fuera d
 ### Cambiar contraseña
 No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?", cómo muestra Figura 8. Desde allá, hay que presionar "https://pasaporte.usm.cl/id/", y esto te lleva al interfaz en Figura 9 dónde tienes que presionar "Cambiar Contraseña". Presionar esto, te lleva al interfaz de Figura 10, dónde tienes que inscribir tus credenciales. Cuando lo has hecho, finalmente llevas al paso en Figura 11 donde puedes cambiar la contraseña. 
 
-FIGURA 8 para cambiar contraseña
-FIGURA 9 para cambiar contraseña
-FIGURA 10 para cambiar contraseña
-FIGURA 11 para cambiar contraseña
+***Figura 8: Primera pagina para cambiar contraseña***
+![Image of_contrasena_1](https://github.com/hvarg/INF322/blob/master/contrasena_1.png)
+
+***Figura 9: Segunda pagina para cambiar contraseña***
+![Image of_contrasena_2](https://github.com/hvarg/INF322/blob/master/contrasena_2.png)
+
+***Figura 10: Tercera pagina para cambiar contraseña***
+![Image of_contrasena_3](https://github.com/hvarg/INF322/blob/master/contrasena_3.png)
+
+***Figura 11: Cuarto pagina para cambiar contraseña***
+![Image of_contrasena_4](https://github.com/hvarg/INF322/blob/master/contrasena_4.png)
+
 
 ### Noticias
 P: Las noticias y información debe venir despues de inciar una sesción. Las noticias debe estar en una cuadra en el nueva menu a la izuierda, donde el menu contiene las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
@@ -209,6 +217,10 @@ Tambien van a recibir noticias de la escuela o información sobre fechas importa
 
 ## Diseño
 **Nada aún**
+
+
+![Image_of_propuesta_1](https://github.com/hvarg/INF322/blob/master/propuesta_1.jpg)
+![Image_of_propuesta_2](https://github.com/hvarg/INF322/blob/master/propuesta_2.jpg)
 
 ## Evaluación
 **Nada aún**
