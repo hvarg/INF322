@@ -219,8 +219,8 @@ Tambien van a recibir noticias de la escuela o información sobre fechas importa
 **Nada aún**
 
 
-![Image_of_propuesta_1](https://github.com/hvarg/INF322/blob/master/propuesta_1.jpg)
-![Image_of_propuesta_2](https://github.com/hvarg/INF322/blob/master/propuesta_2.jpg)
+![Image_of_propuesta_1](https://github.com/hvarg/INF322/blob/master/propuesta_1.jpeg)
+![Image_of_propuesta_2](https://github.com/hvarg/INF322/blob/master/propuesta_2.jpeg)
 
 ## Evaluación
 **Nada aún**
