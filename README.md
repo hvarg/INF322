@@ -52,7 +52,7 @@ En general la sistema es dificil entender, por que no ofrece mucho apoyo al usua
 ¿Cual puede ser editada?**
 La información que el sistema muestra en la pagina principal se indica en Figura 1. 
 
-![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/Siga_First_Page.png)
+![Image of pagina_principal](https://github.com/hvarg/INF322/blob/master/assets/Siga_First_Page.png)
  ***Figura 1*** 
  
 Beca de alimentación: Ver las becas del usuario  
@@ -82,7 +82,7 @@ Cuando el usuario entra https://siga.usm.cl/pag/, el sistema muestra la pagina i
 ### Ingreso
 El usario tiene dos ventanas para iniciar la sesión en SIGA, como se muestra en  Figura 2. El sistema no explica la diferencia entre las dos maneras de iniciar la sesión (esto es las maneras de ingresar a la cuenta viene de que antiguos y nuevos usarios no están en la misma servidor), y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda.
 
-![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/Siga_pagina_inicial.png)
+![Image of pagina_inicial](https://github.com/hvarg/INF322/blob/master/assets/Siga_pagina_inicial.png)
 ***Figura 2***
 
 ### Navigación desorganizada - Maybe change the photo to show the volver
@@ -96,32 +96,32 @@ P: Mejor sería usar alguna referencia al mundo real, como una casa, al lado del
 En el sistema, también hay descripciones de cada opción que se muestra cuando el índice está encima del enlace. Algunas descripciones ofrecen más información para cada opción que otras. Debe cambiar este aspecto del sistema porque no le informa al usuario consitentemente la función de cada opción del sistema.
 
 ***Figura 4: Descripción más breve y redundante***
-![Imagen_de_Descripción_Breve](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionBreve.png)
+![Imagen_de_Descripción_Breve](https://github.com/hvarg/INF322/blob/master/assets/SIGA_descriOpcionBreve.png)
 
 ***Figura 5: Descripción más informativa***
-![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/SIGA_descriOpcionmasUtil.png)
+![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/assets/SIGA_descriOpcionmasUtil.png)
 
 ### Inscripción
 Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, el sistema no indica al usario que no es posible. Se necesita cambiar este aspecto del sistema porque sin esta información puede confudir y molestar al usuario.
 
 P: Mejor sería si la sistema tuviera algún tipo de indicación si esta fuera del tiempo para hacer incribciónes para mejorar la visibilidad del estado del sistema. Una opción sería usar un reloj con un texto diciendo "XX dias hasta que es posible hacer inscripciónes".
 
-![Image of siga_inscripcion](https://github.com/hvarg/INF322/blob/master/siga_incripcion.png)
+![Image of siga_inscripcion](https://github.com/hvarg/INF322/blob/master/assets/siga_incripcion.png)
 
 ### Cambiar contraseña
 No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar contraseña hay que presionar "¿problemas con su contraseña?", cómo muestra Figura 8. Desde allá, hay que presionar "https://pasaporte.usm.cl/id/", y esto te lleva al interfaz en Figura 9 dónde tienes que presionar "Cambiar Contraseña". Presionar esto, te lleva al interfaz de Figura 10, dónde tienes que inscribir tus credenciales. Cuando lo has hecho, finalmente llevas al paso en Figura 11 donde puedes cambiar la contraseña. 
 
 ***Figura 8: Primera pagina para cambiar contraseña***
-![Image of_contrasena_1](https://github.com/hvarg/INF322/blob/master/contrasena_1.png)
+![Image of_contrasena_1](https://github.com/hvarg/INF322/blob/master/assets/contrasena_1.png)
 
 ***Figura 9: Segunda pagina para cambiar contraseña***
-![Image of_contrasena_2](https://github.com/hvarg/INF322/blob/master/contrasena_2.png)
+![Image of_contrasena_2](https://github.com/hvarg/INF322/blob/master/assets/contrasena_2.png)
 
 ***Figura 10: Tercera pagina para cambiar contraseña***
-![Image of_contrasena_3](https://github.com/hvarg/INF322/blob/master/contrasena_3.png)
+![Image of_contrasena_3](https://github.com/hvarg/INF322/blob/master/assets/contrasena_3.png)
 
 ***Figura 11: Cuarto pagina para cambiar contraseña***
-![Image of_contrasena_4](https://github.com/hvarg/INF322/blob/master/contrasena_4.png)
+![Image of_contrasena_4](https://github.com/hvarg/INF322/blob/master/assets/contrasena_4.png)
 
 
 ### Noticias
@@ -152,7 +152,7 @@ En la primera página nos gustaría tener solo una opción para iniciar una sesi
 
 En la pagina principal hay demasiadas opciónes que se pueden reorganizar en una nueva jerarquía. El Usuario estará arriba en el borde superior a la derecha, y opciones como Noticias, Ramos y Solicitudes externos estarán en una jerarquía a la izquierda.
 
-![Image_of_page_strukture](https://github.com/hvarg/INF322/blob/master/Estructura.png)
+![Image_of_page_strukture](https://github.com/hvarg/INF322/blob/master/assets/Estructura.png)
 
 #### El borde superior
 
@@ -219,8 +219,8 @@ Tambien van a recibir noticias de la escuela o información sobre fechas importa
 **Nada aún**
 
 
-![Image_of_propuesta_1](https://github.com/hvarg/INF322/blob/master/propuesta_1.jpeg)
-![Image_of_propuesta_2](https://github.com/hvarg/INF322/blob/master/propuesta_2.jpeg)
+![Image_of_propuesta_1](https://github.com/hvarg/INF322/blob/master/assets/propuesta_1.jpeg)
+![Image_of_propuesta_2](https://github.com/hvarg/INF322/blob/master/assets/propuesta_2.jpeg)
 
 ## Evaluación
 **Nada aún**
