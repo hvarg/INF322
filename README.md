@@ -1,5 +1,11 @@
 # Evaluación interfaz: SIGA (Alumnos)
 
+Los objetivos de este escrito son los siguientes:
+1.	Presentar una evaluación de las interfaces presentes en el sistema **SIGA version alumnos**.
+2.	Con base en dicha evaluación, proponer mejoras a las interfaces para facilitar la utilización del sistema.
+3.	Definir componentes que llevarán a cabo estas mejoras.
+4.	Evaluar los componentes creados.
+
 ## Indice
 
 1. [Concepto del producto](#concepto-del-producto)
@@ -13,14 +19,26 @@
 9. [Evaluación](#evaluacion)
 
 ## Concepto del producto
-**Responder a la ¿Para qué fue creado el sistema?**
+SIGA es un sistema de información creado por la Universidad Técnica Federico Santa María (UTFSM) para gestionar notas, asignaturas, deudas, certificados, entre otros.
 
-SIGA es un sistema creado para facilitar la administración de ramos para estudiantes en la Universidad Técnica Federico Santa María (UTFSM). Esto para que los alumnos en línea puedan gestionar cosas como registrar su propio asignaturas, ver sus resultados y su horario.
+SIGA define su mision como:
+
+> Contribuir al desarrollo de las Tecnologías de Información con el fin de responder a las necesidades de la comunidad universitaria, a través del desarrollo de sistemas, que permitan mejorar la calidad de los servicios que brinda nuestra institución.
+
+Y su mision como:
+> La comunidad universitaria tendrá acceso a servicios de Tecnologías de Información con calidad, rapidez, seguridad y sostenibilidad en el tiempo lo que contribuye al cumplimiento de la misión de la universidad.
+
+Más información puede ser encontrada en la sección *¿Qué es SIGA?* de [siga.usm.cl](https://siga.usm.cl//pag/)
 
 ## Comunidad usuaria
-**¿Quien usa el sistema?, edad, sexo, etc**
 
-Los usarios son estudiantes entre 18-27 años los que consisten de 70% hombres y 30% mujeres. Generalmente los usarios estudian una forma de ingeniería. 
+Podemos clasificar a los usuarios que tienen acceso al sistema SIGA en dos grupos: Profesores y Alumnos.
+
+Los usuarios profesores tienen entre 25-65 años, generalmente ingenieros y mayoritariamente hombres.
+
+Los usuarios alumnos tienen entre 18-27 años, estudian algún tipo de ingeniería y se estima que un 70% de ellos son hombres y 30% mujeres.
+
+En esta evaluación nos centraremos en los usuarios Alumnos y como mejorar las interfaces que se les presentan a estos.
 
 ## Análisis de tareas
 **¿Qué hacen generalmente los usuarios en el sistema?
