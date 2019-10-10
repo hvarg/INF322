@@ -62,7 +62,7 @@ Revisar el avance curricular para ver las notas obtenidas en cada asignatura y r
 La administración de la UTFSM usa SIGA para informar a los alumnos, a través de la página principal (que no requiere inicio de sesión), dónde se pueden encontrar noticias tanto de actualización de los reglamentos, como de plazos importantes. Pero depende de la pantalla del usuario si alcanza o no a visualizar esta información (en algunos casos sólo se ve el título o una parte de la primera sección), es por ello que se dificulta la lectura y obtención de la información por parte de los **alumnos**, puesto que no suelen percatarse de que hay noticias y/o nuevos cambios.  
 
 ### Conclusión de Usabilidad
-En general la sistema es dificil entender, por que no ofrece mucho apoyo al usuario. Este apoyo podría ser información que indica las funciónes con un breve explicación y mejor organización para facilitar navegar el sistema y sus servicios.
+En general la sistema es díficil entender, porque no ofrece mucho apoyo al usuario. Por lo que para mejorar este aspecto, se podría agregar **información** que indique las funciónes de cada sección a través de una breve explicación y una **mejor organización** del contenido para facilitar la navegación por el sistema y sus servicios.
 
 ## Análisis de datos
 **¿Qué información muestra el sistema?
@@ -81,7 +81,7 @@ Planes de carrera: Ver el plan (cursos) de los semestres para cada carrera.
 Avance curricular: Ver los asignaturas inscritas del semestre y las notas de las evaluaciónes.   
 Inscripción: Inscibirse en ramos (ojo: solo es posible durante el tiempo de inscripción).  
 Cambio de mención: Cambio de Mención/Especialización, dónde el alumno puede cambiar especialización.  
-Postulación Intercambio: Enviar su solicitud para ir al intercambio.  
+Postulación Intercambio: Enviar su solicitud para irse de intercambio.  
 Horario asignaturas: Ver el horario de cada asignatura dictada el semestre actual.   
 Asignaturas inscritas - Ver información sobre las asignaturas inscritas, comó las siglas, nombre del curso, número de créditos, nota final, evaluaciónes y el horario de los asignaturas.  
 Correo y Credencial USM - ver su RUT, nombre, correo USM y código QR Credencial.  
@@ -95,7 +95,8 @@ Consulta de Pagarés - Compromisos del usuario para pagar en una fecha más tard
 ¿Por qué?**
 
 ### Noticias
-Cuando el usuario entra https://siga.usm.cl/pag/, el sistema muestra la pagina inicial, como se muestra en Figura 2. En este página hay informacion sobre el sistema, información de los que se puedan contactar sobre el sistema y información sobre la universidad. Cuando se inicie la sesión en SIGA, no es posible buscar esta información de nuevo.  Entonces información clave al usuario no es muy acesible durante su uso entero del SIGA.
+Cuando el usuario entra https://siga.usm.cl/pag/, el sistema muestra la pagina inicial, como se muestra en Figura 2. En esta página hay información sobre el sistema, medios de contacto y sobre la universidad.
+Cuando se inicie la sesión en SIGA, no es posible buscar esta información de nuevo.  Entonces información clave al usuario no es muy acesible durante su uso entero del SIGA.
 
 ### Ingreso
 El usario tiene dos ventanas para iniciar la sesión en SIGA, como se muestra en  Figura 2. El sistema no explica la diferencia entre las dos maneras de iniciar la sesión (esto es las maneras de ingresar a la cuenta viene de que antiguos y nuevos usarios no están en la misma servidor), y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda.
