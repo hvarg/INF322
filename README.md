@@ -21,11 +21,11 @@ Los objetivos de este escrito son los siguientes:
 ## Concepto del producto
 SIGA es un sistema de información creado por la Universidad Técnica Federico Santa María (UTFSM) para gestionar notas, asignaturas, deudas, certificados, entre otros.
 
-SIGA define su mision como:
+SIGA define su misión como:
 
 > Contribuir al desarrollo de las Tecnologías de Información con el fin de responder a las necesidades de la comunidad universitaria, a través del desarrollo de sistemas, que permitan mejorar la calidad de los servicios que brinda nuestra institución.
 
-Y su mision como:
+Y su misión como:
 > La comunidad universitaria tendrá acceso a servicios de Tecnologías de Información con calidad, rapidez, seguridad y sostenibilidad en el tiempo lo que contribuye al cumplimiento de la misión de la universidad.
 
 Más información puede ser encontrada en la sección *¿Qué es SIGA?* de [siga.usm.cl](https://siga.usm.cl//pag/)
@@ -48,18 +48,18 @@ En esta evaluación nos centraremos en los usuarios Alumnos y como mejorar las i
 El uso de el sistema es obligatorio para los estudiantes en UTFSM. 
 
 **uso al principio del semestre**
-Administrar sus ramos, ver su horario personal y ver el horario de asignaturas cuando elijan ramos. Inscribir asignaturas es fácil pero adaptar su horario, descubrir las asignaturas en SIGA y descubrir los planes de carrera es dificil.
+Administrar sus ramos, ver su horario personal y ver el horario de asignaturas cuando elijan ramos. Inscribir asignaturas es fácil, pero adaptar su horario, visualizar las asignaturas en SIGA y visualizar los planes de carrera es dificil.
 
 **uso durante el semestre**
-Ver su resultado por los asignaturas y ver los horarios de asignaturas para comunicar con los profesores que dictan éstos.
+Ver su horario personal y revisar los horarios por asignatura/departamento/profesor, para asistir a las clases y conocer la disponibilidad de un profesor, respectivamente. 
 
-Hay una página sobre ficha personal, donde se pueden actualizar su información personal a la escuela. Es facil descubir la pagina, pero cambiar algúna información es difícil porque los usuarios, sea los alumnos, no tienen autoridad para hacer cambios. Los alumnos extranjeros tienen menos autoridades que los alumnos **local**, entonces usar el sistema es mas dificil.
+Actualizar su información personal en la Ficha personal es fácil para datos como la _dirección acádemica_ o _numéro de telefono_, pero si se quiere modificar los _datos del apoderado_ o _dirección del grupo familiar_ es díficil, dado que los usuarios alumnos no tienen la autoridad para realizar estos cambios. Y si se trata de un **alumno de intercambio** (extranjero), la situación es aún más díficil, ya que tiene menos permisos de edición que un **alumno local**.
 
 **uso al fin semestre**
-Evaluar los asignaturas y profesores en la final de cada semestre.
+Revisar el avance curricular para ver las notas obtenidas en cada asignatura y realizar la encuesta docente para evaluar la asignatura y profesor.
 
 ### Para Administración
-La administración de UTFSM usa SIGA para informar a los alumnos, en genera por la página para noticias cual que el usuaria va antes de iniciar su sesíon. Sin embargo, muchos de los usuarios no leen la información y por eso, es dificil obtener la información.  
+La administración de la UTFSM usa SIGA para informar a los alumnos, a través de la página principal (que no requiere inicio de sesión), dónde se pueden encontrar noticias tanto de actualización de los reglamentos, como de plazos importantes. Pero depende de la pantalla del usuario si alcanza o no a visualizar esta información (en algunos casos sólo se ve el título o una parte de la primera sección), es por ello que se dificulta la lectura y obtención de la información por parte de los **alumnos**, puesto que no suelen percatarse de que hay noticias y/o nuevos cambios.  
 
 ### Conclusión de Usabilidad
 En general la sistema es dificil entender, por que no ofrece mucho apoyo al usuario. Este apoyo podría ser información que indica las funciónes con un breve explicación y mejor organización para facilitar navegar el sistema y sus servicios.
