@@ -19,14 +19,20 @@
     "test:regenerate_screenshots": "tsc && mocha test/integration/screenshots-baseline/regenerate.js --timeout=15000"
   },
   "dependencies": {
-    "@polymer/app-layout": "^3.0.0",
+    "@polymer/app-layout": "^3.1.0",
     "@polymer/polymer": "^3.1.0",
+    "@sinonjs/samsam": "^4.2.0",
     "@webcomponents/webcomponentsjs": "^2.2.4",
+    "ajv": "^5.0.0",
     "lit-element": "^2.2.1",
     "pwa-helpers": "^0.9.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "sinon": "^3.0.0",
+    "tslib": "^1.10.0",
+    "tslint": "^5.20.0",
+    "weightless": "0.0.34"
   },
   "devDependencies": {
     "@polymer/test-fixture": "^4.0.2",

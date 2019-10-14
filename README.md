@@ -1,3 +1,4 @@
+
 # Evaluación interfaz: SIGA (Alumnos)
 
 Los objetivos de este escrito son los siguientes:
@@ -18,7 +19,28 @@ Los objetivos de este escrito son los siguientes:
 8. [Diseño](#diseño)
 9. [Evaluación](#evaluacion)
 
+## Instrucciones de instalación/compilación
+
+Todas las intrucciones en la carpeta root del proyecto.
+
+```bash
+npm install
+```
+
+En caso de tener Warnings primero hacer audit fix para solucionar automaticamente.
+
+```bash
+npm audit fix
+```
+
+En caso de tener Warnings no solucionables por audit fix
+
+```bash
+npm i --save ajv tslib tslint sinon
+```
+
 ## Concepto del producto
+
 SIGA es un sistema de información creado por la Universidad Técnica Federico Santa María (UTFSM) para gestionar notas, asignaturas, deudas, certificados, entre otros.
 
 SIGA define su mision como:
