@@ -40,6 +40,7 @@ import 'weightless/card';
 import 'weightless/textfield';
 import 'weightless/icon';
 import 'weightless/select';
+import { login } from '../../actions/user.js';
 
 @customElement('login-page')
 export class LoginPage extends connect(store)(LitElement) {
@@ -189,8 +190,10 @@ export class LoginPage extends connect(store)(LitElement) {
     this.submitErrorMessage = "Error";
   }
 
-  _logIn (e: Event) {
-    this.datosUsuario(this.userNameInput.value,this.passwordInput.value);
+  _logIn () {
+    let lof = store.dispatch(login());
+    console.log(lof);
+
   }
 
   datosUsuario(userName: string, password: string) {

@@ -40,11 +40,13 @@ import 'weightless/button';
 import 'weightless/card';
 import 'weightless/textfield';
 
+import { logout } from '../actions/user.js';
+
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
 
   @property({type: Boolean})
-  private _loggedIn: boolean = false;
+  private _loggedIn: Boolean = false;
 
   @property({type: String})
   private _page: string = '';
@@ -107,11 +109,15 @@ export class MainPage extends connect(store)(LitElement) {
     ];
   }
 
-  _logIn () {
-    this._loggedIn = (Math.random() > .5);
-    if (!this._loggedIn) {
-        alert('try again!');
-    }
+  //Magia de redux: esto puede suceder en otro lugar
+  //y cambiará el estado gracias a la ultima función de
+  //esta clase.
+  // _logIn () {
+  //   console
+  //   store.dispatch(getUserState(store.getState()));
+  // }
+  _logOut(){
+    store.dispatch(logout());
   }
 
   protected render() {
@@ -119,8 +125,11 @@ export class MainPage extends connect(store)(LitElement) {
     ${
       this._loggedIn ? html`
       <div id="main">
-          <div id="header"></div>
-          <div id="nav-bar"></div>
+          <div id="header">
+            <wl-button @click="${this._logOut}">Cerrar sesión</wl-button>
+          </div>
+          <div id="nav-bar">
+          </div>
           <div id="content" class="centered">
               <h2>Hola mundo!</h2>
           </div>
@@ -128,15 +137,13 @@ export class MainPage extends connect(store)(LitElement) {
       <!--home-component/-->
       ` : 
       html`
-      <login-page></login-page>
+      <login-page ></login-page>
       `}  
     `;
   }
 
   constructor() {
     super();
-    // To force all event listeners for gestures to be passive.
-    // See https://www.polymer-project.org/3.0/docs/devguide/settings#setting-passive-touch-gestures
     setPassiveTouchGestures(true);
   }
 
@@ -160,5 +167,8 @@ export class MainPage extends connect(store)(LitElement) {
 
   stateChanged(state: RootState) {
     this._page = state.app!.page;
+    if(state.user){
+      this._loggedIn = state.user.isLoggedIn;
+    }
   }
 }
