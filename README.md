@@ -19,6 +19,12 @@ Los objetivos de este escrito son los siguientes:
 8. [Diseño](#diseño)
 9. [Evaluación](#evaluacion)
 
+## Páginas interesantes
+
+1. [Lit element polymer](https://lit-element.polymer-project.org/)
+2. [Weightless elements](https://weightless.dev/elements)
+3. [Redux polymer](https://pwa-starter-kit.polymer-project.org/redux-and-state-management)
+
 ## Instrucciones de instalación/compilación
 
 Todas las intrucciones en la carpeta root del proyecto.
