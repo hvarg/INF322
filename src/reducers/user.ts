@@ -9,34 +9,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { Reducer } from 'redux';
-import { INCREMENT, DECREMENT } from '../actions/counter.js';
+import { LOGIN, LOGOUT } from '../actions/user.js';
 import { RootAction } from '../store.js';
 
-export interface CounterState {
-  clicks: number;
-  value: number;
+export interface UserState {
+  isLoggedIn: Boolean
 }
 
-const INITIAL_STATE: CounterState = {
-  clicks: 0,
-  value: 0
+const INITIAL_STATE: UserState = {
+  isLoggedIn: false,
 };
 
-const counter: Reducer<CounterState, RootAction> = (state = INITIAL_STATE, action) => {
+const user: Reducer<UserState, RootAction> = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case INCREMENT:
-      return {
-        clicks: state.clicks + 1,
-        value: state.value + 1
-      };
-    case DECREMENT:
-      return {
-        clicks: state.clicks + 1,
-        value: state.value - 1
-      };
+    case LOGIN:
+        return {
+            ...state,
+            isLoggedIn: (Math.random() > .5)
+        };
+    case LOGOUT:
+        return {
+            ...state,
+            isLoggedIn: false
+        };
     default:
       return state;
   }
 };
 
-export default counter;
+export default user;
