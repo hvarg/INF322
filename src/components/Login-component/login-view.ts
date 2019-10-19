@@ -18,7 +18,7 @@ import { updateMetadata } from 'pwa-helpers/metadata.js';
 
 // This element is connected to the Redux store.
 import { store, RootState } from '../../store.js';
-import { customCss } from '../style';
+import { customCss } from './login-styles';
 
 // These are the actions needed by this element.
 import {
@@ -40,6 +40,8 @@ import 'weightless/card';
 import 'weightless/textfield';
 import 'weightless/icon';
 import 'weightless/select';
+import 'weightless/divider';
+import 'weightless/banner';
 import { login } from '../../actions/user.js';
 
 @customElement('login-page')
@@ -47,102 +49,31 @@ export class LoginPage extends connect(store)(LitElement) {
   
   static get styles() {
     return [customCss,
-      css`
-      :host {
-        display: block;
-        height: 100vh;
-        font: Sans-serif;
-        --input-color: White;
-      }
-      
-      app-toolbar{
-        display: flex;
-        align-items:center;
-        justify-content: center;
-      }
-        .login-layout {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-          background-color: #e8e7e7;
-        }
-        
-        .card{
-          background-color: #151617e0;
-          border-radius: 6px;
-          box-shadow: 0 2px 2px rgba(0,0,0,.3);
-          height:100%;
-          width:100%;
-            
-        }
-        
-        .input-text{
-          font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-          font-size: 14px;
-          line-height: 1.42857143;
-          color: #fff;
-        }
-        
-        app-header {
-          color: #fff;
-          --app-header-background-rear-layer: {
-            /* The header is blue when condensed */
-            background-color: blue;
-          };
-        }
-          
-        @media screen and (max-width: 1100px) {
-            .card-container{
-              height: 70%;
-              width: 50%;
-              padding: 20px;
-          }
-        }
-
-        @media screen and (max-width: 1600px) {
-          .card-container{
-            height: 70%;
-            width: 30%;
-            padding: 20px;
-    
-        }
-      }
-      
-      @media screen and (max-width: 1000px) {
-        .card-container{
-          height: 70%;
-          width: 90%;
-          padding: 20px;
-      }
-    }    
-      `
     ];
   }
   
   @property({type: String})
-  forgotPasswordText: string = "¿Has olvidado tu contraseña?";
+  forgotPasswordText: string = "¿Problemas con tu contraseña?";
 
   @property({type: String})
   public userName: string = "";
 
   @property()
-  public userNameLabel: string = "";
+  public userNameLabel: string = "Usuario";
+
+  
+  @property({type: String})
+  public password: string = "";
 
   @property()
-  public displayName: string = "";
-
-  @property()
-  public userShowedName: string ="";
-
-  @property()
-  public canSubmit: boolean = false;
-
-  @property()
-  public canShow: boolean = false;
+  public passwordLabel: string = "Contraseña";
 
   @property()
   public passwordInputType: string = "password";
+  
+  @property()
+  /// used for see password in login
+  public visibility: string = "visibility_off";
 
   @property()
   public loginButtonText: string = "";
@@ -186,14 +117,30 @@ export class LoginPage extends connect(store)(LitElement) {
 
   _myDefaultOptions() {
     this.userNameLabel = "Correo institucional";
-    this.loginButtonText = "Entrar";
-    this.submitErrorMessage = "Error";
+    this.loginButtonText = "Iniciar sesión";
   }
 
   _logIn () {
-    let lof = store.dispatch(login());
-    console.log(lof);
-
+    if(this.userNameInput.value != ""){
+      this.userName = this.userNameInput.value;
+      if(this.passwordInput.value != ""){
+        this.password = this.passwordInput.value;
+        store.dispatch(login(this.userName, this.password));
+      }
+    } else{
+      this.userNameInput.setAttribute("invalid",'');
+      this.showMsgSubmit = "";
+      this.submitErrorMessage = "Debes ingresar nombre de usuario";
+    }
+  }
+  _showPassword(){
+    if(this.passwordInputType == "text"){
+      this.passwordInputType = "password";
+      this.visibility = "visibility_off";
+    }else{
+      this.passwordInputType = "text";
+      this.visibility = "visibility";
+    }
   }
 
   datosUsuario(userName: string, password: string) {
@@ -205,36 +152,55 @@ export class LoginPage extends connect(store)(LitElement) {
     <div class="login-layout">
       <div class="card-container">
         <wl-card class="card">
+          <!--header -->
           <app-header effects="waterfall">
             <app-toolbar>Bienvenid@</app-toolbar>
           </app-header>
-          <div class="submit-msg" part="login__submitMsg"
-          ?hidden="${this.showMsgSubmit}">
-          ${this.submitMessage} 
-          </div>  
-          <div style="width:100% !important;">
-              <wl-textfield
-              outlined 
-              class="username input-text"
-              label="Usuario" 
-              type="email"
-              style="width:50% !important; display:flex;">
-                <wl-icon slot="before">person_pin</wl-icon>
-              </wl-textfield>
-              <wl-select outlined
-                style="width:50% !important; display:block;" >
-                <wl-icon slot="before">alternate_email</wl-icon>
-                <option value="1" selected>sansano.usm.cl</option>
-                <option value="2">alumnos.usm.cl</option>
-                <option value="3">pregrado.usm.cl</option>
-                <option value="4">usm.cl</option>
-                <option value="5">whatdafuck</option>
-              </wl-select>
+          <!-- header/ -->
+          <!--Warning message -->
+          <div ?hidden="${this.showMsgSubmit}" style="width: 80%; align-self:center;">
+            <wl-banner style="--banner-icon-color: #dc3545!important; --banner-color: aliceblue; --banner-bg: #fdfdfd4a;">
+                <wl-icon slot="icon">error</wl-icon>
+                <wl-text size="small">
+                  ${this.submitErrorMessage}
+                </wl-text>  
+            </wl-banner>
           </div>
-          <wl-textfield class="password input-text" label="Password" type="password"></wl-textfield>
-          <wl-button @click="${this._logIn}">Iniciar sesión</wl-button>
+          <!--Warning message/ -->
+          <div class="row">
+              <div  class="column">
+                <wl-textfield
+                  class="username input-text"
+                  label="${this.userNameLabel}" 
+                  type="text" required>
+                  <wl-icon slot="before">person_pin</wl-icon>
+                </wl-textfield>
+              </div>
+              <div  class="column">
+                <wl-select style="--input-before-after-color: #fff;">
+                  <wl-icon slot="before">alternate_email</wl-icon>
+                  <option class="special" value="1" selected>sansano.usm.cl</option>
+                  <option class="special" value="2">alumnos.usm.cl</option>
+                  <option class="special" value="3">pregrado.usm.cl</option>
+                  <option class="special" value="4">usm.cl</option>
+                  <option class="special" value="5">whatdafuck</option>
+                </wl-select>
+              </div>
+          </div>
+          <div class="row-password">
+            <wl-textfield class="password input-text" label="${this.passwordLabel}" type="${this.passwordInputType}">
+              <wl-icon @click="${this._showPassword}" slot="after">${this.visibility}</wl-icon>
+            </wl-textfield>
+          </div>
+          <div class="row">
+            <div class="column" style="text-align:center; padding: 1em;" >
+              <a style="color:antiquewhite;" href="" part="login__forgotPass">${this.forgotPasswordText}</a>
+            </div>  
+          </div>
+          <div class="login-button" >
+            <wl-button class="btn-showPassword" @click="${this._logIn}" style="width:100%;">${this.loginButtonText}</wl-button>
+          </div>
           <br>
-          <a class="forgotPass" href="" part="login__forgotPass">${this.forgotPasswordText}</a>
         </wl-card>
       </div>
     </div>
@@ -262,5 +228,9 @@ export class LoginPage extends connect(store)(LitElement) {
 
   stateChanged(state: RootState) {
     this._page = state.app!.page;
+    if(state.user.error !== ""){
+      this.showMsgSubmit = "";
+      this.submitErrorMessage = state.user.error.toString();
+    }
   }
 }
