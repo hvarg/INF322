@@ -13,24 +13,51 @@ import { LOGIN, LOGOUT } from '../actions/user.js';
 import { RootAction } from '../store.js';
 
 export interface UserState {
-  isLoggedIn: Boolean
+  isLoggedIn: Boolean,
+  userInfo: UserInfo,
+  error: String
+}
+
+export interface UserInfo {
+  userName: String,
+  password: String
 }
 
 const INITIAL_STATE: UserState = {
   isLoggedIn: false,
+  userInfo: {
+    userName: "",
+    password: ""
+  },
+  error: ""
 };
 
 const user: Reducer<UserState, RootAction> = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case LOGIN:
+      let userNameIn = action.userName;
+      let passwordIn = action.password;
+      // let user : UserInfo = state.userInfo;
+      let error = "";
+      if( userNameIn == "root" && passwordIn == "toor" ){
         return {
             ...state,
-            isLoggedIn: (Math.random() > .5)
+            isLoggedIn: true,
+            userInfo: {
+              userName: userNameIn,
+              password: passwordIn
+            }
         };
+      } else{
+        error = "No se ha podido iniciar sesión, revisa tu nombre de usuario y contraseña";
+        return {
+          ...state,
+          error: error,
+        };
+      }
     case LOGOUT:
         return {
-            ...state,
-            isLoggedIn: false
+          ...INITIAL_STATE,
         };
     default:
       return state;

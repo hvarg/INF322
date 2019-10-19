@@ -36,9 +36,8 @@ import { ShopAction } from './actions/shop.js';
 // Overall state extends static states and partials lazy states.
 export interface RootState {
   app?: AppState;
-  user?: UserState;
   shop?: ShopState;
-  userState: UserState;
+  user: UserState;
 }
 
 export type RootAction = AppAction | UserAction | ShopAction;
