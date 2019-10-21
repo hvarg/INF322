@@ -39,9 +39,6 @@ import './snack-bar.js';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
-  @property({type: Boolean})
-  private _loggedIn: boolean = false;
-
   @property({type: String})
   private _page: string = '';
 
@@ -51,31 +48,15 @@ export class MainPage extends connect(store)(LitElement) {
     return [customCss];
   }
 
-  _logIn () {
-    this._loggedIn = (Math.random() > .5);
-    if (!this._loggedIn) {
-        alert('try again!');
-    }
-  }
-
   protected render() {
     return html`
-    ${this._loggedIn ? html`
     <div id="main">
         <div id="header"></div>
         <div id="nav-bar"></div>
         <div id="content" class="centered">
             <h2>Hola mundo!</h2>
         </div>
-    </div>
-    ` : html`
-    <div class="centered">
-        <span id="logInButton" @click="${this._logIn}">
-            Click here to try to log in!
-        </span>
-    </div>
-    <!--home-component/-->`}
-    `;
+    </div>`;
   }
 
   constructor() {

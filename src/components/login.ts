@@ -37,7 +37,7 @@ import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import './snack-bar.js';
 
-@customElement('login-element')
+@customElement('login-page')
 export class LoginComponent extends connect(store)(LitElement) {
   @property({type: Boolean})
   private _loggedIn: boolean = false;
@@ -45,7 +45,7 @@ export class LoginComponent extends connect(store)(LitElement) {
   @property({type: String})
   private _page: string = '';
 
-  private appTitle : string = 'Siga';
+  private appTitle : string = 'SIGA';
   
   static get styles() {
     return [customCss];
@@ -54,7 +54,7 @@ export class LoginComponent extends connect(store)(LitElement) {
   _logIn () {
     this._loggedIn = (Math.random() > .5);
     if (!this._loggedIn) {
-        alert('try again!');
+        console.log('try again!');
     }
   }
 
