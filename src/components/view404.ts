@@ -14,8 +14,8 @@ import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
-@customElement('my-view404')
-export class MyView404 extends PageViewElement {
+@customElement('view404-page')
+export class View404 extends PageViewElement {
   static get styles() {
     return [
       SharedStyles

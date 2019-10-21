@@ -42,11 +42,15 @@ const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
   switch(page) {
     case 'login':
       page = 'Inicio de sesión'
+      import('../components/login');
+      break;
+    case 'main':
+      page = 'Home'
       import('../components/main');
       break;
     default:
       page = 'view404';
-      import('../components/my-view404.js');
+      import('../components/view404.js');
   }
 
   dispatch(updatePage(page));
