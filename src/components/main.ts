@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html, css, property, PropertyValues, customElement } from 'lit-element';
+import { LitElement, html, property, PropertyValues, customElement } from 'lit-element';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
@@ -48,58 +48,7 @@ export class MainPage extends connect(store)(LitElement) {
   private appTitle : string = 'Siga';
   
   static get styles() {
-    return [customCss,
-      css`
-        :host {
-          display: block;
-          height: 100vh;
-        }
-
-        #main {
-          display: grid;
-          height: 100%;
-          grid-template-columns: 300px calc(100% - 300px);
-          grid-template-rows: 100px calc(100% - 100px);
-        }
-
-        #header {
-          grid-row: 1;
-          grid-column: 1 / 3;
-          border: 1px dotted red;
-        }
-
-        #nav-bar {
-          grid-row: 2;
-          grid-column: 1;
-          border: 1px dotted blue;
-        }
-
-        #content {
-          grid-row: 2;
-          grid-column: 2;
-          border: 1px dotted green;
-        }
-
-        #logInButton {
-          cursor: pointer;
-          border: 1px solid gray;
-          border-radius: 4px;
-          padding: 5px;
-          background: aliceblue;
-        }
-
-        #logInButton:hover {
-          background: aqua;
-        }
-
-        .centered {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-        }
-      `
-    ];
+    return [customCss];
   }
 
   _logIn () {
