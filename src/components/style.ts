@@ -6,6 +6,14 @@ export const customCss = css`
   height: 100vh;
 }
 
+.page {
+  display: none;
+}
+
+.page[active] {
+  display: block;
+}
+
 #main {
     display: grid;
   height: 100%;

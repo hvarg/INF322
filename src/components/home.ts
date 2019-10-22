@@ -8,14 +8,13 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html, property, PropertyValues, customElement } from 'lit-element';
-//import { PageViewElement } from './page-view-element.js';
+import { html, property, PropertyValues, customElement } from 'lit-element';
+import { PageViewElement } from './page-view-element.js';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings.js';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
 import { installOfflineWatcher } from 'pwa-helpers/network.js';
 import { installRouter } from 'pwa-helpers/router.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
-import { connect } from 'pwa-helpers/connect-mixin';
 
 // This element is connected to the Redux store.
 import { store, RootState } from '../store.js';
@@ -36,12 +35,9 @@ import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
-import './login.js';
-import './view404.js';
-import './home.js';
 
-@customElement('main-page')
-export class MainPage extends connect(store)(LitElement) {
+@customElement('home-page')
+export class HomePage extends PageViewElement {
   @property({type: String})
   private _page: string = '';
 
@@ -53,11 +49,13 @@ export class MainPage extends connect(store)(LitElement) {
 
   protected render() {
     return html`
-    <p>Current page: ${this._page}</p>
-    <login-page class="page" ?active="${this._page === 'login'}"></login-page>
-    <home-page class="page" ?active="${this._page === 'home'}"></home-page>
-    <view404-page class="page" ?active="${this._page === 'view404'}"></view404-page>
-    `;
+    <div id="main">
+        <div id="header"></div>
+        <div id="nav-bar"></div>
+        <div id="content" class="centered">
+            <h2>Hola mundo!</h2>
+        </div>
+    </div>`;
   }
 
   constructor() {

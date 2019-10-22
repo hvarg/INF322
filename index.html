@@ -101,29 +101,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         min-height: 100vh;
         -webkit-font-smoothing: antialiased;
       }
-      .page {
-        display: none;
-      }
-      .page[active] {
-        display: block;
-      }
     </style>
   </head>
   <body>
-    <p>${this._page}</p>
-    <main role="main" class="main-content">
-      <login-page class="page" active></login-page>
-      <main-page class="page" ?active="${this._page === 'main'}"></main-page>
-      <view404-page class="page" ?active="${this._page === 'view404'}"></view404-page>
-    </main>
+    <main-page class="main"></main-page>
     <noscript>
       Please enable JavaScript to view this website.
     </noscript>
     <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <!-- Built with love using PWA Starter Kit -->
-    <script type="module" src="src/components/login.js"></script>
     <script type="module" src="src/components/main.js"></script>
-    <script type="module" src="src/components/view404.js"></script>
   </body>
 </html>

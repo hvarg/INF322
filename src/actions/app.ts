@@ -28,7 +28,7 @@ type ThunkResult = ThunkAction<void, RootState, undefined, AppAction>;
 
 export const navigate: ActionCreator<ThunkResult> = (path: string) => (dispatch) => {
   // Extract the page name from path.
-  const page = path === '/' ? 'login' : path.slice(1);
+  const page = path === '/' ? 'main' : path.slice(1);
 
   // Any other info you might want to extract from the path (like page type),
   // you can do here
@@ -40,17 +40,17 @@ export const navigate: ActionCreator<ThunkResult> = (path: string) => (dispatch)
 
 const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
   switch(page) {
-    case 'login':
-      page = 'Inicio de sesión'
-      import('../components/login');
-      break;
     case 'main':
-      page = 'Home'
+      page = 'login';
+      import('../components/main');
+      break;
+    case 'home':
       import('../components/main');
       break;
     default:
       page = 'view404';
-      import('../components/view404.js');
+      import('../components/main');
+      break;
   }
 
   dispatch(updatePage(page));
