@@ -5,7 +5,7 @@ export const customCss = css`
         display: block;
         height: 100vh;
         font: Sans-serif;
-        background: url(/images/valpo1.jpg) no-repeat;
+        /*background: url(/images/valpo1.jpg) no-repeat;*/
         background-position: center;
         background-size: cover;
         --input-color: White;
@@ -15,9 +15,11 @@ export const customCss = css`
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%;
+        height: 95%;
     }
-    
+    footer{
+      height:5%;
+    }
     .card{
         background-color: #151617e0;
         border-radius: 6px;
@@ -109,6 +111,9 @@ export const customCss = css`
     }
     wl-textfield{
     --input-before-after-color: #fff;	
+    }
+    wl-text{
+        font-size: .9em;
     }
   wl-select {
     height: 100%;

@@ -42,6 +42,9 @@ import 'weightless/icon';
 import 'weightless/select';
 import 'weightless/divider';
 import 'weightless/banner';
+import 'weightless/nav';
+import 'weightless/tab';
+import 'weightless/tab-group';
 import { login } from '../../actions/user.js';
 
 @customElement('login-page')
@@ -150,7 +153,23 @@ export class LoginPage extends connect(store)(LitElement) {
   protected render() {
     return html`
     <div class="login-layout">
+      <wl-nav shadow fixed style="--nav-color:#fff;--nav-bg:#18395A">
+        <div slot="left">
+          <img style="width:60%" src="/images/usm.jpg" alt="logo" />
+        </div>
+        <span slot="title" style="text-align:center;">SISTEMA DE INFORMACIÓN DE GESTIÓN ACADÉMICA</span>
+      </wl-nav>
       <div class="card-container">
+        <wl-tab-group>
+          <wl-tab vertical>
+              <wl-icon slot="before">help</wl-icon>
+              <span>¿Qué es Siga?</span>
+          </wl-tab>
+          <wl-tab vertical>
+              <wl-icon slot="before">people_alt</wl-icon>
+              <span>Contacto</span>
+          </wl-tab>
+        </wl-tab-group>
         <wl-card class="card">
           <!--header -->
           <app-header effects="waterfall">
@@ -203,7 +222,8 @@ export class LoginPage extends connect(store)(LitElement) {
           <br>
         </wl-card>
       </div>
-    </div>
+      </div>
+      <footer style="background-color:#ff9900"><span>Powered by Lionbit @v0.0.20</span></footer>
         <!--Login-component/-->
       `;
   }
