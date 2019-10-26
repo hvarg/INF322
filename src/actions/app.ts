@@ -10,8 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 import { Action, ActionCreator } from 'redux';
 import { ThunkAction } from 'redux-thunk';
-import { RootState, store } from '../store.js';
-import { getUserState } from './user.js';
+import { RootState } from '../store.js';
 
 export const UPDATE_PAGE = 'UPDATE_PAGE';
 export const UPDATE_OFFLINE = 'UPDATE_OFFLINE';
@@ -51,12 +50,6 @@ const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
       
       import('../components/Login-component/login-view.js');
 
-      break;
-    case 'view2':
-      import('../components/my-view2.js');
-      break;
-    case 'view3':
-      import('../components/my-view3.js');
       break;
     default:
       page = 'view404';

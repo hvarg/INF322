@@ -137,7 +137,7 @@ export class MainPage extends connect(store)(LitElement) {
       <!--home-component/-->
       ` : 
       html`
-      <login-page ></login-page>
+      <login-view ></login-view>
       `}  
     `;
   }

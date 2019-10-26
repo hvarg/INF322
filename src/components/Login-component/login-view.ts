@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html, css, property, PropertyValues, customElement, query } from 'lit-element';
+import { LitElement, html, property, PropertyValues, customElement, query } from 'lit-element';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
@@ -18,7 +18,7 @@ import { updateMetadata } from 'pwa-helpers/metadata.js';
 
 // This element is connected to the Redux store.
 import { store, RootState } from '../../store.js';
-import { customCss } from './login-styles';
+import { customCss } from './login-styles.js';
 
 // These are the actions needed by this element.
 import {
@@ -47,8 +47,8 @@ import 'weightless/tab';
 import 'weightless/tab-group';
 import { login } from '../../actions/user.js';
 
-@customElement('login-page')
-export class LoginPage extends connect(store)(LitElement) {
+@customElement('login-view')
+export class LoginView extends connect(store)(LitElement) {
   
   static get styles() {
     return [customCss,
