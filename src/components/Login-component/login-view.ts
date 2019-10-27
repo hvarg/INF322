@@ -162,6 +162,10 @@ export class LoginView extends connect(store)(LitElement) {
       <div class="card-container">
         <wl-tab-group>
           <wl-tab vertical>
+              <wl-icon slot="before">meeting_room</wl-icon>
+              <span>Entrar</span>
+          </wl-tab>
+          <wl-tab vertical>
               <wl-icon slot="before">help</wl-icon>
               <span>¿Qué es Siga?</span>
           </wl-tab>
@@ -183,6 +187,7 @@ export class LoginView extends connect(store)(LitElement) {
                 <wl-text size="small">
                   ${this.submitErrorMessage}
                 </wl-text>  
+                <wl-button slot="action" fab flat inverted @click="${this.closeErrorBanner}"><wl-icon style="color: #dc3545!important;">close</wl-icon></wl-button>
             </wl-banner>
           </div>
           <!--Warning message/ -->
@@ -226,6 +231,9 @@ export class LoginView extends connect(store)(LitElement) {
       <footer style="background-color:#ff9900"><span>Powered by Lionbit @v0.0.20</span></footer>
         <!--Login-component/-->
       `;
+  }
+  closeErrorBanner(): void {
+    this.showMsgSubmit = "display:none";
   }
 
   protected firstUpdated() {

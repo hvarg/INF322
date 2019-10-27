@@ -5,7 +5,7 @@
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view1.js": {
+    "src/components/Login-component/login-view.js": {
       "crossorigin": "anonymous",
       "type": "script",
       "weight": 1
@@ -21,7 +21,7 @@
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view1.js": {
+    "src/components/Login-component/login-view.js": {
       "crossorigin": "anonymous",
       "type": "script",
       "weight": 1

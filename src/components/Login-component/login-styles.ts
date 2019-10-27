@@ -9,6 +9,7 @@ export const customCss = css`
         background-position: center;
         background-size: cover;
         --input-color: White;
+        --input-font-family: sans-serif;
     }
   
     .login-layout {
@@ -24,7 +25,7 @@ export const customCss = css`
         background-color: #151617e0;
         border-radius: 6px;
         box-shadow: 0 2px 2px rgba(0,0,0,.3);
-        height:100%;
+        height:90%;
         width:100%;
     }
 

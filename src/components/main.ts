@@ -40,13 +40,13 @@ import 'weightless/button';
 import 'weightless/card';
 import 'weightless/textfield';
 
-import { logout } from '../actions/user.js';
+import { logout, login } from '../actions/user.js';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
 
   @property({type: Boolean})
-  private _loggedIn: Boolean = false;
+  private _loggedIn: Boolean | undefined;
 
   @property({type: String})
   private _page: string = '';
@@ -167,8 +167,6 @@ export class MainPage extends connect(store)(LitElement) {
 
   stateChanged(state: RootState) {
     this._page = state.app!.page;
-    if(state.user){
-      this._loggedIn = state.user.isLoggedIn;
-    }
+    this._loggedIn = state.user.isLoggedIn;
   }
 }
