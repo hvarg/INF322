@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html, css, property, PropertyValues, customElement, query } from 'lit-element';
+import { LitElement, html, property, PropertyValues, customElement, query } from 'lit-element';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
@@ -18,7 +18,7 @@ import { updateMetadata } from 'pwa-helpers/metadata.js';
 
 // This element is connected to the Redux store.
 import { store, RootState } from '../../store.js';
-import { customCss } from './login-styles';
+import { customCss } from './login-styles.js';
 
 // These are the actions needed by this element.
 import {
@@ -42,10 +42,13 @@ import 'weightless/icon';
 import 'weightless/select';
 import 'weightless/divider';
 import 'weightless/banner';
+import 'weightless/nav';
+import 'weightless/tab';
+import 'weightless/tab-group';
 import { login } from '../../actions/user.js';
 
-@customElement('login-page')
-export class LoginPage extends connect(store)(LitElement) {
+@customElement('login-view')
+export class LoginView extends connect(store)(LitElement) {
   
   static get styles() {
     return [customCss,
@@ -150,7 +153,27 @@ export class LoginPage extends connect(store)(LitElement) {
   protected render() {
     return html`
     <div class="login-layout">
+      <wl-nav shadow fixed style="--nav-color:#fff;--nav-bg:#18395A">
+        <div slot="left">
+          <img style="width:60%" src="/images/usm.jpg" alt="logo" />
+        </div>
+        <span slot="title" style="text-align:center;">SISTEMA DE INFORMACIÓN DE GESTIÓN ACADÉMICA</span>
+      </wl-nav>
       <div class="card-container">
+        <wl-tab-group>
+          <wl-tab vertical>
+              <wl-icon slot="before">meeting_room</wl-icon>
+              <span>Entrar</span>
+          </wl-tab>
+          <wl-tab vertical>
+              <wl-icon slot="before">help</wl-icon>
+              <span>¿Qué es Siga?</span>
+          </wl-tab>
+          <wl-tab vertical>
+              <wl-icon slot="before">people_alt</wl-icon>
+              <span>Contacto</span>
+          </wl-tab>
+        </wl-tab-group>
         <wl-card class="card">
           <!--header -->
           <app-header effects="waterfall">
@@ -164,6 +187,7 @@ export class LoginPage extends connect(store)(LitElement) {
                 <wl-text size="small">
                   ${this.submitErrorMessage}
                 </wl-text>  
+                <wl-button slot="action" fab flat inverted @click="${this.closeErrorBanner}"><wl-icon style="color: #dc3545!important;">close</wl-icon></wl-button>
             </wl-banner>
           </div>
           <!--Warning message/ -->
@@ -203,9 +227,13 @@ export class LoginPage extends connect(store)(LitElement) {
           <br>
         </wl-card>
       </div>
-    </div>
+      </div>
+      <footer style="background-color:#ff9900"><span>Powered by Lionbit @v0.0.20</span></footer>
         <!--Login-component/-->
       `;
+  }
+  closeErrorBanner(): void {
+    this.showMsgSubmit = "display:none";
   }
 
   protected firstUpdated() {

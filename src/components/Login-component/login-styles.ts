@@ -5,24 +5,27 @@ export const customCss = css`
         display: block;
         height: 100vh;
         font: Sans-serif;
-        background: url(/images/valpo1.jpg) no-repeat;
+        /*background: url(/images/valpo1.jpg) no-repeat;*/
         background-position: center;
         background-size: cover;
         --input-color: White;
+        --input-font-family: sans-serif;
     }
   
     .login-layout {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%;
+        height: 95%;
     }
-    
+    footer{
+      height:5%;
+    }
     .card{
         background-color: #151617e0;
         border-radius: 6px;
         box-shadow: 0 2px 2px rgba(0,0,0,.3);
-        height:100%;
+        height:90%;
         width:100%;
     }
 
@@ -109,6 +112,9 @@ export const customCss = css`
     }
     wl-textfield{
     --input-before-after-color: #fff;	
+    }
+    wl-text{
+        font-size: .9em;
     }
   wl-select {
     height: 100%;
