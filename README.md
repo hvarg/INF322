@@ -105,7 +105,7 @@ El usario tiene dos ventanas para iniciar la sesión en SIGA, como se muestra en
 ***Figura 2***
 
 ### Navigación desorganizada - Maybe change the photo to show the volver
-Cuando el usuario inicia la sesión, el sistema muestra la página principal, como se muestra en  Figura 1. El sistema muestra el nombre del usario arriba por la izquierda. La página principal, el inicio, no tiene ningún nombre. Cada vez que el usario sigue con alguna tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha.
+Cuando el usuario inicia la sesión, el sistema muestra la página principal, como se muestra en  Figura 1. El sistema muestra el nombre del usario en la esquina superior izquierda. La página principal, el inicio, no tiene ningún nombre. Cada vez que el usario sigue con alguna tarea, para volver a la pagina principal, hay que presionar el botón "volver" abajo a la derecha.
 
 Si no se usa el botón *volver*, se le desconecta de la página y hay que inicializar una nueva sesión. Se espera que pueda ir y venir en una página, por eso puede ser una experiencia irritante al usar el sistema. 
 
@@ -121,7 +121,7 @@ En el sistema, también hay descripciones de cada opción que se muestra cuando 
 ![Imagen_de_Descripción_Informativa](https://github.com/hvarg/INF322/blob/master/assets/SIGA_descriOpcionmasUtil.png)
 
 ### Inscripción
-Cuando el usario quiere inscribirse a ramos fuera del tiempo para inscripción, el sistema no indica al usario que no es posible. Se necesita cambiar este aspecto del sistema porque sin esta información puede confudir y molestar al usuario.
+Cuando el usario quiere inscribirse a ramos fuera del período de inscripción, el sistema no indica al usario que no es posible. Se necesita cambiar este aspecto del sistema porque sin esta información puede confudir y molestar al usuario.
 
 P: Mejor sería si la sistema tuviera algún tipo de indicación si esta fuera del tiempo para hacer incribciónes para mejorar la visibilidad del estado del sistema. Una opción sería usar un reloj con un texto diciendo "XX dias hasta que es posible hacer inscripciónes".
 
@@ -144,7 +144,7 @@ No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar c
 
 
 ### Noticias
-P: Las noticias y información debe venir despues de inciar una sesción. Las noticias debe estar en una cuadra en el nueva menu a la izuierda, donde el menu contiene las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
+P: Las noticias y información debe venir despues de inciar una sesión. Las noticias debe estar en una cuadra en el nueva menu a la izquierda, donde el menu contiene las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
 
 ### Horario Asignaturas
 En esta parte del SIGA, nos falta búsquedor de asignaturas. Además, cuando se busque asignaturas, se obtenga demasiado información (esto es el profesor o cupos para cada curso).  Esta cantidad de información además puede confudir al usuario o causar demoras inecesarias en el proceso de buscar
