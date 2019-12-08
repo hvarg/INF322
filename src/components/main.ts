@@ -36,6 +36,7 @@ import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import './snack-bar.js';
+import './shop-products.js';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
@@ -116,7 +117,8 @@ export class MainPage extends connect(store)(LitElement) {
         <div id="header"></div>
         <div id="nav-bar"></div>
         <div id="content" class="centered">
-            <h2>Hola mundo!</h2>
+          
+            <shop-products></shop-products> 
         </div>
     </div>
     ` : html`

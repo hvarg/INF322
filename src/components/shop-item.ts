@@ -16,18 +16,23 @@ export class ShopItem extends LitElement {
   @property({type: String})
   name = '';
 
-  @property({type: Number})
-  amount = 0;
+  @property({type: String})
+  asigna = '';
 
-  @property({type: Number})
-  price = 0;
+  @property({type: String})
+  profe = '';
 
   protected render() {
-    return html`
-      ${this.name}:
-      <span ?hidden="${this.amount === 0}">${this.amount} * </span>
-      $${this.price}
-      </span>
+    return html`                 
+      <td>
+          ${this.name}
+      </td>
+      <td>
+          ${this.asigna}
+      </td>
+      <td>
+          ${this.profe}
+      </td>
     `;
   }
 }

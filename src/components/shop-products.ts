@@ -15,22 +15,22 @@ import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store, RootState } from '../store.js';
 
 // These are the elements needed by this element.
-import './shop-item.js';
+// import './shop-item.js';
 
 // These are the actions needed by this element.
-import { getAllProducts, addToCart } from '../actions/shop.js';
+import { getAllProducts } from '../actions/shop.js';
 
 // These are the elements needed by this element.
-import { addToCartIcon } from './my-icons.js';
+//import { addToCartIcon } from './my-icons.js';
 
 // These are the shared styles needed by this element.
 import { ButtonSharedStyles } from './button-shared-styles.js';
-import { ProductsState } from '../reducers/shop.js';
+import { ListaCursos } from '../reducers/shop.js';
 
 @customElement('shop-products')
 export class ShopProducts extends connect(store)(LitElement) {
   @property({type: Object})
-  private _products: ProductsState = {};
+  private _products: ListaCursos = {};
 
   static get styles() {
     return [
@@ -42,34 +42,86 @@ export class ShopProducts extends connect(store)(LitElement) {
       `
     ];
   }
+  
+
+  handleClick() {
+    console.log(this._products);
+  }
 
   protected render() {
     return html`
+    <h2>Listado de cursos</h2>
+    <table >
+      <tbody>
+        <tr>
+          <th>
+            <strong> Sigla </strong>
+          </th>
+          <th>
+            <strong> Asignatura </strong>
+          </th>
+          <th>
+            <strong> Departamento </strong>
+          </th>
+          <th>
+            <strong> Paralelo </strong>
+          </th>
+          <th>
+            <strong> Profesor </strong>
+          </th>
+          <th>
+            <strong> Cupos </strong>
+          </th>
+          <th>
+            <strong> Horario </strong>
+          </th>
+        </tr>
       ${Object.keys(this._products).map((key) => {
         const item = this._products[key];
         return html`
-          <div>
-            <shop-item name="${item.title}" amount="${item.inventory}" price="${item.price}"></shop-item>
-            <button
-                .disabled="${item.inventory === 0}"
-                @click="${this._addButtonClicked}"
-                data-index="${item.id}"
-                title="${item.inventory === 0 ? 'Sold out' : 'Add to cart' }">
-              ${item.inventory === 0 ? 'Sold out': addToCartIcon }
-            </button>
-          </div>
+        <tr>
+          <td>
+            ${item.sigla}
+          </td>
+          <td>
+            ${item.asignatura}
+          </td>
+          <td>
+            ${item.departamento}
+          </td> 
+          <td>
+            ${item.paralelos}
+          </td> 
+          <td>
+            cosa
+          </td> 
+          <td>
+            cosa
+          </td> 
+          <td>
+          <button @click="${this.handleClick}">
+          Detalles
+          </button>
+          </td> 
+          
+        </tr>
+      </tbody>
+      </table> 
         `;
       })}
     `;
+
+  
   }
 
   protected firstUpdated() {
     store.dispatch(getAllProducts());
   }
-
+  /*
   private _addButtonClicked(e: Event) {
     store.dispatch(addToCart((e.currentTarget as HTMLButtonElement).dataset['index']));
   }
+  */
 
   // This is called every time something is updated in the store.
   stateChanged(state: RootState) {

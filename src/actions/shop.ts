@@ -11,14 +11,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 import { Action, ActionCreator } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 import { RootState } from '../store.js';
-import { ProductsState } from '../reducers/shop.js';
+import { ListaCursos} from '../reducers/shop.js';
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 export const CHECKOUT_SUCCESS = 'CHECKOUT_SUCCESS';
 export const CHECKOUT_FAILURE = 'CHECKOUT_FAILURE';
 
-export interface ShopActionGetProducts extends Action<'GET_PRODUCTS'> {products: ProductsState};
+export interface ShopActionGetProducts extends Action<'GET_PRODUCTS'> {products: ListaCursos};
 export interface ShopActionAddToCart extends Action<'ADD_TO_CART'> {productId: string};
 export interface ShopActionRemoveFromCart extends Action<'REMOVE_FROM_CART'> {productId: string};
 export interface ShopActionCheckoutSuccess extends Action<'CHECKOUT_SUCCESS'> {};
@@ -28,23 +28,22 @@ export type ShopAction = ShopActionGetProducts | ShopActionAddToCart | ShopActio
 type ThunkResult = ThunkAction<void, RootState, undefined, ShopAction>;
 
 const PRODUCT_LIST = [
-  { "id": 1, "title": "Cabot Creamery Extra Sharp Cheddar Cheese", "price": 10.99, "inventory": 2 },
-  { "id": 2, "title": "Cowgirl Creamery Mt. Tam Cheese", "price": 29.99, "inventory": 10 },
-  { "id": 3, "title": "Tillamook Medium Cheddar Cheese", "price": 8.99, "inventory": 5 },
-  { "id": 4, "title": "Point Reyes Bay Blue Cheese", "price": 24.99, "inventory": 7 },
-  { "id": 5, "title": "Shepherd's Halloumi Cheese", "price": 11.99, "inventory": 3 }
+  { "id": 1, "sigla": 'IWI131', "asignatura": 'Programación', "departamento": 'Informática' , "paralelos": [{ "id": 1, "profesor": 'profe1', "cupos": 20},  { "id": 2, "profesor": 'profe2', "cupos": 30}]},
+  { "id": 3, "sigla": 'FIS100', "asignatura": 'Introducción a la Física', "departamento": 'Física' , "paralelos": [{"id": 1, "profesor": 'Hakobyan', "cupos": 50}] },
+  { "id": 4, "sigla": 'MAT021' , "asignatura": 'Matemáticas I', "departamento": 'Matemáticas', "paralelos": [{"id": 1, "profesor": 'El maravilloso Yansen', "cupos": 25}] },
+  { "id": 5, "sigla": 'MAT022' , "asignatura": 'Matemáticas II' , "departamento": 'Matemáticas' , "paralelos": [{"id": 1, "profesor": 'tuma', "cupos": 14}] } 
 ];
 
 export const getAllProducts: ActionCreator<ThunkResult> = () => (dispatch) => {
   // Here you would normally get the data from the server. We're simulating
   // that by dispatching an async action (that you would dispatch when you
   // successfully got the data back).
-
   // You could reformat the data in the right format as well.
+
   const products = PRODUCT_LIST.reduce((obj, product) => {
     obj[product.id] = product
     return obj
-  }, {} as ProductsState);
+  }, {} as ListaCursos);
 
   dispatch({
     type: GET_PRODUCTS,
@@ -69,12 +68,14 @@ export const checkout: ActionCreator<ThunkResult> = () => (dispatch) => {
 };
 
 export const addToCart: ActionCreator<ThunkResult> = (productId) => (dispatch, getState) => {
-  const state = getState();
+  var state = getState();
+  state = state;
+  dispatch(addToCart(productId));
   // Just because the UI thinks you can add this to the cart
   // doesn't mean it's in the inventory (user could've fixed it).
-  if (state.shop!.products[productId].inventory > 0) {
-    dispatch(addToCartUnsafe(productId));
-  }
+  //if (state.shop!.products[productId].inventory > 0) {
+  //  dispatch(addToCartUnsafe(productId));
+  //}
 };
 
 export const removeFromCart: ActionCreator<ShopActionRemoveFromCart> = (productId) => {

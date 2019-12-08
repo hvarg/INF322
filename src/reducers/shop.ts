@@ -21,19 +21,29 @@ import { createSelector } from 'reselect';
 import { RootState, RootAction } from '../store.js';
 
 export interface ShopState {
-  products: ProductsState;
+  products: ListaCursos;
   cart: CartState;
   error: string;
 }
-export interface ProductsState {
-  [index:string]: ProductState;
+
+export interface ListaCursos {
+  [index:string]: Curso;
 }
-export interface ProductState {
+
+export interface Paralelo {
   id: number;
-  title: string;
-  price: number;
-  inventory: number;
+  profesor: string;
+  cupos: number;
 }
+
+export interface Curso {
+  id: number;
+  sigla: string;
+  asignatura: string;
+  departamento: string;
+  paralelos: Array<Paralelo>;
+}
+
 export interface CartState {
   [index:string]: number;
 }
@@ -62,7 +72,7 @@ const shop: Reducer<ShopState, RootAction> = (state = INITIAL_STATE, action) => 
     case CHECKOUT_SUCCESS:
       return {
         ...state,
-        products: products(state.products, action),
+        products: cursos(state.products, action),
         cart: cart(state.cart, action),
         error: ''
       };
@@ -77,7 +87,7 @@ const shop: Reducer<ShopState, RootAction> = (state = INITIAL_STATE, action) => 
 };
 
 // Slice reducer: it only reduces the bit of the state it's concerned about.
-const products = (state: ProductsState, action: ShopAction) => {
+const cursos = (state: ListaCursos, action: ShopAction) => {
   switch (action.type) {
     case ADD_TO_CART:
     case REMOVE_FROM_CART:
@@ -91,17 +101,16 @@ const products = (state: ProductsState, action: ShopAction) => {
   }
 };
 
-const product = (state: ProductState, action: ShopAction) => {
+const product = (state: Curso, action: ShopAction) => {
   switch (action.type) {
     case ADD_TO_CART:
       return {
         ...state,
-        inventory: state.inventory - 1
+        
       };
     case REMOVE_FROM_CART:
       return {
         ...state,
-        inventory: state.inventory + 1
       };
     default:
       return state;
@@ -161,33 +170,7 @@ export const cartItemsSelector = createSelector(
   (cart, products) => {
     return Object.keys(cart).map(id => {
       const item = products[id];
-      return {id: item.id, title: item.title, amount: cart[id], price: item.price};
+      return {id: item.id, sigla: item.sigla, asignatura: item.asignatura, departamento: item.departamento, paralelos: item.paralelos};
     });
-  }
-);
-
-// Return the total cost of the items in the cart
-export const cartTotalSelector = createSelector(
-  cartSelector,
-  productsSelector,
-  (cart, products) => {
-    let total = 0;
-    Object.keys(cart).forEach(id => {
-      const item = products[id];
-      total += item.price * cart[id];
-    });
-    return Math.round(total * 100) / 100;
-  }
-);
-
-// Return the number of items in the cart
-export const cartQuantitySelector = createSelector(
-  cartSelector,
-  cart => {
-    let num = 0;
-    Object.keys(cart).forEach(id => {
-      num += cart[id];
-    });
-    return num;
   }
 );
