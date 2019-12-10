@@ -41,14 +41,40 @@ export class ShopProducts extends connect(store)(LitElement) {
         }
 
         .custom-css {
-            background: gray;
-            border: 2px solid green;
+            
         }
 
-        .custom-css:hover {
-            background: red;
-            color: white;
-            border: 1px solid blue;
+        
+        .sigla {
+          width: 10% 
+        }
+        
+        .asignatura{
+        width: 25%
+        }
+        
+        .departamento{
+        width: 13%
+        }
+        
+        .paralelo{
+        width: 22%
+        }
+        
+        .profesor{
+        width: 15%
+        }
+        
+        .cupos{
+        width: 5%
+        }
+        
+        .horario{
+        width: 10%
+        }
+        
+        .left{
+        text-align: left;
         }
       `
     ];
@@ -61,36 +87,41 @@ export class ShopProducts extends connect(store)(LitElement) {
 
   protected render() {
     return html`
-    <h2 class="custom-css">Listado de cursos</h2>
-    <table >
+    <h2 class="custom-css">Listado de Cursos</h2>
+    <table class="left" >
       <tbody>
         <tr>
-          <th>
+          <th class="sigla">
             <strong> Sigla </strong>
           </th>
-          <th>
+          <th class="asignatura">
             <strong> Asignatura </strong>
           </th>
-          <th>
+          <th class="departamento">
             <strong> Departamento </strong>
           </th>
-          <th>
+          <th class="paralelo">
             <strong> Paralelo </strong>
           </th>
-          <th>
+          <th class="profesor">
             <strong> Profesor </strong>
           </th>
-          <th>
+          <th class="cupos">
             <strong> Cupos </strong>
           </th>
-          <th>
+          <th class="horario">
             <strong> Horario </strong>
           </th>
         </tr>
       ${Object.keys(this._products).map((key) => {
         const item = this._products[key];
         return html`
-        <tr>
+        ${Object.keys(item.paralelos).map((idies) => {
+          // @ts-ignore
+          const item2 = item.paralelos[idies];
+          if(idies == '0'){
+            return html`
+          <tr>
           <td>
             ${item.sigla}
           </td>
@@ -99,27 +130,58 @@ export class ShopProducts extends connect(store)(LitElement) {
           </td>
           <td>
             ${item.departamento}
+          </td>
+          <td>
+            ${item2.id}
           </td> 
           <td>
-            ${item.paralelos}
+            ${item2.profesor}
           </td> 
           <td>
-            cosa
-          </td> 
-          <td>
-            cosa
+            ${item2.cupos}
           </td> 
           <td>
           <button @click="${this.handleClick}">
           Detalles
           </button>
           </td> 
-          
         </tr>
-      </tbody>
-      </table> 
+          `;
+          } else {
+            return html`
+          <tr>
+          <td>
+            
+          </td>
+          <td>
+             
+          </td>
+          <td>
+             
+          </td>
+          <td>
+            ${item2.id}
+          </td> 
+          <td>
+            ${item2.profesor}
+          </td> 
+          <td>
+            ${item2.cupos}
+          </td> 
+          <td>
+          <button @click="${this.handleClick}">
+          Detalles
+          </button>
+          </td> 
+        </tr>
+          `;
+          }
+          
+        })}
         `;
       })}
+      </tbody>
+      </table> 
     `;
   
   }

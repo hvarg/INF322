@@ -58,27 +58,28 @@ export class MainPage extends connect(store)(LitElement) {
 
         #main {
           display: grid;
-          height: 100%;
+          height: fit-content;
           grid-template-columns: 300px calc(100% - 300px);
-          grid-template-rows: 100px calc(100% - 100px);
+          grid-template-rows: 100px calc(100% - 200px) 100px;
         }
 
         #header {
+          background-color: #0d1e52;
+          text-align: left;
+          color: white;
+          padding: 2%;
           grid-row: 1;
           grid-column: 1 / 3;
-          border: 1px dotted red;
         }
 
         #nav-bar {
           grid-row: 2;
           grid-column: 1;
-          border: 1px dotted blue;
         }
 
         #content {
           grid-row: 2;
           grid-column: 2;
-          border: 1px dotted green;
         }
 
         #logInButton {
@@ -92,6 +93,12 @@ export class MainPage extends connect(store)(LitElement) {
         #logInButton:hover {
           background: aqua;
         }
+        
+        #footer {
+        grid-column: 1 / 3;
+        background-color: #faba25;
+        align-content: center;
+        }
 
         .centered {
           display: flex;
@@ -99,6 +106,11 @@ export class MainPage extends connect(store)(LitElement) {
           justify-content: center;
           height: 100%;
         }
+        
+        .shop-margin {
+          margin: 10% 10%
+        }
+        
       `
     ];
   }
@@ -114,12 +126,26 @@ export class MainPage extends connect(store)(LitElement) {
     return html`
     ${this._loggedIn ? html`
     <div id="main">
-        <div id="header"></div>
-        <div id="nav-bar"></div>
-        <div id="content" class="centered">
-          
-            <shop-products></shop-products> 
+        <div id="header" >
+        
+        <div style="vertical-align: middle;">
+        
+        sesión de ALUMNO NOMBRE APELLIDO
+        
         </div>
+        
+        </div>
+           
+        <div id="nav-bar"></div>
+           
+        <div id="content">
+          
+            <shop-products class="shop-margin" ></shop-products> 
+        </div>
+        
+        <div id="footer">
+        </div>
+        
     </div>
     ` : html`
     <div class="centered">
