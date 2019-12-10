@@ -28,7 +28,7 @@ import { lazyReducerEnhancer } from 'pwa-helpers/lazy-reducer-enhancer.js';
 
 import app, { AppState } from './reducers/app.js';
 import { CounterState } from './reducers/counter.js';
-import { ShopState } from './reducers/shop.js';
+import shop, { ShopState } from './reducers/shop.js';
 import { AppAction } from './actions/app.js';
 import { CounterAction } from './actions/counter.js';
 import { ShopAction } from './actions/shop.js';
@@ -64,4 +64,8 @@ export const store = createStore(
 // Initially loaded reducers.
 store.addReducers({
   app
+});
+
+store.addReducers({
+  shop
 });

@@ -39,6 +39,17 @@ export class ShopProducts extends connect(store)(LitElement) {
         :host {
           display: block;
         }
+
+        .custom-css {
+            background: gray;
+            border: 2px solid green;
+        }
+
+        .custom-css:hover {
+            background: red;
+            color: white;
+            border: 1px solid blue;
+        }
       `
     ];
   }
@@ -50,7 +61,7 @@ export class ShopProducts extends connect(store)(LitElement) {
 
   protected render() {
     return html`
-    <h2>Listado de cursos</h2>
+    <h2 class="custom-css">Listado de cursos</h2>
     <table >
       <tbody>
         <tr>
@@ -110,7 +121,6 @@ export class ShopProducts extends connect(store)(LitElement) {
         `;
       })}
     `;
-
   
   }
 
