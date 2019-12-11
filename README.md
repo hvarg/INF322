@@ -151,10 +151,10 @@ En esta parte del SIGA, nos falta búsquedor de asignaturas. Además, cuando se 
 
 P: Cuando se encuentra el curso que nos gusta, se debería hacer clic en la resuelto para obtener más información (como la información dicha) en un cuadro a la izquierda en la misma pagina. Aquí está la información sobre el profesor y el horario puede estar. También debe haber un *link* con la dirección de correo electrónico al profesor.
 
-### Visibilidad excesiva de la ficha personal
-Es demasiado fácil a cambiar fichas personales y verlos cuando se tenga aceso a una cuenta.
+### Visibilidad innecesaria personal
+Cuando se acede las fichas personales, datos que puede ser muy sensible, como grupo sanguineo, dirrección del periódo academico, telefono, se pueden ver muy fácilmente y modificar sin verficar la identidad del usuario.
 
-P: El SIGA debe notificar al usuario que su sesión estaría perdida por una falta de actividad para que el usuario pueda confirmar su presencia y continua la sesión y no pedir la sesión y entrar su información de nuevo.
+P: Por defecto, esa información se debe ser ocultado. Además, si el usuario quiere ver y modificar los datos, SIGA debe pedir al usuario entrar su contraseño de nuevo para que verifique que el propiador de la cuenta esta haciendo interactuando con esos datos. Esta modificación añade un otro nivel de seguridad para proteger datos personales del usuario.
 
 ### Falta de entender límites temporales de sistem
 El usuario puede pedir su sesión, pero no hay información del límite del tiempo que queda al usuario hasta se le pierde su sesión por una falta de actividad.  Entonces, puede irritar al usuario cuando tiene que entrar su información de nuevo.
