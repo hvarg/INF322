@@ -59,7 +59,7 @@ Actualizar su información personal en la Ficha personal es fácil para datos co
 Revisar el avance curricular para ver las notas obtenidas en cada asignatura y realizar la encuesta docente para evaluar la asignatura y profesor.
 
 ### Para Administración
-La administración de la UTFSM usa SIGA para informar a los alumnos, a través de la página principal (que no requiere inicio de sesión), dónde se pueden encontrar noticias tanto de actualización de los reglamentos, como de plazos importantes. Pero depende de la pantalla del usuario si alcanza o no a visualizar esta información (en algunos casos sólo se ve el título o una parte de la primera sección), es por ello que se dificulta la lectura y obtención de la información por parte de los **alumnos**, puesto que no suelen percatarse de que hay noticias y/o nuevos cambios.  
+La administración de la UTFSM usa SIGA para informar a los alumnos, a través de la página principal (que no requiere inicio de sesión), dónde se pueden encontrar noticias tanto de actualización de los reglamentos, como de plazos importantes. Pero depende de la pantalla del usuario si alcanza o no a visualizar esta información (en algunos casos sólo se ve el título o una parte de la primera sección), es por ello que se dificulta la lectura y obtención de la información por parte de los **alumnos**, puesto que no suelen percatarse de que hay y/o nuevos cambios.  
 
 ### Conclusión de Usabilidad
 En general la sistema es díficil entender, porque no ofrece mucho apoyo al usuario. Por lo que para mejorar este aspecto, se podría agregar **información** que indique las funciónes de cada sección a través de una breve explicación y una **mejor organización** del contenido para facilitar la navegación por el sistema y sus servicios.
@@ -97,6 +97,8 @@ Consulta de Pagarés - Compromisos del usuario para pagar en una fecha más tard
 ### Noticias
 Cuando el usuario entra https://siga.usm.cl/pag/, el sistema muestra la pagina inicial, como se muestra en Figura 2. En esta página hay información sobre el sistema, medios de contacto y sobre la universidad.
 Cuando se inicie la sesión en SIGA, no es posible buscar esta información de nuevo.  Entonces información clave al usuario no es muy acesible durante su uso entero del SIGA.
+
+P: Las noticias y información debe venir despues de inciar una sesión. Esto hace que el usuario puede acceder a la información cuando ya está dentro del sistema. Esto evite que el usuario tiene que salir del sistema para buscar la información en la pagina mostrada en Figura 2. Las noticias debe estar en una cuadra en el nueva menu a la izquierda, donde el menu contiene las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
 
 ### Ingreso
 El usario tiene dos ventanas para iniciar la sesión en SIGA, como se muestra en  Figura 2. El sistema no explica la diferencia entre las dos maneras de iniciar la sesión (esto es las maneras de ingresar a la cuenta viene de que antiguos y nuevos usarios no están en la misma servidor), y el usario necesitaría más suporte para entender cual información es necesario para iniciar la sesión usando la manera a la izquierda.
@@ -143,8 +145,7 @@ No es posible cambiar contraseña cuando has iniciado la sesión. Para cambiar c
 ![Image of_contrasena_4](https://github.com/hvarg/INF322/blob/master/assets/contrasena_4.png)
 
 
-### Noticias
-P: Las noticias y información debe venir despues de inciar una sesión. Las noticias debe estar en una cuadra en el nueva menu a la izquierda, donde el menu contiene las alternativas de navegación cuando se haya iniciado una sesión. Esto facilitará que el alumno lea la información.
+
 
 ### Horario Asignaturas
 En esta parte del SIGA, nos falta búsquedor de asignaturas. Además, cuando se busque asignaturas, se obtenga demasiado información (esto es el profesor o cupos para cada curso).  Esta cantidad de información además puede confudir al usuario o causar demoras inecesarias en el proceso de buscar
