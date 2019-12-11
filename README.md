@@ -151,7 +151,7 @@ En esta parte del SIGA, nos falta búsquedor de asignaturas. Además, cuando se 
 
 P: Cuando se encuentra el curso que nos gusta, se debería hacer clic en la resuelto para obtener más información (como la información dicha) en un cuadro a la izquierda en la misma pagina. Aquí está la información sobre el profesor y el horario puede estar. También debe haber un *link* con la dirección de correo electrónico al profesor.
 
-### Visibilidad innecesaria personal
+### Visibilidad innecesaria de la ficha personal
 Cuando se acede las fichas personales, datos que puede ser muy sensible, como grupo sanguineo, dirrección del periódo academico, telefono, se pueden ver muy fácilmente y modificar sin verficar la identidad del usuario.
 
 P: Por defecto, esa información se debe ser ocultado. Además, si el usuario quiere ver y modificar los datos, SIGA debe pedir al usuario entrar su contraseño de nuevo para que verifique que el propiador de la cuenta esta haciendo interactuando con esos datos. Esta modificación añade un otro nivel de seguridad para proteger datos personales del usuario.
