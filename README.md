@@ -151,7 +151,7 @@ En esta parte del SIGA, nos falta búsquedor de asignaturas. Además, cuando se 
 
 P: Cuando se encuentra el curso que nos gusta, se debería hacer clic en la resuelto para obtener más información (como la información dicha) en un cuadro a la izquierda en la misma pagina. Aquí está la información sobre el profesor y el horario puede estar. También debe haber un *link* con la dirección de correo electrónico al profesor.
 
-### Demasiado visibilidad de ficha personal
+### Visibilidad excesiva de la ficha personal
 Es demasiado fácil a cambiar fichas personales y verlos cuando se tenga aceso a una cuenta.
 
 P: El SIGA debe notificar al usuario que su sesión estaría perdida por una falta de actividad para que el usuario pueda confirmar su presencia y continua la sesión y no pedir la sesión y entrar su información de nuevo.
