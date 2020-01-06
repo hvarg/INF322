@@ -55,6 +55,7 @@ export class LoginComponent extends PageViewElement {
     if (!this._loggedIn) {
         console.log('try again!');
     }
+    store.dispatch(navigate('/home'))
   }
 
   protected render() {
