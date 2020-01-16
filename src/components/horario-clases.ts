@@ -10,71 +10,53 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 import { LitElement, html, css, property, customElement } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
-
-// This element is connected to the Redux store.
-import { store, RootState } from '../store.js';
-
-// These are the elements needed by this element.
-// import './shop-item.js';
-
-// These are the actions needed by this element.
-import { getAllProducts } from '../actions/shop.js';
-
-// These are the elements needed by this element.
-//import { addToCartIcon } from './my-icons.js';
-
-// These are the shared styles needed by this element.
+import { store } from '../store.js';
 import { ButtonSharedStyles } from './button-shared-styles.js';
-import { ListaCursos } from '../reducers/shop.js';
+import { ListaCursos } from '../reducers/cursos';
 
-@customElement('shop-products')
-export class ShopProducts extends connect(store)(LitElement) {
+@customElement('horario-clases')
+export class HorarioClases extends connect(store)(LitElement) {
   @property({type: Object})
-  private _products: ListaCursos = {};
+  public cursos: ListaCursos = {};
 
   static get styles() {
     return [
       ButtonSharedStyles,
       css`
         :host {
-          display: block;
+            display: block;
         }
 
-        .custom-css {
-            
-        }
-
-        
         .sigla {
-          width: 10% 
+            width: 10% 
         }
         
         .asignatura{
-        width: 25%
+            width: 25%
         }
         
         .departamento{
-        width: 13%
+            width: 13%
         }
         
         .paralelo{
-        width: 22%
+            width: 22%
         }
         
         .profesor{
-        width: 15%
+            width: 15%
         }
         
         .cupos{
-        width: 5%
+            width: 5%
         }
         
         .horario{
-        width: 10%
+            width: 10%
         }
         
         .left{
-        text-align: left;
+            text-align: left;
         }
       `
     ];
@@ -82,13 +64,13 @@ export class ShopProducts extends connect(store)(LitElement) {
   
 
   handleClick() {
-    console.log(this._products);
+    console.log(this.cursos);
   }
 
   protected render() {
     return html`
-    <h2 class="custom-css">Listado de Cursos</h2>
-    <table class="left" >
+    <h2>Listado de Cursos</h2>
+    <table class="left">
       <tbody>
         <tr>
           <th class="sigla">
@@ -113,8 +95,8 @@ export class ShopProducts extends connect(store)(LitElement) {
             <strong> Horario </strong>
           </th>
         </tr>
-      ${Object.keys(this._products).map((key) => {
-        const item = this._products[key];
+      ${Object.keys(this.cursos).map((key) => {
+        const item = this.cursos[key];
         return html`
         ${Object.keys(item.paralelos).map((idies) => {
           // @ts-ignore
@@ -184,19 +166,5 @@ export class ShopProducts extends connect(store)(LitElement) {
       </table> 
     `;
   
-  }
-
-  protected firstUpdated() {
-    store.dispatch(getAllProducts());
-  }
-  /*
-  private _addButtonClicked(e: Event) {
-    store.dispatch(addToCart((e.currentTarget as HTMLButtonElement).dataset['index']));
-  }
-  */
-
-  // This is called every time something is updated in the store.
-  stateChanged(state: RootState) {
-    this._products = state.shop!.products;
   }
 }
