@@ -25,7 +25,6 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
         this.options = {
             valueNames: ['Sigla', 'Asignatura']
         };
-        this.cursoList = ['asignaturas', this.options];
     }
     static get styles() {
         return [
@@ -35,84 +34,6 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
             display: block;
         }
         
-        .list {
-        font-family:sans-serif;
-        }
-        
-        td {
-        padding:10px;
-        border:solid 1px #eee;
-        }
-               
-        input {
-        border:solid 1px #ccc;
-        border-radius: 5px;
-        padding:7px 14px;
-        margin-bottom:10px
-        }
-        
-        input:focus {
-        outline:none;
-        border-color:#aaa;
-        }
-        
-        .sort {
-        padding:8px 30px;
-        border-radius: 6px;
-        border:none;
-        display:inline-block;
-        color:#fff;
-        text-decoration: none;
-        background-color: #28a8e0;
-        height:30px;
-        }
-        
-        .sort:hover {
-        text-decoration: none;
-        background-color:#1b8aba;
-        }
-        
-        .sort:focus {
-        outline:none;
-        }
-        
-        .sort:after {
-        display:inline-block;
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        content:"";
-        position: relative;
-        top:-10px;
-        right:-5px;
-        }
-        
-        .sort.asc:after {
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 5px solid #fff;
-        content:"";
-        position: relative;
-        top:4px;
-        right:-5px;
-        }
-        
-        .sort.desc:after {
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-bottom: 5px solid #fff;
-        content:"";
-        position: relative;
-        top:-4px;
-        right:-5px;
-        }
-
         .sigla {
             width: 10% 
         }
@@ -151,6 +72,7 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
         var button = e.target;
         if (button.prefix == "far") {
             button.setAttribute("prefix", "fas");
+            console.log(e.target.id);
         }
         else {
             button.setAttribute("prefix", "far");
@@ -158,19 +80,9 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
     }
     render() {
         return html `
-<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <h2>Listado de Cursos</h2>
-    <table class="left">
-      <div id="asignaturas">
-      
-      <input class="search" placeholder="Buscar" />
-      <button class="sort" data-sort="Sigla">
-      Ordenar por sigla
-      </button>
-      <button class="sort" data-sort="Asignatura">
-      Ordenar por asignatura
-      </button>
-      <tbody class="list">
+    <table>
+      <tbody>
       <tr>
           <th class="Sigla">
             <strong> Sigla </strong>
@@ -198,7 +110,7 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
             ${item.asignatura}
           </td>
           <td>
-          <button name="boton1" id="boton1" @click="${this.handleClick}"><fontawesome-icon id="1" prefix="far" name="plus-square" fixed-width></fontawesome-icon></button>
+          <button @click="${this.handleClick}"><fontawesome-icon id="${item.sigla}" prefix="far" name="plus-square" fixed-width></fontawesome-icon></button>
           </td> 
         </tr>
           `;
@@ -210,8 +122,6 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
             })}
         `;
         })}
-      
-      </div>
       </tbody>
       </table> 
     `;
