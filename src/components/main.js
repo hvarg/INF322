@@ -36,6 +36,7 @@ import './snack-bar.js';
 // Aqui se importan los componentes.
 import './horario-clases';
 import './tabla-guion';
+import './ramo-paralelo';
 let MainPage = class MainPage extends connect(store)(LitElement) {
     constructor() {
         super();
@@ -136,7 +137,8 @@ let MainPage = class MainPage extends connect(store)(LitElement) {
         <div id="content">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                  el nombre de la variable del componente (public) -->
-            <tabla-guion class="component-margin" .cursos="${this._cursos}"></tabla-guion>       
+            <tabla-guion class="component-margin" .cursos="${this._cursos}"></tabla-guion>
+            <ramo-paralelo class="component-margin" .cursos="${this._cursos}"></ramo-paralelo>
         </div>
         
         <div id="footer">
