@@ -21,10 +21,10 @@ export class HorarioClases extends connect(store)(LitElement) {
   @property({type: Object})
   public cursos: ListaCursos = {};
   public options = {
-    valueNames: [ 'name', 'born' ]
+    valueNames: [ 'Sigla', 'Asignatura' ]
   };
 
-  public userList = new List('users', this.options);
+  public cursoList = ['asignaturas', this.options];
 
   static get styles() {
     return [
@@ -161,12 +161,21 @@ export class HorarioClases extends connect(store)(LitElement) {
     return html`
     <h2>Listado de Cursos</h2>
     <table class="left">
-      <tbody>
-        <tr>
-          <th class="sigla">
+      <div id="asignaturas">
+      
+      <input class="search" placeholder="Buscar" />
+      <button class="sort" data-sort="Sigla">
+      Ordenar por sigla
+      </button>
+      <button class="sort" data-sort="Asignatura">
+      Ordenar por asignatura
+      </button>
+      <tbody class="list">
+      <tr>
+          <th class="Sigla">
             <strong> Sigla </strong>
           </th>
-          <th class="asignatura">
+          <th class="Asignatura">
             <strong> Asignatura </strong>
           </th>
           <th>
@@ -174,13 +183,13 @@ export class HorarioClases extends connect(store)(LitElement) {
           </th>
         </tr>
       ${Object.keys(this.cursos).map((key) => {
-        const item = this.cursos[key];
-        return html`
+      const item = this.cursos[key];
+      return html`
         ${Object.keys(item.paralelos).map((idies) => {
-          // @ts-ignore
-          const item2 = item.paralelos[idies];
-          if(idies == '0'){
-            return html`
+        // @ts-ignore
+        const item2 = item.paralelos[idies];
+        if(idies == '0'){
+          return html`
           <tr>
           <td>
             ${item.sigla}
@@ -193,14 +202,16 @@ export class HorarioClases extends connect(store)(LitElement) {
           </td> 
         </tr>
           `;
-          } else {
-            return html`
+        } else {
+          return html`
           `;
-          }
-          
-        })}
-        `;
+        }
+
       })}
+        `;
+    })}
+      
+      </div>
       </tbody>
       </table> 
     `;

@@ -40,7 +40,6 @@ import { CursosAction } from './actions/cursos';
 export interface RootState {
   app?: AppState;
   cursos?: CursosState;
-  horario?: HorarioState;
 }
 
 // Se agrega el tipo de las acciones que creemos al tipo root.
@@ -68,4 +67,3 @@ export const store = createStore(
 // Cargar reducers, aquí es donde se conectan los básicos, se pueden cargar a demanda tambien.
 store.addReducers({ app });
 store.addReducers({ cursos });
-store.addReducers({ horario });

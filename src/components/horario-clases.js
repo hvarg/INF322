@@ -23,9 +23,9 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
         super(...arguments);
         this.cursos = {};
         this.options = {
-            valueNames: ['name', 'born']
+            valueNames: ['Sigla', 'Asignatura']
         };
-        this.userList = new List('users', this.options);
+        this.cursoList = ['asignaturas', this.options];
     }
     static get styles() {
         return [
@@ -160,12 +160,21 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
         return html `
     <h2>Listado de Cursos</h2>
     <table class="left">
-      <tbody>
-        <tr>
-          <th class="sigla">
+      <div id="asignaturas">
+      
+      <input class="search" placeholder="Buscar" />
+      <button class="sort" data-sort="Sigla">
+      Ordenar por sigla
+      </button>
+      <button class="sort" data-sort="Asignatura">
+      Ordenar por asignatura
+      </button>
+      <tbody class="list">
+      <tr>
+          <th class="Sigla">
             <strong> Sigla </strong>
           </th>
-          <th class="asignatura">
+          <th class="Asignatura">
             <strong> Asignatura </strong>
           </th>
           <th>
@@ -200,6 +209,8 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
             })}
         `;
         })}
+      
+      </div>
       </tbody>
       </table> 
     `;
