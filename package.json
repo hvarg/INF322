@@ -19,10 +19,15 @@
     "test:regenerate_screenshots": "tsc && mocha test/integration/screenshots-baseline/regenerate.js --timeout=15000"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@polymer/app-layout": "^3.0.0",
     "@polymer/polymer": "^3.1.0",
     "@webcomponents/webcomponentsjs": "^2.2.4",
+    "font-awesome": "^4.7.0",
+    "fontawesome-icon": "^1.0.4",
     "lit-element": "^2.2.1",
+    "material-design-icons": "^3.0.1",
     "pwa-helpers": "^0.9.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",

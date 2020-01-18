@@ -8,16 +8,19 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html, css, property, customElement } from 'lit-element';
+import {LitElement, html, css, property, customElement} from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
-import { store } from '../store.js';
-import { ButtonSharedStyles } from './button-shared-styles.js';
+import { store } from '../store';
+import { ButtonSharedStyles } from './button-shared-styles';
 import { ListaCursos } from '../reducers/cursos';
+import 'fontawesome-icon';
+
 
 @customElement('horario-clases')
 export class HorarioClases extends connect(store)(LitElement) {
   @property({type: Object})
   public cursos: ListaCursos = {};
+
 
   static get styles() {
     return [
@@ -63,8 +66,13 @@ export class HorarioClases extends connect(store)(LitElement) {
   }
   
 
-  handleClick() {
-    console.log(this.cursos);
+  handleClick(e : any) {
+    var button = e.target;
+    if(button.prefix == "far"){
+      button.setAttribute("prefix","fas");
+    }else{
+      button.setAttribute("prefix","far");
+    }
   }
 
   protected render() {
@@ -79,20 +87,8 @@ export class HorarioClases extends connect(store)(LitElement) {
           <th class="asignatura">
             <strong> Asignatura </strong>
           </th>
-          <th class="departamento">
-            <strong> Departamento </strong>
-          </th>
-          <th class="paralelo">
-            <strong> Paralelo </strong>
-          </th>
-          <th class="profesor">
-            <strong> Profesor </strong>
-          </th>
-          <th class="cupos">
-            <strong> Cupos </strong>
-          </th>
-          <th class="horario">
-            <strong> Horario </strong>
+          <th>
+          <strong> Más información </strong>
           </th>
         </tr>
       ${Object.keys(this.cursos).map((key) => {
@@ -111,51 +107,17 @@ export class HorarioClases extends connect(store)(LitElement) {
             ${item.asignatura}
           </td>
           <td>
-            ${item.departamento}
-          </td>
-          <td>
-            ${item2.id}
-          </td> 
-          <td>
-            ${item2.profesor}
-          </td> 
-          <td>
-            ${item2.cupos}
-          </td> 
-          <td>
-          <button @click="${this.handleClick}">
-          Detalles
+          <button name="boton1" id="boton1" @click="${this.handleClick}">
+          <fontawesome-icon id="1" prefix="far" name="plus-square" fixed-width></fontawesome-icon>
+          </button>
+          <button id="boton2" style="display: none" @click="${this.handleClick}">
+          <fontawesome-icon  id="${item.sigla}-2" prefix="fas" name="plus-square" fixed-width></fontawesome-icon>
           </button>
           </td> 
         </tr>
           `;
           } else {
             return html`
-          <tr>
-          <td>
-            
-          </td>
-          <td>
-             
-          </td>
-          <td>
-             
-          </td>
-          <td>
-            ${item2.id}
-          </td> 
-          <td>
-            ${item2.profesor}
-          </td> 
-          <td>
-            ${item2.cupos}
-          </td> 
-          <td>
-          <button @click="${this.handleClick}">
-          Detalles
-          </button>
-          </td> 
-        </tr>
           `;
           }
           
