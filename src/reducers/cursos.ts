@@ -25,7 +25,7 @@ export interface ListaCursos {
   [index:string]: Curso;
 }
 
-export interface Hora {
+export interface Horario {
   bloque: string;
   sala: string;
 }
@@ -34,7 +34,7 @@ export interface Paralelo {
   id: number;
   profesor: string;
   cupos: number;
-  horario: Array<Hora>;
+  horarios: Array<Horario>;
 }
 
 export interface Curso {
