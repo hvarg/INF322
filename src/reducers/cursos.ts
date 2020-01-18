@@ -34,7 +34,7 @@ export interface Paralelo {
   id: number;
   profesor: string;
   cupos: number;
-  bloques: Array<Hora>;
+  horario: Array<Hora>;
 }
 
 export interface Curso {

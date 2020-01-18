@@ -158,6 +158,7 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
     }
     render() {
         return html `
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <h2>Listado de Cursos</h2>
     <table class="left">
       <div id="asignaturas">

@@ -25,7 +25,7 @@ type ThunkResult = ThunkAction<void, RootState, undefined, CursosAction>;
 const CURSOS_LIST = [
   { "id": 1, "sigla": 'IWI131', "asignatura": 'Programación', "departamento": 'Informática' ,
     "paralelos": [{ "id": 1, "profesor": 'profe1', "cupos": 20, "horario":[{"bloque":'1-2', "sala":'M-302'}]},
-                  { "id": 2, "profesor": 'profe2', "cupos": 30, "horario":[{"Bloque": '1-2', "sala":'M-123'},
+                  { "id": 2, "profesor": 'profe2', "cupos": 30, "horario":[{"bloque": '1-2', "sala":'M-123'},
                                                                            {"bloque": '3-4', "sala":'F-106'}]}]},
   { "id": 3, "sigla": 'FIS100', "asignatura": 'Introducción a la Física', "departamento": 'Física' ,
     "paralelos": [{"id": 1, "profesor": 'Hakobyan', "cupos": 50, "horario":[{"bloque": '13-14', "sala":'A-234'}]}] },
