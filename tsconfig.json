@@ -6,6 +6,7 @@
     "lib": ["es2017", "dom"],
     "strict": true,
     "noUnusedLocals": true,
+    "sourceMap": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
