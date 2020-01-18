@@ -41,6 +41,7 @@ import './snack-bar.js';
 // Aqui se importan los componentes.
 import './horario-clases';
 
+
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
   @property({type: Object})
@@ -122,7 +123,7 @@ export class MainPage extends connect(store)(LitElement) {
   }
 
   _logIn () {
-    this._loggedIn = (Math.random() > .5);
+    this._loggedIn = (Math.random() > 0);
     if (!this._loggedIn) {
         alert('try again!');
     }
@@ -145,7 +146,7 @@ export class MainPage extends connect(store)(LitElement) {
         <div id="content">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                  el nombre de la variable del componente (public) -->
-            <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
+            <tabla class="component-margin" .cursos="${this._cursos}"></tabla>         
         </div>
         
         <div id="footer">
