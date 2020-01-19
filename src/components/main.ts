@@ -40,6 +40,7 @@ import './snack-bar.js';
 
 // Aqui se importan los componentes.
 import './horario-clases';
+import './nav-bar';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
@@ -122,7 +123,7 @@ export class MainPage extends connect(store)(LitElement) {
   }
 
   _logIn () {
-    this._loggedIn = (Math.random() > .5);
+    this._loggedIn = true;
     if (!this._loggedIn) {
         alert('try again!');
     }
@@ -140,7 +141,9 @@ export class MainPage extends connect(store)(LitElement) {
             Sesión de ALUMNO NOMBRE APELLIDO
         </div>
            
-        <div id="nav-bar"></div>
+        <div id="nav-bar">
+          <nav-bar class="component-margin"> </nav-bar>
+        </div>
            
         <div id="content">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
