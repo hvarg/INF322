@@ -29,6 +29,7 @@ export interface Paralelo {
   id: number;
   profesor: string;
   cupos: number;
+  bloques: Array<Array<string>>;
 }
 
 export interface Curso {

@@ -12,7 +12,7 @@ import { LitElement, html, css, property, customElement } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store.js';
 import { ButtonSharedStyles } from './button-shared-styles.js';
-import { ListaCursos } from '../reducers/cursos';
+import { ListaCursos} from '../reducers/cursos';
 
 @customElement('horario-clases')
 export class HorarioClases extends connect(store)(LitElement) {
@@ -27,50 +27,60 @@ export class HorarioClases extends connect(store)(LitElement) {
             display: block;
         }
 
+        tr:nth-child(even) {
+          background-color: #dfe6ec;
+        }
+
         .sigla {
-            width: 10% 
+            width: 10%;
+            text-align: left;
+            background-color: #abc;
         }
         
         .asignatura{
-            width: 25%
+            width: 25%;
+            text-align: left;
+            background-color: #abc;
         }
         
         .departamento{
-            width: 13%
+            width: 15%;
+            text-align: left;
+            background-color: #abc;
         }
         
         .paralelo{
-            width: 22%
+            width: 5%;
+            text-align: center;
+            background-color: #abc;
         }
         
         .profesor{
-            width: 15%
+            width: 15%;
+            background-color: #abc;
         }
         
         .cupos{
-            width: 5%
+            width: 5%;
+            background-color: #abc;
         }
         
         .horario{
-            width: 10%
-        }
-        
-        .left{
-            text-align: left;
-        }
+            width: 10%;
+            background-color: #abc;
+        };
       `
     ];
   }
   
-
   handleClick() {
     console.log(this.cursos);
   }
 
   protected render() {
     return html`
-    <h2>Listado de Cursos</h2>
-    <table class="left">
+    <h2>Listado de Cursos </h2>
+    <table>
       <tbody>
         <tr>
           <th class="sigla">
@@ -113,16 +123,16 @@ export class HorarioClases extends connect(store)(LitElement) {
           <td>
             ${item.departamento}
           </td>
-          <td>
+          <td style="text-align:center;">
             ${item2.id}
           </td> 
           <td>
             ${item2.profesor}
           </td> 
-          <td>
+          <td style="text-align:center;">
             ${item2.cupos}
           </td> 
-          <td>
+          <td style="text-align:center;">
           <button @click="${this.handleClick}">
           Detalles
           </button>
@@ -141,16 +151,16 @@ export class HorarioClases extends connect(store)(LitElement) {
           <td>
              
           </td>
-          <td>
+          <td style="text-align:center;">
             ${item2.id}
           </td> 
           <td>
             ${item2.profesor}
           </td> 
-          <td>
+          <td style="text-align:center;">
             ${item2.cupos}
           </td> 
-          <td>
+          <td style="text-align:center;">
           <button @click="${this.handleClick}">
           Detalles
           </button>
