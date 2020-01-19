@@ -20,14 +20,17 @@ export class RamoParalelo extends connect(store)(LitElement) {
   @property({type: Object})
   public cursos: ListaCursos = {};
   public sigla = "IWI131";
-  public curso : any = this.filter;
-  public paralelos : any = this.curso.paralelos;
+  public nombre : any;
+  public curso : any ;
+  public paralelos : any ;
 
   protected filter() {
     Object.keys(this.cursos).map((key) => {
             const item = this.cursos[key];
             if (item.sigla == this.sigla){
+                this.sigla = item.sigla;
                 this.curso = item;
+                this.nombre = item.asignatura;
                 this.paralelos = this.curso.paralelos;
                 console.log("Entró");
                 console.log(this.curso);
@@ -78,7 +81,8 @@ export class RamoParalelo extends connect(store)(LitElement) {
 
   protected render() {
       return html`
-      <h2>Sigla: </h2>
+        ${this.filter()}
+      <h2>Sigla: ${this.sigla} Asignatura: ${this.nombre}</h2>
       <table>
         <tbody>
         <tr>
@@ -95,7 +99,7 @@ export class RamoParalelo extends connect(store)(LitElement) {
             <strong> Horario </strong>
             </th>
           </tr>
-        ${this.filter()}
+        
         ${Object.keys(this.paralelos).map((key) => {
    
         const item = this.paralelos[key];
