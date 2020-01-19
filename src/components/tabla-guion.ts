@@ -162,6 +162,9 @@ export class TablaGuion extends connect(store)(LitElement) {
         <table>
     <body>
         <tr>
+        <th></th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th><th>Sábado</th>
+        </tr>
+        <tr>
             <th>1-2</th>
             <td colspan="4" rowspan="2" class="stage-saturn">Welcome</td>
         </tr>
