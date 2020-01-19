@@ -12,7 +12,7 @@ import {LitElement, html, css, property, customElement} from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store';
 import { ButtonSharedStyles } from './button-shared-styles';
-import { testCss} from './styletest';
+import { testCss } from './horario-style';
 import { ListaCursos } from '../reducers/cursos';
 import 'fontawesome-icon';
 
@@ -26,8 +26,7 @@ export class TablaGuion extends connect(store)(LitElement) {
     };
 
     static get styles() {
-        return [
-            testCss,
+        return [testCss,
             ButtonSharedStyles,
             css`
         :host {
@@ -37,12 +36,7 @@ export class TablaGuion extends connect(store)(LitElement) {
         .list {
         font-family:sans-serif;
         }
-        
-        td {
-        padding:10px;
-        border:solid 1px #eee;
-        }
-               
+                       
         input {
         border:solid 1px #ccc;
         border-radius: 5px;

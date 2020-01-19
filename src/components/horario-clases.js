@@ -27,8 +27,7 @@ let HorarioClases = class HorarioClases extends connect(store)(LitElement) {
         };
     }
     static get styles() {
-        return [
-            ButtonSharedStyles,
+        return [ButtonSharedStyles,
             css `
         :host {
             display: block;
