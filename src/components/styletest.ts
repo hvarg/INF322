@@ -13,7 +13,7 @@ body {
 
 table {
     width: 100%;
-    max-width: 50rem;
+    max-width: 60rem;
 
     tr:nth-child(even) th {
         color: #ccc;
@@ -34,7 +34,7 @@ table {
         font-size: 0.8rem;
         font-weight: bold;
         line-height: 1.4;
-        border-radius: 0.2rem;
+        border-radius: 0.1rem;
         transition: opacity 0.3s ease;
     }
 
