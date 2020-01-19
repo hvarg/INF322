@@ -1,3 +1,14 @@
+# Comentarios de desarrollo Penguin Club:
+
+* En la carpeta assets tenemos unas ilustraciones de propuesta/objetivo a desarrollar
+* Por ahora estamos trabajando en 3 componentes distintos:
+    * horario-clases
+    * tabla-guion
+    * ramo-paralelo
+* En un futuro planeamos juntarlos, por ahora estamos desarrollando su funcionamiento por separado
+
+
+
 # Evaluación interfaz: SIGA (Alumnos)
 
 Los objetivos de este escrito son los siguientes:
