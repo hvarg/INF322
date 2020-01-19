@@ -21,9 +21,52 @@ import 'fontawesome-icon';
 export class TablaGuion extends connect(store)(LitElement) {
     @property({type: Object})
     public cursos: ListaCursos = {};
-    public options = {
-        valueNames: [ 'Sigla', 'Asignatura' ]
-    };
+    public sigla = "IWI131";
+    public nombre : any;
+    public curso : any ;
+    public paralelos : any ;
+
+    public id = "2";
+    public profesor : any;
+    public horarios :any;
+
+    protected filter() {
+        Object.keys(this.cursos).map((key) => {
+            const item = this.cursos[key];
+            if (item.sigla == this.sigla){
+                this.sigla = item.sigla;
+                this.curso = item;
+                this.nombre = item.asignatura;
+                this.paralelos = this.curso.paralelos;
+                console.log("Entró");
+                console.log(this.curso);
+            }
+        })
+    }
+
+    protected filter_by_paralelo() {
+        Object.keys(this.paralelos).map((key) => {
+            const item = this.paralelos[key];
+            if (item.id == this.id){
+                this.id = item.id;
+                this.profesor = item.profesor;
+                this.horarios = item.horarios;
+                console.log("Entró");
+                console.log(this.curso);
+            }
+        })
+    }
+
+    protected getSala(dia :any,bloque :any){
+        Object.keys(this.horarios).map((key) => {
+            const item = this.horarios[key];
+            if ((item.dia == dia) && (item.bloque == bloque)){
+                console.log(item.sala);
+                return item.sala;
+            }
+        })
+    }
+
 
     static get styles() {
         return [testCss,
@@ -153,13 +196,16 @@ export class TablaGuion extends connect(store)(LitElement) {
 
     protected render() {
         return html`
+        ${this.filter()}
+        ${this.filter_by_paralelo()}
+        <h2>Paralelo: ${this.id} Profesor: ${this.profesor}</h2>
         <table>
     <body>
         <tr>
         <th></th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th><th>Sábado</th>
         </tr>
         <tr>
-            <th>1-2</th>
+            <th>1-2</th> <th> ${this.getSala('lunes','1-2')}</th> <th> ${this.getSala('martes','1-2')}</th>
         </tr>
         <tr>
             <th>3-4</th>

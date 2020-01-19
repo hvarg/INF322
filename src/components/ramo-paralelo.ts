@@ -38,6 +38,7 @@ export class RamoParalelo extends connect(store)(LitElement) {
     })
   }
 
+
   static get styles() {
       return [
         ButtonSharedStyles,
