@@ -113,7 +113,7 @@ export class RamoParalelo extends connect(store)(LitElement) {
               ${item.cupos}
             </td>
             <td>
-            <button @click="${this.handleClick}"><fontawesome-icon id="${item.id}" prefix="far" name="plus-square" fixed-width></fontawesome-icon></button>
+            <button @click="${this.handleClick}"><fontawesome-icon id="${item.id}" prefix="far" name="calendar-alt" fixed-width></fontawesome-icon></button>
             </td>
           </tr>
             `;
