@@ -26,6 +26,7 @@ export interface ListaCursos {
 }
 
 export interface Horario {
+  dia: string;
   bloque: string;
   sala: string;
 }
