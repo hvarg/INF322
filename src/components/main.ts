@@ -21,6 +21,7 @@ import { updateMetadata } from 'pwa-helpers/metadata.js';
 import { store, RootState } from '../store.js';
 import { customCss } from './style';
 
+
 // Importen sus tipos de datos y funciones
 import { getAllCursos } from '../actions/cursos';
 import { ListaCursos } from '../reducers/cursos';
@@ -147,7 +148,7 @@ export class MainPage extends connect(store)(LitElement) {
         <div id="content">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                  el nombre de la variable del componente (public) -->
-            <ramo-paralelo class="component-margin" .cursos="${this._cursos}"></ramo-paralelo>
+            <tabla-guion class="component-margin" .cursos="${this._cursos}"></tabla-guion>
         </div>
         
         <div id="footer">

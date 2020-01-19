@@ -12,6 +12,7 @@ import {LitElement, html, css, property, customElement} from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store';
 import { ButtonSharedStyles } from './button-shared-styles';
+import { testCss} from './styletest';
 import { ListaCursos } from '../reducers/cursos';
 import 'fontawesome-icon';
 
@@ -26,6 +27,7 @@ export class TablaGuion extends connect(store)(LitElement) {
 
     static get styles() {
         return [
+            testCss,
             ButtonSharedStyles,
             css`
         :host {
@@ -157,7 +159,42 @@ export class TablaGuion extends connect(store)(LitElement) {
 
     protected render() {
         return html`
-        help
+        <table>
+    <body>
+        <tr>
+            <th>1-2</th>
+            <td colspan="4" rowspan="2" class="stage-saturn">Welcome</td>
+        </tr>
+        <tr>
+            <th>3-4</th>
+        </tr>
+        <tr>
+            <th>5-6</th>
+            <td colspan="4" class="stage-earth">Speaker One <span>Earth Stage</span></td>
+        </tr>
+        <tr>
+            <th>7-8</th>
+            <td colspan="4" class="stage-earth">Speaker Two <span>Earth Stage</span></td>
+        </tr>
+        <tr>
+            <th>9-10</th>
+            <td colspan="4" class="stage-earth">Speaker Three <span>Earth Stage</span></td>
+        </tr>
+        <tr>
+            <th>11-12</th>
+            <td colspan="4" class="stage-earth">Speaker Four <span>Earth Stage</span></td>
+        </tr>
+        <tr>
+            <th>13-14</th>
+            <td rowspan="5" class="stage-mercury">Speaker Five <span>Mercury Stage</span></td>
+            <td rowspan="5" class="stage-venus">Speaker Six <span>Venus Stage</span></td>
+            <td rowspan="5" class="stage-mars">Speaker Seven <span>Mars Stage</span></td>
+            <td rowspan="2" class="stage-saturn">Lunch</td>
+        </tr>
+        
+       
+    </body>
+</table>
     `;
 
     }

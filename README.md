@@ -5,7 +5,7 @@
     * horario-clases
     * tabla-guion
     * ramo-paralelo
-* En un futuro planeamos juntarlos, por ahora estamos desarrollando su funcionamiento por separado
+* En un futuro planeamos juntarlos(como se ve en las ilustraciones), por ahora estamos desarrollando su funcionamiento por separado
 
 
 
