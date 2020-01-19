@@ -25,6 +25,7 @@ export class TablaGuion extends connect(store)(LitElement) {
     public nombre : any;
     public curso : any ;
     public paralelos : any ;
+    public sala :any;
 
     public id = "2";
     public profesor : any;
@@ -58,11 +59,13 @@ export class TablaGuion extends connect(store)(LitElement) {
     }
 
     protected getSala(dia :any,bloque :any){
+        this.sala = "";
         Object.keys(this.horarios).map((key) => {
             const item = this.horarios[key];
             if ((item.dia == dia) && (item.bloque == bloque)){
                 console.log(item.sala);
-                return item.sala;
+                this.sala = item.sala;
+                //return item.sala;
             }
         })
     }
@@ -205,25 +208,61 @@ export class TablaGuion extends connect(store)(LitElement) {
         <th></th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th><th>Sábado</th>
         </tr>
         <tr>
-            <th>1-2</th> <th> ${this.getSala('lunes','1-2')}</th> <th> ${this.getSala('martes','1-2')}</th>
+            <th>1-2</th> <th> ${this.getSala('lunes','1-2')} ${this.sala}</th>
+                         <th> ${this.getSala('martes','1-2')} ${this.sala}</th>
+                         <th> ${this.getSala('miércoles','1-2')} ${this.sala}</th>
+                         <th> ${this.getSala('jueves','1-2')} ${this.sala}</th>
+                         <th> ${this.getSala('viernes','1-2')} ${this.sala}</th>
+                         <th> ${this.getSala('sábado','1-2')} ${this.sala}</th>
         </tr>
         <tr>
-            <th>3-4</th>
+            <th>3-4</th> <th> ${this.getSala('lunes','3-4')} ${this.sala}</th>
+                         <th> ${this.getSala('martes','3-4')} ${this.sala}</th> 
+                         <th> ${this.getSala('miércoles','3-4')} ${this.sala}</th>
+                         <th> ${this.getSala('jueves','3-4')} ${this.sala}</th>
+                         <th> ${this.getSala('viernes','3-4')} ${this.sala}</th>
+                         <th> ${this.getSala('sábado','3-4')} ${this.sala}</th>
+        
         </tr>
         <tr>
-            <th>5-6</th>
+            <th>5-6</th> <th> ${this.getSala('lunes','5-6')} ${this.sala}</th>
+                         <th> ${this.getSala('martes','5-6')} ${this.sala}</th> 
+                         <th> ${this.getSala('miércoles','5-6')} ${this.sala}</th>
+                         <th> ${this.getSala('jueves','5-6')} ${this.sala}</th>
+                         <th> ${this.getSala('viernes','5-6')} ${this.sala}</th>
+                         <th> ${this.getSala('sábado','5-6')} ${this.sala}</th>
         </tr>
         <tr>
-            <th>7-8</th>
+            <th>7-8</th> <th> ${this.getSala('lunes','7-8')} ${this.sala}</th>
+                         <th> ${this.getSala('martes','7-8')} ${this.sala}</th> 
+                         <th> ${this.getSala('miércoles','7-8')} ${this.sala}</th>
+                         <th> ${this.getSala('jueves','7-8')} ${this.sala}</th>
+                         <th> ${this.getSala('viernes','7-8')} ${this.sala}</th>
+                         <th> ${this.getSala('sábado','7-8')} ${this.sala}</th>
         </tr>
         <tr>
-            <th>9-10</th>
+            <th>9-10</th> <th> ${this.getSala('lunes','9-10')} ${this.sala}</th>
+                         <th> ${this.getSala('martes','9-10')} ${this.sala}</th> 
+                         <th> ${this.getSala('miércoles','9-10')} ${this.sala}</th>
+                         <th> ${this.getSala('jueves','9-10')} ${this.sala}</th>
+                         <th> ${this.getSala('viernes','9-10')} ${this.sala}</th>
+                         <th> ${this.getSala('sábado','9-10')} ${this.sala}</th>
         </tr>
         <tr>
-            <th>11-12</th>
+            <th>11-12</th> <th> ${this.getSala('lunes','11-12')} ${this.sala}</th>
+                         <th> ${this.getSala('martes','11-12')} ${this.sala}</th> 
+                         <th> ${this.getSala('miércoles','11-12')} ${this.sala}</th>
+                         <th> ${this.getSala('jueves','11-12')} ${this.sala}</th>
+                         <th> ${this.getSala('viernes','11-12')} ${this.sala}</th>
+                         <th> ${this.getSala('sábado','11-12')} ${this.sala}</th>
         </tr>
         <tr>
-            <th>13-14</th>
+            <th>13-14</th> <th> ${this.getSala('lunes','13-14')} ${this.sala}</th>
+                         <th> ${this.getSala('martes','13-14')} ${this.sala}</th> 
+                         <th> ${this.getSala('miércoles','13-14')} ${this.sala}</th>
+                         <th> ${this.getSala('jueves','13-14')} ${this.sala}</th>
+                         <th> ${this.getSala('viernes','13-14')} ${this.sala}</th>
+                         <th> ${this.getSala('sábado','13-14')} ${this.sala}</th>
         </tr>
         
        
