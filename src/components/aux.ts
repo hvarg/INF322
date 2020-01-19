@@ -17,14 +17,14 @@ import 'fontawesome-icon';
 
 @customElement('ramo-paralelo')
 export class RamoParalelo extends connect(store)(LitElement) {
-  @property({type: Object})
-  public cursos: ListaCursos = {};
-  public sigla = "IWI131";
-  public curso : any = this.filter;
-  public paralelos : any = this.curso.paralelos;
+    @property({type: Object})
+    public cursos: ListaCursos = {};
+    public sigla = "IWI131";
+    public curso : any = this.filter;
+    public paralelos : any = this.curso.paralelos;
 
-  protected filter() {
-    Object.keys(this.cursos).map((key) => {
+    protected filter() {
+        Object.keys(this.cursos).map((key) => {
             const item = this.cursos[key];
             if (item.sigla == this.sigla){
                 this.curso = item;
@@ -32,13 +32,13 @@ export class RamoParalelo extends connect(store)(LitElement) {
                 console.log("Entró");
                 console.log(this.curso);
             }
-    })
-  }
+        })
+    }
 
-  static get styles() {
-      return [
-        ButtonSharedStyles,
-        css`
+    static get styles() {
+        return [
+            ButtonSharedStyles,
+            css`
           :host {
               display: block;
           }
@@ -63,21 +63,21 @@ export class RamoParalelo extends connect(store)(LitElement) {
               text-align: left;
           }
         `
-      ];
-  }
+        ];
+    }
 
-  handleClick(e : any) {
-      var button = e.target;
-      if(button.prefix == "far"){
-        button.setAttribute("prefix","fas");
-        console.log(e.target.id);
-      }else{
-        button.setAttribute("prefix","far");
-      }
-  }
+    handleClick(e : any) {
+        var button = e.target;
+        if(button.prefix == "far"){
+            button.setAttribute("prefix","fas");
+            console.log(e.target.id);
+        }else{
+            button.setAttribute("prefix","far");
+        }
+    }
 
-  protected render() {
-      return html`
+    protected render() {
+        return html`
       <h2>Sigla: </h2>
       <table>
         <tbody>
@@ -97,11 +97,16 @@ export class RamoParalelo extends connect(store)(LitElement) {
           </tr>
         ${this.filter()}
         ${Object.keys(this.paralelos).map((key) => {
-   
-        const item = this.paralelos[key];
-        console.log("llegue");
-        console.log(item);
-          return html`
+
+            const item = this.paralelos[key];
+            console.log("llegue");
+            console.log(item);
+            return html`
+          ${Object.keys(item.paralelos).map((idies) => {
+                // @ts-ignore
+                const item2 = item.paralelos[idies];
+                if(idies == '0'){
+                    return html`
             <tr>
             <td>
               ${item.id}
@@ -117,7 +122,13 @@ export class RamoParalelo extends connect(store)(LitElement) {
             </td>
           </tr>
             `;
-      })}
+                } else {
+                    return html`
+            `;
+                }
+            })}
+          `;
+        })}
         </tbody>
         </table>
       `;
