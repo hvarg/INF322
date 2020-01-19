@@ -1,12 +1,12 @@
 /**
-@license
-Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-*/
+ @license
+ Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
+ This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+ The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+ Code distributed by Google as part of the polymer project is also
+ subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+ */
 
 import {LitElement, html, css, property, customElement} from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
@@ -16,20 +16,18 @@ import { ListaCursos } from '../reducers/cursos';
 import 'fontawesome-icon';
 
 
-@customElement('horario-clases')
-export class HorarioClases extends connect(store)(LitElement) {
-  @property({type: Object})
-  public cursos: ListaCursos = {};
-  public options = {
-    valueNames: [ 'Sigla', 'Asignatura' ]
-  };
+@customElement('tabla-guion')
+export class TablaGuion extends connect(store)(LitElement) {
+    @property({type: Object})
+    public cursos: ListaCursos = {};
+    public options = {
+        valueNames: [ 'Sigla', 'Asignatura' ]
+    };
 
-  public cursoList = ['asignaturas', this.options];
-
-  static get styles() {
-    return [
-      ButtonSharedStyles,
-      css`
+    static get styles() {
+        return [
+            ButtonSharedStyles,
+            css`
         :host {
             display: block;
         }
@@ -142,80 +140,25 @@ export class HorarioClases extends connect(store)(LitElement) {
         
         .left{
             text-align: left;
-        }
+        }  
       `
-    ];
-  }
-  
-
-  handleClick(e : any) {
-    var button = e.target;
-    if(button.prefix == "far"){
-      button.setAttribute("prefix","fas");
-    }else{
-      button.setAttribute("prefix","far");
+        ];
     }
-  }
 
-  protected render() {
-    return html`
-<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
-    <h2>Listado de Cursos</h2>
-    <table class="left">
-      <div id="asignaturas">
-      
-      <input class="search" placeholder="Buscar" />
-      <button class="sort" data-sort="Sigla">
-      Ordenar por sigla
-      </button>
-      <button class="sort" data-sort="Asignatura">
-      Ordenar por asignatura
-      </button>
-      <tbody class="list">
-      <tr>
-          <th class="Sigla">
-            <strong> Sigla </strong>
-          </th>
-          <th class="Asignatura">
-            <strong> Asignatura </strong>
-          </th>
-          <th>
-          <strong> Más información </strong>
-          </th>
-        </tr>
-      ${Object.keys(this.cursos).map((key) => {
-      const item = this.cursos[key];
-      return html`
-        ${Object.keys(item.paralelos).map((idies) => {
-        // @ts-ignore
-        const item2 = item.paralelos[idies];
-        if(idies == '0'){
-          return html`
-          <tr>
-          <td>
-            ${item.sigla}
-          </td>
-          <td>
-            ${item.asignatura}
-          </td>
-          <td>
-          <button name="boton1" id="boton1" @click="${this.handleClick}"><fontawesome-icon id="1" prefix="far" name="plus-square" fixed-width></fontawesome-icon></button>
-          </td> 
-        </tr>
-          `;
-        } else {
-          return html`
-          `;
+
+    handleClick(e : any) {
+        var button = e.target;
+        if(button.prefix == "far"){
+            button.setAttribute("prefix","fas");
+        }else{
+            button.setAttribute("prefix","far");
         }
+    }
 
-      })}
-        `;
-    })}
-      
-      </div>
-      </tbody>
-      </table> 
+    protected render() {
+        return html`
+        help
     `;
-  
-  }
+
+    }
 }

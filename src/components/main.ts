@@ -40,6 +40,7 @@ import './snack-bar.js';
 
 // Aqui se importan los componentes.
 import './horario-clases';
+import './tabla-guion';
 
 
 @customElement('main-page')
@@ -146,7 +147,7 @@ export class MainPage extends connect(store)(LitElement) {
         <div id="content">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                  el nombre de la variable del componente (public) -->
-            <tabla class="component-margin" .cursos="${this._cursos}"></tabla>         
+            <tabla-guion class="component-margin" .cursos="${this._cursos}"></tabla-guion>       
         </div>
         
         <div id="footer">
