@@ -6,7 +6,7 @@
     * tabla-guion
     * ramo-paralelo
 * En un futuro planeamos juntarlos(como se ve en las ilustraciones), por ahora estamos desarrollando su funcionamiento por separado
-
+* Para poder ver cada uno, se debe cambiar la línea 151 en `main.ts`
 
 
 # Evaluación interfaz: SIGA (Alumnos)
