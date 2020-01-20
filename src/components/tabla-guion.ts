@@ -157,6 +157,7 @@ export class TablaGuion extends connect(store)(LitElement) {
         }
         
         .stage-earth {background-color: #FFA726};
+        .stage-mercury {background-color: #9CCC65};
                 
         .center{
             text-align: center;

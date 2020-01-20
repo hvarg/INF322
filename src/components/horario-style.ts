@@ -72,6 +72,15 @@ export const testCss = css`
            display: block;
            width: 100%;
     }
+    
+    th {
+            font-weight: normal;
+            border-top: thin dotted #ccc;
+            min-width: 45px;
+    }
+
+
+
 
     .stage-earth {background-color: #FFA726};
     .stage-mercury {background-color: #9CCC65};
