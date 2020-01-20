@@ -20,9 +20,6 @@ import 'fontawesome-icon';
 export class HorarioClases extends connect(store)(LitElement) {
   @property({type: Object})
   public cursos: ListaCursos = {};
-  public options = {
-    valueNames: [ 'Sigla', 'Asignatura' ]
-  };
 
   static get styles() {
     return [ButtonSharedStyles,
@@ -31,11 +28,11 @@ export class HorarioClases extends connect(store)(LitElement) {
             display: block;
         }
         
-        .sigla {
+        .Sigla {
             width: 10% 
         }
         
-        .asignatura{
+        .Asignatura{
             width: 25%
         }
         
@@ -78,9 +75,22 @@ export class HorarioClases extends connect(store)(LitElement) {
 
   protected render() {
     return html`
-    <h2>Listado de Cursos</h2>
+<!--<script type="module" src="../../node_modules/list.js">
+</script>
+<script>
+new List('asignaturas',
+        {
+          valueNames:['asignatura', 'sigla'],
+          page: 15,
+          pagination: true
+        });
+</script>-->
+<div class="asignaturas">
+<strong>Buscar:</strong> <input type="text" class="search" />
+<h2>Listado de Cursos</h2>
     <table>
       <tbody>
+      <div class="list">
       <tr>
           <th class="Sigla">
             <strong> Sigla </strong>
@@ -88,7 +98,7 @@ export class HorarioClases extends connect(store)(LitElement) {
           <th class="Asignatura">
             <strong> Asignatura </strong>
           </th>
-          <th>
+          <th class="cupos">
           <strong> Más información </strong>
           </th>
         </tr>
@@ -96,15 +106,13 @@ export class HorarioClases extends connect(store)(LitElement) {
       const item = this.cursos[key];
       return html`
         ${Object.keys(item.paralelos).map((idies) => {
-        // @ts-ignore
-        const item2 = item.paralelos[idies];
         if(idies == '0'){
           return html`
           <tr>
-          <td>
+          <td class="sigla">
             ${item.sigla}
           </td>
-          <td>
+          <td class="asignatura">
             ${item.asignatura}
           </td>
           <td>
@@ -121,6 +129,9 @@ export class HorarioClases extends connect(store)(LitElement) {
     })}
       </tbody>
       </table> 
+      </div>
+          <ul class="pagination"></ul>
+</div>
     `;
   
   }

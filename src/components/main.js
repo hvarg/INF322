@@ -22,7 +22,7 @@ import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
 import { installOfflineWatcher } from 'pwa-helpers/network.js';
 import { installRouter } from 'pwa-helpers/router.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
-import { store } from '../store.js';
+import { store } from '../store';
 import { customCss } from './style';
 // Importen sus tipos de datos y funciones
 import { getAllCursos } from '../actions/cursos';
@@ -137,7 +137,7 @@ let MainPage = class MainPage extends connect(store)(LitElement) {
         <div id="content">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                  el nombre de la variable del componente (public) -->
-            <tabla-guion class="component-margin" .cursos="${this._cursos}"></tabla-guion>
+            <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases>
         </div>
         
         <div id="footer">
