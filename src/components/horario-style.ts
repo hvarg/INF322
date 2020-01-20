@@ -63,8 +63,8 @@ export const testCss = css`
             line-height: 1.4;
             border-radius: 0.1rem;
             transition: opacity 0.3s ease;
-            align: center;
-        }
+            text-align: center;
+    }
 
     td > span {
            font-size: 0.8em;
