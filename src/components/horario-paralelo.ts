@@ -13,6 +13,7 @@ import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store.js';
 import { ButtonSharedStyles } from './button-shared-styles.js';
 import { ListaCursos } from '../reducers/cursos';
+import "weightless/progress-bar";
 
 @customElement('horario-paralelo')
 export class HorarioParalelo extends connect(store)(LitElement) {
@@ -142,7 +143,8 @@ export class HorarioParalelo extends connect(store)(LitElement) {
           <td></td>
           <td></td>
         </tr>
-      </table> 
+      </table>
+      <wl-progress-bar></wl-progress-bar> 
     `;
   
   }
