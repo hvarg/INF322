@@ -66,6 +66,10 @@ export const testCss = css`
             text-align: center;
     }
 
+
+    
+    .stage-earth {background-color: #FFA726};
+    
     td > span {
            font-size: 0.8em;
            font-weight: normal;
@@ -81,11 +85,13 @@ export const testCss = css`
 
 
 
-
-    .stage-earth {background-color: #FFA726};
-    .stage-mercury {background-color: #9CCC65};
-    .stage-venus {background-color: #FF8A65};
-    .stage-mars {background-color: #B3E5FC};
-    .stage-jupiter {background-color: #81D4FA};
     .stage-saturn {background-color: #26C6DA};
+    
+    
+    
+    
+    
+    
+    
+
 `;

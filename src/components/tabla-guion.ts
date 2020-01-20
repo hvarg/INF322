@@ -144,6 +144,7 @@ export class TablaGuion extends connect(store)(LitElement) {
         right:-5px;
         }
         
+
         .sort.desc:after {
         width: 0;
         height: 0;
@@ -156,8 +157,8 @@ export class TablaGuion extends connect(store)(LitElement) {
         right:-5px;
         }
         
-        .stage-earth {background-color: #FFA726};
-        .stage-mercury {background-color: #9CCC65};
+
+        
                 
         .center{
             text-align: center;
@@ -192,36 +193,36 @@ export class TablaGuion extends connect(store)(LitElement) {
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("martes",'1-2')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("miércoles",'1-2')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("jueves",'1-2')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}${this.getSala("viernes",'1-2')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury">a</td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("sábado",'1-2')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury">a</td>
+            <td class="stage-saturn"></td>
             `}
 
         </tr>
@@ -231,36 +232,36 @@ export class TablaGuion extends connect(store)(LitElement) {
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("martes",'3-4')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("miércoles",'3-4')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("jueves",'3-4')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}${this.getSala("viernes",'3-4')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("sábado",'3-4')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
         
         </tr>
@@ -270,36 +271,36 @@ export class TablaGuion extends connect(store)(LitElement) {
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("martes",'5-6')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("miércoles",'5-6')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("jueves",'5-6')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}${this.getSala("viernes",'5-6')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("sábado",'5-6')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
         </tr>
         <tr>
@@ -308,36 +309,36 @@ export class TablaGuion extends connect(store)(LitElement) {
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("martes",'7-8')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("miércoles",'7-8')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("jueves",'7-8')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}${this.getSala("viernes",'7-8')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("sábado",'7-8')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
         </tr>
         <tr>
@@ -346,36 +347,36 @@ export class TablaGuion extends connect(store)(LitElement) {
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("martes",'9-10')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("miércoles",'9-10')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("jueves",'9-10')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}${this.getSala("viernes",'9-10')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("sábado",'9-10')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
         </tr>
         <tr>
@@ -384,36 +385,36 @@ export class TablaGuion extends connect(store)(LitElement) {
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("martes",'11-12')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("miércoles",'11-12')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("jueves",'11-12')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}${this.getSala("viernes",'11-12')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("sábado",'11-12')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
   
         </tr>
@@ -423,36 +424,36 @@ export class TablaGuion extends connect(store)(LitElement) {
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("martes",'13-14')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("miércoles",'13-14')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("jueves",'13-14')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}${this.getSala("viernes",'13-14')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
             ${this.getSala("sábado",'13-14')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
             ` : html `
-            <td class="stage-mercury"></td>
+            <td class="stage-saturn"></td>
             `}
         </tr>
         
