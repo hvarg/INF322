@@ -40,7 +40,7 @@ import './snack-bar.js';
 
 // Aqui se importan los componentes.
 import './horario-clases';
-import './nav-bar';
+import './perfil-alumno';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
@@ -51,7 +51,7 @@ export class MainPage extends connect(store)(LitElement) {
   private _loggedIn: boolean = false;
 
   @property({type: String})
-  private _page: string = '';
+  private _page: string = 'Inicio';
 
   private appTitle : string = 'Siga';
   
@@ -105,6 +105,9 @@ export class MainPage extends connect(store)(LitElement) {
         grid-column: 1 / 3;
         background-color: #faba25;
         align-content: center;
+        background-image: url("images/logo.gif");
+        background-repeat: no-repeat;
+        background-size: auto;
         }
 
         .centered {
@@ -128,41 +131,123 @@ export class MainPage extends connect(store)(LitElement) {
         alert('try again!');
     }
   }
+  _getPage(){
+    return this._page;
+  }
+
+  _changePage(section: string) {
+    this._page ="MiPerfil";
+    console.log(section);
+    console.log(this._page);
+  }
 
   /* Render se ejecuta cada vez que se modifica una variable marcada como property, OJO: no se verifican las
    * subpropiedades de los objetos, pueden requerir una actualización usando this.requestUpdate();
    * Más info: https://polymer-library.polymer-project.org/3.0/docs/devguide/observers */
   protected render() {
     /* Acá está la página principal, cada componente debería tener un lugar donde puedan probarlo. */
+    if(this._loggedIn)
+    {
+      switch (this._page)
+      {
+        case "MiPerfil":
+          console.log("reconocio la wea");
+          return html`
+          <div id="main">
+              <div id="header" style="vertical-align: middle;">
+                Sistema de volas
+              </div>
+
+              <div id="nav-bar">
+                <div id="listaNavegacion">
+                <lu>
+                    <li class="seccion">
+                        <button @click="${this._changePage}">
+                        Mi Perfil
+                        </button>>
+                    </li>
+                    <li class="seccion">
+                        <button @click="${this._changePage}">
+                        Mis Cursos
+                        </button>
+                    </li>
+                    <li class="seccion">
+                        <button @click="${this._changePage}">
+                        Avance Academico
+                        </button>
+                    </li>
+                </lu>
+                </div>
+              </div>
+
+              <div id="content">
+                  <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
+                       el nombre de la variable del componente (public) -->
+                  <perfil-alumno class="component-margin"></perfil-alumno>
+              </div>
+
+              <div id="footer">w
+              </div>
+
+          </div>
+            `
+        default:
+          return html`
+          <div id="main">
+              <div id="header" style="vertical-align: middle;">
+                  Sesion de alumnos
+              </div>
+
+              <div id="nav-bar">
+                  <!--<div class="centered">
+                      <span id="logInButton" @click="${this._changePage}">
+                          Click here to change the page
+                      </span>
+                  </div>-->
+                  <div id="listaNavegacion">
+                      <lu>
+                          <li class="seccion">
+                            <button  @click="${this._changePage}">
+                                Mi Perfil
+                            </button>
+                          </li>
+                          <li class="seccion">
+                              <button @click="${this._changePage}">
+                              Mis Cursos
+                              </button>
+                          </li>
+                          <li class="seccion">
+                              <button @click="${this._changePage}">
+                              Avance Academico
+                              </button>
+                          </li>
+                      </lu>
+                  </div>
+              </div>
+
+              <div id="content">
+                  <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
+                       el nombre de la variable del componente (public) -->
+                  <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
+              </div>
+
+              <div id="footer">w
+              </div>
+
+          </div>
+          `
+      }
+         
+    }
     return html`
-    ${this._loggedIn ? html`
-    <div id="main">
-        <div id="header" style="vertical-align: middle;">
-            Sesión de ALUMNO NOMBRE APELLIDO
-        </div>
-           
-        <div id="nav-bar">
-          <nav-bar class="component-margin"> </nav-bar>
-        </div>
-           
-        <div id="content">
-            <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
-                 el nombre de la variable del componente (public) -->
-            <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
-        </div>
-        
-        <div id="footer">
-        </div>
-        
-    </div>
-    ` : html`
-    <div class="centered">
+      <div class="centered">
         <span id="logInButton" @click="${this._logIn}">
             Click here to try to log in!
         </span>
-    </div>`}
-    `;
-  }
+    </div>
+    `
+    }
+  
 
   constructor() {
     super();
@@ -197,6 +282,7 @@ export class MainPage extends connect(store)(LitElement) {
      * para tomar algo de la página, por ejemplo la barra de navegación podemos: 
         let navBar = this.shadowRoot.getElementById('nav-bar');
      * Así tenemos la navBar, si fuera un input podríamos leerlo con navBar.value */
+    
   }
 
   /* Esta función se ejecuta cada vez que el state cambia, se usa para leer la memoria. */

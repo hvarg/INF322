@@ -14,10 +14,10 @@ import { store } from '../store.js';
 import { ButtonSharedStyles } from './button-shared-styles.js';
 //import { ListaCursos } from '../reducers/cursos';
 
-@customElement('nav-bar')
-export class NavBar extends connect(store)(LitElement) {
+@customElement('perfil-alumno')
+export class PerfilAlumno extends connect(store)(LitElement) {
   @property({type: Object})
-  public isPressed: boolean = false;
+  public isPressed: number = -1;
 
   public contador: number = 0;
 
@@ -27,6 +27,7 @@ export class NavBar extends connect(store)(LitElement) {
       css`
         :host {
             display: block;
+
         }
         .listaNavegacion
         {
@@ -44,39 +45,19 @@ export class NavBar extends connect(store)(LitElement) {
   }
   
 
-  handleClick() {
-    this.isPressed = true;
-    console.log("de pana");
+  handleClick(which: number) {
+    this.isPressed = which;
+    console.log(which);
+    console.log("letal");
     //Aca realizar el proceso de cambio de pagina, dado que aca ya se presiono el boton
-    this.contador++;
-    console.log(this.contador);
-    this.isPressed = false
+    
   }
 
 
   protected render() {
     return html`
-    <div id="listaNavegacion">
-        <lu>
-            <li class="seccion">
-                <button @click="${this.handleClick}">
-                Mi Perfil
-                </button>
-            </li>
-            <li class="seccion">
-                <button @click="${this.handleClick}">
-                Mis Cursos
-                </button>
-            </li>
-            <li class="seccion">
-                <button @click="${this.handleClick}">
-                Avance Academico
-                </button>
-            </li>
-            <li>
-                <div [contador]="Letal"></div>
-            </li>
-        </lu>
+    <div id="perfil">
+        <h2>Perfil Alumno</h2>
     </div>
     `;
   

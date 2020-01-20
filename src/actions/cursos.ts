@@ -17,8 +17,9 @@ import { RootState } from '../store.js';
 import { ListaCursos} from '../reducers/cursos';
 export const GET_CURSOS = 'GET_CURSOS';
 
+
 export interface ActionGetCursos extends Action<'GET_CURSOS'> {cursos: ListaCursos};
-export type CursosAction = ActionGetCursos;
+export type CursosAction = ActionGetCursos ;
 
 type ThunkResult = ThunkAction<void, RootState, undefined, CursosAction>;
 
@@ -28,6 +29,9 @@ const CURSOS_LIST = [
   { "id": 4, "sigla": 'MAT021' , "asignatura": 'Matemáticas I', "departamento": 'Matemáticas', "paralelos": [{"id": 1, "profesor": 'El maravilloso Yansen', "cupos": 25}] },
   { "id": 5, "sigla": 'MAT022' , "asignatura": 'Matemáticas II' , "departamento": 'Matemáticas' , "paralelos": [{"id": 1, "profesor": 'tuma', "cupos": 14}] } 
 ];
+
+//const PERFIL = 
+//  [{ "nombre": "Juan Pablo", "rol":"201673100", "carrera": "Ing Civil Informatica"}];
 
 export const getAllCursos: ActionCreator<ThunkResult> = () => (dispatch) => {
   const cursos = CURSOS_LIST.reduce((obj, curso) => {
@@ -40,3 +44,5 @@ export const getAllCursos: ActionCreator<ThunkResult> = () => (dispatch) => {
     cursos
   });
 };
+
+
