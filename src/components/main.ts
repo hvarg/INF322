@@ -25,6 +25,9 @@ import { customCss } from './style';
 import { getAllCursos } from '../actions/cursos';
 import { ListaCursos } from '../reducers/cursos';
 
+import { getAllUsuarios } from '../actions/usuarios';
+import { ListaUsuarios} from '../reducers/usuarios';
+
 // These are the actions needed by this element.
 import {
   navigate,
@@ -46,13 +49,23 @@ export class MainPage extends connect(store)(LitElement) {
   @property({type: Object})
   private _cursos: ListaCursos = {};
 
+  @property({type: Object})
+  private _usuarios: ListaUsuarios = {};
+
   @property({type: Boolean})
   private _loggedIn: boolean = false;
 
   @property({type: String})
   private _page: string = '';
 
+  @property({type: String})
+  private _emailUsuario ='';
+
+  @property({type: String})
+  private _passwordUsuario= '';
+
   private appTitle : string = 'Siga';
+
   
   static get styles() {
     return [customCss,
@@ -86,6 +99,8 @@ export class MainPage extends connect(store)(LitElement) {
         #content {
           grid-row: 2;
           grid-column: 2;
+          align-content: center;
+          vertical-align: center;
         }
 
         #logInButton {
@@ -104,6 +119,7 @@ export class MainPage extends connect(store)(LitElement) {
         grid-column: 1 / 3;
         background-color: #faba25;
         align-content: center;
+        text-align: right;
         }
 
         .centered {
@@ -121,10 +137,27 @@ export class MainPage extends connect(store)(LitElement) {
     ];
   }
 
+
+
+  updateEmailUsuario(e:any) {
+    this._emailUsuario = e.target.value;
+  }
+  updatePasswordUsuario(e:any) {
+    this._passwordUsuario = e.target.value;
+  }
+
+  _logOut (){
+    this._loggedIn = false;
+    this._emailUsuario = '';
+    this._passwordUsuario = '';
+  }
+
   _logIn () {
-    this._loggedIn = (Math.random() > .5);
-    if (!this._loggedIn) {
-        alert('try again!');
+
+    for (var i=0;i < Object.entries(this._usuarios).length; i++){
+      if (Object.values(this._usuarios)[i].email === this._emailUsuario && Object.values(this._usuarios)[i].password === this._passwordUsuario){
+        this._loggedIn = true;
+      }
     }
   }
 
@@ -137,10 +170,13 @@ export class MainPage extends connect(store)(LitElement) {
     ${this._loggedIn ? html`
     <div id="main">
         <div id="header" style="vertical-align: middle;">
-            Sesión de ALUMNO NOMBRE APELLIDO
+            Sesión de ${this._emailUsuario}
+            <button style="align: right;" @click="${this._logOut} class="button button-block"/>Log Out</button>
+
         </div>
            
-        <div id="nav-bar"></div>
+        <div id="nav-bar">
+        </div>
            
         <div id="content">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
@@ -148,16 +184,49 @@ export class MainPage extends connect(store)(LitElement) {
             <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
         </div>
         
+        
         <div id="footer">
         </div>
         
     </div>
-    ` : html`
-    <div class="centered">
-        <span id="logInButton" @click="${this._logIn}">
-            Click here to try to log in!
-        </span>
-    </div>`}
+    ` : html` 
+    <div id="main">
+        <div id="header" style="vertical-align: middle;">
+            <h2>Inicio de Sesión</h2>
+        </div>
+           
+        <div id="nav-bar"></div>
+           
+        <div id="content">
+          <h1>Bienvenido!</h1>
+
+          <div class="field-wrap">
+          <label>
+            Correo<span class="req">*</span>
+          </label>
+          <input id=“email” @change=${(e:any) => this.updateEmailUsuario(e)} name="email" type="email"required autocomplete="on"/>
+          </div> 
+          
+          <div class="field-wrap">
+            <label>
+              Contraseña<span class="req">*</span>
+            </label>
+            <input id="password" @change=${(e:any) => this.updatePasswordUsuario(e)} type="password"required autocomplete="off"/>
+          </div>
+          
+          <button @click="${this._logIn} class="button button-block"/>Log In</button>
+        </div>       
+        
+        <div id="footer">
+        <a>Universidad Técnica Federico Santa María
+        <a>Contacto: +56 32 2654000 · dgc@usm.cl
+        <a>Dirección: Avenida España 1680, Valparaíso 
+
+
+        </div>
+        
+    </div>
+          `}
     `;
   }
 
@@ -177,6 +246,7 @@ export class MainPage extends connect(store)(LitElement) {
 
     // Cargando datos
     store.dispatch(getAllCursos());
+    store.dispatch(getAllUsuarios());
   }
 
   /* Esta función se ejecuta DESPUES de cada render. */
@@ -200,5 +270,6 @@ export class MainPage extends connect(store)(LitElement) {
   stateChanged(state: RootState) {
     this._page = state.app!.page;
     this._cursos = state.cursos!.cursos;
+    this._usuarios = state.usuarios!.usuarios;
   }
 }

@@ -1,3 +1,6 @@
+# Login
+Para acceder a la página simplemente hay que poner un correo y contraseña, dentro del archivo usuarios.ts en la carpeta actions se encuentran los usuarios permitidos.
+
 # Evaluación interfaz: SIGA (Alumnos)
 
 Los objetivos de este escrito son los siguientes:

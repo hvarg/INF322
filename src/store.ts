@@ -35,15 +35,18 @@ import { AppAction } from './actions/app.js';
  * Todo lo definido debe ser impotado aquí: */
 import cursos, { CursosState } from './reducers/cursos';
 import { CursosAction } from './actions/cursos';
+import usuarios, { UsuariosState } from './reducers/usuarios';
+import { UsuariosAction } from './actions/usuarios';
 
 // Este es el state principal, se define la estructura de datos...
 export interface RootState {
   app?: AppState;
   cursos?: CursosState;
+  usuarios?: UsuariosState;
 }
 
 // Se agrega el tipo de las acciones que creemos al tipo root.
-export type RootAction = AppAction | CursosAction;
+export type RootAction = AppAction | CursosAction | UsuariosAction;
 
 // Sets up a Chrome extension for time travel debugging.
 // See https://github.com/zalmoxisus/redux-devtools-extension for more information.
@@ -67,3 +70,4 @@ export const store = createStore(
 // Cargar reducers, aquí es donde se conectan los básicos, se pueden cargar a demanda tambien.
 store.addReducers({ app });
 store.addReducers({ cursos });
+store.addReducers({ usuarios});
