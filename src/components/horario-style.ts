@@ -53,7 +53,24 @@ export const testCss = css`
             font-weight: normal;
             display: block;
             width: 100%;
+            align: center;
         }
+    }
+    
+    td {
+            font-size: 0.8rem;
+            font-weight: bold;
+            line-height: 1.4;
+            border-radius: 0.1rem;
+            transition: opacity 0.3s ease;
+            align: center;
+        }
+
+    td > span {
+           font-size: 0.8em;
+           font-weight: normal;
+           display: block;
+           width: 100%;
     }
 
     .stage-earth {background-color: #FFA726};
