@@ -40,7 +40,6 @@ import './snack-bar.js';
 
 // Aqui se importan los componentes.
 import './horario-clases';
-import './horario-paralelo';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
@@ -147,7 +146,6 @@ export class MainPage extends connect(store)(LitElement) {
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                  el nombre de la variable del componente (public) -->
             <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases>
-            <horario-paralelo class="component-margin" .cursos="${this._cursos}"></horario-paralelo>  
         </div>
         
         <div id="footer">

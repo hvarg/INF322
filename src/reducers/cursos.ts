@@ -37,6 +37,7 @@ export interface Curso {
   sigla: string;
   asignatura: string;
   departamento: string;
+  creditos: number;
   paralelos: Array<Paralelo>;
 }
 
