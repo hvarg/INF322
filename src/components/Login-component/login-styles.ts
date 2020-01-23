@@ -18,6 +18,7 @@ export const customCss = css`
         justify-content: center;
         height: 95%;
     }
+
     footer{
       height:5%;
     }
@@ -76,9 +77,10 @@ export const customCss = css`
       color: #fff;
     }
     
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 750px) {
         .card-container {
             height:60%;
+            width:60%;
         }
       .column{
         flex: 100%;
@@ -95,8 +97,8 @@ export const customCss = css`
 
     @media screen and (max-width: 1600px) {
       .card-container{
-        height: 40%;
-        width: 40%;
+        height: 50%;
+        width: 50%;
         padding: 20px;
       }
       
@@ -106,7 +108,7 @@ export const customCss = css`
   @media screen and (max-width: 1100px) {
     .card-container{
       height: 50%;
-      width: 90%;
+      width: 60%;
       padding: 20px;
     }
     }
@@ -116,10 +118,7 @@ export const customCss = css`
     wl-text{
         font-size: .9em;
     }
-  wl-select {
-    height: 100%;
-    --select-height: 100%;
-  }
+
   .special {
     color: #fff !important;
     background-color: #151617e0;

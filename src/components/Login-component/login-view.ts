@@ -192,25 +192,25 @@ export class LoginView extends connect(store)(LitElement) {
           </div>
           <!--Warning message/ -->
           <div class="row">
-              <div  class="column">
+              <div class="column">
                 <wl-textfield
-                  class="username input-text"
-                  label="${this.userNameLabel}" 
-                  type="text" required>
-                  <wl-icon slot="before">person_pin</wl-icon>
-                </wl-textfield>
-              </div>
-              <div  class="column">
-                <wl-select style="--input-before-after-color: #fff;">
-                  <wl-icon slot="before">alternate_email</wl-icon>
-                  <option class="special" value="1" selected>sansano.usm.cl</option>
-                  <option class="special" value="2">alumnos.usm.cl</option>
-                  <option class="special" value="3">pregrado.usm.cl</option>
-                  <option class="special" value="4">usm.cl</option>
-                  <option class="special" value="5">whatdafuck</option>
-                </wl-select>
-              </div>
-          </div>
+                        class="username input-text"
+                        label="${this.userNameLabel}" 
+                        type="text" required>
+                        <wl-icon slot="before">person_pin</wl-icon>
+                        </wl-textfield>
+                </div>
+                <div class="column">
+                        <wl-select style="--input-before-after-color: #fff;--input-padding-top-bottom:15px;" >
+                                <wl-icon slot="before">alternate_email</wl-icon>
+                                <option class="special" value="1" selected>sansano.usm.cl</option>
+                                <option class="special" value="2">alumnos.usm.cl</option>
+                                <option class="special" value="3">pregrado.usm.cl</option>
+                                <option class="special" value="4">usm.cl</option>
+                        </wl-select>
+                </div>
+
+        </div>
           <div class="row-password">
             <wl-textfield class="password input-text" label="${this.passwordLabel}" type="${this.passwordInputType}">
               <wl-icon @click="${this._showPassword}" slot="after">${this.visibility}</wl-icon>
