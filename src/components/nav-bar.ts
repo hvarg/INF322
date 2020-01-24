@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { LitElement, html, css, property, customElement } from 'lit-element';
+//import { html, css, property, customElement } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store.js';
 import { ButtonSharedStyles } from './button-shared-styles.js';
@@ -17,9 +18,7 @@ import { ButtonSharedStyles } from './button-shared-styles.js';
 @customElement('nav-bar')
 export class NavBar extends connect(store)(LitElement) {
   @property({type: Object})
-  public isPressed: boolean = false;
-
-  public contador: number = 0;
+  public page: string = "";
 
   static get styles() {
     return [
@@ -42,15 +41,14 @@ export class NavBar extends connect(store)(LitElement) {
       `
     ];
   }
-  
+  changePage()
+  {
+    this.page= "MiPerfil";
+  }
 
   handleClick() {
-    this.isPressed = true;
-    console.log("de pana");
-    //Aca realizar el proceso de cambio de pagina, dado que aca ya se presiono el boton
-    this.contador++;
-    console.log(this.contador);
-    this.isPressed = false
+    console.log({this:this.page});
+    this.changePage();
   }
 
 
@@ -80,5 +78,8 @@ export class NavBar extends connect(store)(LitElement) {
     </div>
     `;
   
+  }
+  constructor(){
+    super();
   }
 }

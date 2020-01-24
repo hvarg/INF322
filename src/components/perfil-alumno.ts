@@ -58,6 +58,11 @@ export class PerfilAlumno extends connect(store)(LitElement) {
     return html`
     <div id="perfil">
         <h2>Perfil Alumno</h2>
+        <ul>
+            <li>Nombre alumno</li>
+            <li> Año de Ingreso</li>
+            <li>Carrera :</li>
+        </ul>
     </div>
     `;
   

@@ -14,8 +14,8 @@ import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
-@customElement('my-view4')
-export class MyView404 extends PageViewElement {
+@customElement('view-1')
+export class View1 extends PageViewElement {
   static get styles() {
     return [
       SharedStyles
@@ -24,13 +24,14 @@ export class MyView404 extends PageViewElement {
 
   protected render() {
     return html`
-      <section>
-        <h2>Oops! You hit a 404</h2>
-        <p>
-          The page you're looking for doesn't seem to exist. Head back
-          <a href="/">home</a> and try again?
-        </p>
-      </section>
-    `
+      <div id="perfil">
+        <h2>Perfil Alumno</h2>
+          <ul>
+              <li>Nombre alumno</li>
+              <li> Año de Ingreso</li>
+              <li>Carrera :</li>
+          </ul>
+      </div>
+    `;
   }
 }

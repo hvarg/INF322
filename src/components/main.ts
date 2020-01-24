@@ -41,6 +41,7 @@ import './snack-bar.js';
 // Aqui se importan los componentes.
 import './horario-clases';
 import './perfil-alumno';
+import './view-1';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
@@ -51,7 +52,7 @@ export class MainPage extends connect(store)(LitElement) {
   private _loggedIn: boolean = false;
 
   @property({type: String})
-  private _page: string = 'Inicio';
+  private _page: string = "Inicio";
 
   private appTitle : string = 'Siga';
   
@@ -80,10 +81,20 @@ export class MainPage extends connect(store)(LitElement) {
         }
 
         #nav-bar {
-          grid-row: 2;
+          grid-row: 2 / 3;
           grid-column: 1;
+          height: 638px;
+          width: 300px;
+          background-color: antiquewhite;
+          border:black 3px solid;
         }
-
+        #menu {
+          margin: 0;
+          width: 140px;
+          background-color: aliceblue;
+          font-size: 30px; 
+        }
+        
         #content {
           grid-row: 2;
           grid-column: 2;
@@ -124,21 +135,20 @@ export class MainPage extends connect(store)(LitElement) {
       `
     ];
   }
-
+   
   _logIn () {
     this._loggedIn = true;
     if (!this._loggedIn) {
         alert('try again!');
     }
   }
-  _getPage(){
-    return this._page;
+
+  _mostrar()  {
+    console.log("mostrar");
   }
 
-  _changePage(section: string) {
-    this._page ="MiPerfil";
-    console.log(section);
-    console.log(this._page);
+  _ocultar()  {
+    console.log("ocultar");
   }
 
   /* Render se ejecuta cada vez que se modifica una variable marcada como property, OJO: no se verifican las
@@ -155,28 +165,18 @@ export class MainPage extends connect(store)(LitElement) {
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                Sistema de volas
+                <h2>Sistema de volas</h2>
               </div>
 
               <div id="nav-bar">
                 <div id="listaNavegacion">
-                <lu>
-                    <li class="seccion">
-                        <button @click="${this._changePage}">
-                        Mi Perfil
-                        </button>>
-                    </li>
-                    <li class="seccion">
-                        <button @click="${this._changePage}">
-                        Mis Cursos
-                        </button>
-                    </li>
-                    <li class="seccion">
-                        <button @click="${this._changePage}">
-                        Avance Academico
-                        </button>
-                    </li>
-                </lu>
+                  <nav class="menu" id="menu">
+                    <ul>
+                      <a  href="/">Inicio</a>
+                      <a  href="/MiPerfil">MiPerfil</a>
+                      <!--<a  href="/View1">View1</a>-->
+                    </ul>
+                  </nav>
                 </div>
               </div>
 
@@ -191,38 +191,50 @@ export class MainPage extends connect(store)(LitElement) {
 
           </div>
             `
+            break;
+        case "View1":
+          return html`
+          <div id="main">
+              <div id="header" style="vertical-align: middle;">
+                <h2>Sistema de volas</h2>
+              </div>
+
+              <div id="nav-bar">
+                <nav class="menu" id="menu">
+                    <ul>
+                      <a  href="/">Inicio</a>
+                      <a  href="/MiPerfil">MiPerfil</a>
+                      <!--<a ?selected="${this._page === 'View1'}" href="/View1">View1</a>
+                    </ul>
+                </nav>  
+              </div>
+
+              <div id="content">
+                  ACA está la utilización del componente, para pasarle datos usen un punto '.' más
+                       el nombre de la variable del componente (public) -->
+                  <!-- <view-1 class="component-margin"></view-1> -->
+              </div>
+
+              <div id="footer">w
+              </div>
+
+          </div>
+          `
         default:
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                  Sesion de alumnos
+                  <h2>Sistema de volas</h2>
               </div>
 
               <div id="nav-bar">
-                  <!--<div class="centered">
-                      <span id="logInButton" @click="${this._changePage}">
-                          Click here to change the page
-                      </span>
-                  </div>-->
-                  <div id="listaNavegacion">
-                      <lu>
-                          <li class="seccion">
-                            <button  @click="${this._changePage}">
-                                Mi Perfil
-                            </button>
-                          </li>
-                          <li class="seccion">
-                              <button @click="${this._changePage}">
-                              Mis Cursos
-                              </button>
-                          </li>
-                          <li class="seccion">
-                              <button @click="${this._changePage}">
-                              Avance Academico
-                              </button>
-                          </li>
-                      </lu>
-                  </div>
+                    <nav class="menu" id="menu">
+                        <ul>
+                          <a ?selected="${this._page === 'Inicio'}" href="/">Inicio</a>
+                          <a ?selected="${this._page === 'MiPerfil'}" href="/MiPerfil">MiPerfil</a>
+                          <!--<a ?selected="${this._page === 'View1'}" href="/View1">View1</a>-->
+                        </ul>
+                    </nav>
               </div>
 
               <div id="content">
@@ -251,6 +263,7 @@ export class MainPage extends connect(store)(LitElement) {
 
   constructor() {
     super();
+    this._page="Inicio";
     // To force all event listeners for gestures to be passive.
     // See https://www.polymer-project.org/3.0/docs/devguide/settings#setting-passive-touch-gestures
     setPassiveTouchGestures(true);
