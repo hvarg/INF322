@@ -93,7 +93,7 @@ export const testCss = css`
 
 
 
-    .stage-saturn {background-color: #26C6DA};
+    .stage-saturn {background-color: #f5f3ed};
     
     
     
