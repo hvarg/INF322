@@ -41,6 +41,7 @@ export interface Paralelo {
 
 export interface Curso {
   id: number;
+  creditos: number;
   sigla: string;
   asignatura: string;
   departamento: string;

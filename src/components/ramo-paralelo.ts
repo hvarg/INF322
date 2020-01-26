@@ -21,8 +21,8 @@ export class RamoParalelo extends connect(store)(LitElement) {
   public cursos: ListaCursos = {};
   public sigla = "IWI131";
   public nombre : any;
-  public curso : any ;
-  public paralelos : any ;
+  public curso : any;
+  public paralelos : any;
 
   protected filter() {
     Object.keys(this.cursos).map((key) => {
@@ -32,7 +32,6 @@ export class RamoParalelo extends connect(store)(LitElement) {
                 this.curso = item;
                 this.nombre = item.asignatura;
                 this.paralelos = this.curso.paralelos;
-                console.log("Entró");
                 console.log(this.curso);
             }
     })
@@ -46,6 +45,23 @@ export class RamoParalelo extends connect(store)(LitElement) {
           :host {
               display: block;
           }
+          
+          #box{
+        box-sizing: content-box;
+        width: 60%;
+        height: 50%;
+        border: 1px solid black;
+        float: left;
+        border-radius: 10px 10px 10px 10px;
+        padding: 10px;
+
+        }
+        
+        #no-margin{
+        margin: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        }
 
           .paralelo {
               width: 20%
@@ -83,41 +99,46 @@ export class RamoParalelo extends connect(store)(LitElement) {
   protected render() {
       return html`
         ${this.filter()}
-      <h2>Sigla: ${this.sigla} Asignatura: ${this.nombre}</h2>
-      <table>
+        <div id="box" >
+            <h3 id="no-margin">Sigla: ${this.sigla} &nbsp; &nbsp; Asignatura: ${this.nombre}
+            <span style="float: right">
+            <button>
+                <fontawesome-icon name="times" style="font-size: small"></fontawesome-icon>
+            </button>     
+            </h3>
+            <h3 id="no-margin">Créditos: ${this.curso.creditos}</h3>
+      <table style="box-sizing: content-box">
         <tbody>
         <tr>
-            <th class="Paralelo">
+            <th class="Paralelo" style="text-align: left">
               <strong> Paralelo </strong>
             </th>
-            <th class="Profesor">
+            <th class="Profesor" style="text-align: left">
               <strong> Profesor </strong>
             </th>
-            <th class="Cupos">
+            <th class="Cupos" style="text-align: left">
               <strong> Cupos </strong>
             </th>
-            <th>
+            <th style="text-align: left">
             <strong> Horario </strong>
             </th>
           </tr>
         
         ${Object.keys(this.paralelos).map((key) => {
-   
-        const item = this.paralelos[key];
-        console.log("llegue");
-        console.log(item);
+
+          const item = this.paralelos[key];
           return html`
             <tr>
-            <td>
+            <td style="width: 7%; text-align: center">
               ${item.id}
             </td>
-            <td>
+            <td style="width: 75%; text-align: left;">
               ${item.profesor}
             </td>
-            <td>
+            <td style="width: 9%; text-align: center">  
               ${item.cupos}
             </td>
-            <td>
+            <td style="width: 9%; text-align: center">
             <button @click="${this.handleClick}"><fontawesome-icon id="${item.id}" prefix="far" name="calendar-alt" fixed-width></fontawesome-icon></button>
             </td>
           </tr>
@@ -125,6 +146,8 @@ export class RamoParalelo extends connect(store)(LitElement) {
       })}
         </tbody>
         </table>
+      
+        </div>
       `;
 
     }

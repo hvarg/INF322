@@ -218,13 +218,13 @@ export class TablaGuion extends connect(store)(LitElement) {
         ${this.filter()}
         ${this.filter_by_paralelo()}
     <div id="box">
-        <h3 id="no-margin">Paralelo: ${this.id} &nbsp;&nbsp;Profesor: ${this.profesor}
+        <h3 id="no-margin">Paralelo: ${this.id} &nbsp; &nbsp;&nbsp;Profesor: ${this.profesor}
         <button @click="${this.onClick}">
-            <fontawesome-icon prefix="far" name="envelope" fixed-width ></fontawesome-icon>
+            <fontawesome-icon prefix="far" name="envelope" style="font-size: small" ></fontawesome-icon>
         </button>
         <span style="float: right">
         <button >
-            <fontawesome-icon name="times" fixed-width></fontawesome-icon>
+            <fontawesome-icon name="times" style="font-size: small"></fontawesome-icon>
         </button>
         </span>
         </h3>
