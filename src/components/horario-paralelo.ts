@@ -74,6 +74,7 @@ export class HorarioParalelo extends connect(store)(LitElement) {
 
   protected render() {
     return html`
+    
       <table>
         <tr>
           <th class="margen-s" style="background-color: white;"></th>
@@ -143,4 +144,5 @@ export class HorarioParalelo extends connect(store)(LitElement) {
     `;
   
   }
+  
 }

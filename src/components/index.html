@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tablas</title>
+    </head>
+    <body>
+        <div class="" id="wraped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <script type="text/javascript">
+            function graficarTablaAlertas(){
+                console.log("hola");
+                var numColumnas=6;
+                var numFilas=7;
+                var codigoHTML="<table border=\"1\"><tbody>";
+                
+                for(var i=0; i<numFilas; i++){
+                    codigoHTML+="<tr>";
+                    for(var j=0; j<numColumnas; j++){
+                    codigoHTML+="<td>"+i+","+j+"</td>"
+            
+                    }
+                    codigoHTML+="</tr>";
+                }
+                codigoHTML+="</tbody></table>";
+                
+                document.getElementById("wraped").innerHTML = codigoHTML;
+            }
+            graficarTablaAlertas();
+        
+        </script>
+    </body>
+</html>
