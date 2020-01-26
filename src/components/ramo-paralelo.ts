@@ -129,16 +129,16 @@ export class RamoParalelo extends connect(store)(LitElement) {
           const item = this.paralelos[key];
           return html`
             <tr>
-            <td style="width: 7%; text-align: center">
+            <td style="width: 7%; text-align: center; background-color: #f5f3ed">
               ${item.id}
             </td>
-            <td style="width: 75%; text-align: left;">
+            <td style="width: 75%; text-align: left; background-color: #f5f3ed">
               ${item.profesor}
             </td>
-            <td style="width: 9%; text-align: center">  
+            <td style="width: 9%; text-align: center; background-color: #f5f3ed">
               ${item.cupos}
             </td>
-            <td style="width: 9%; text-align: center">
+            <td style="width: 9%; text-align: center; background-color: #f5f3ed">
             <button @click="${this.handleClick}"><fontawesome-icon id="${item.id}" prefix="far" name="calendar-alt" fixed-width></fontawesome-icon></button>
             </td>
           </tr>
