@@ -45,6 +45,7 @@ import { logout } from '../actions/user.js';
 
 // Aqui se importan los componentes.
 import './horario-clases';
+import { SharedStyles } from './shared-styles.js';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
@@ -62,67 +63,12 @@ export class MainPage extends connect(store)(LitElement) {
   
   static get styles() {
     return [customCss,
-      css`
-        :host {
-          display: block;
-          height: 100vh;
-        }
-
-        #main {
-          display: grid;
-          height: 100%;
-          grid-template-columns: 300px calc(100% - 300px);
-          grid-template-rows: 80px calc(100% - 160px) 80px;
-        }
-
-        #header {
-          background-color: #0d1e52;
-          text-align: left;
-          color: white;
-          padding: 2%;
-          grid-row: 1;
-          grid-column: 1 / 3;
-        }
-
-        #nav-bar {
-          grid-row: 2;
-          grid-column: 1;
-        }
-
-        #content {
-          grid-row: 2;
-          grid-column: 2;
-        }
-
-        #logInButton {
-          cursor: pointer;
-          border: 1px solid gray;
-          border-radius: 4px;
-          padding: 5px;
-          background: aliceblue;
-        }
-
-        #logInButton:hover {
-          background: aqua;
-        }
-        
-        #footer {
-        grid-column: 1 / 3;
-        background-color: #faba25;
-        align-content: center;
-        }
-
-        .centered {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-        }
-        
-        .component-margin {
-          margin: 10% 10%
-        }
-        
+        SharedStyles,
+        css`
+                :host {
+                display: block;
+                height: 100vh;
+                }
       `
     ];
   }

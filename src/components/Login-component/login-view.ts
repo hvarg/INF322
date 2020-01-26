@@ -51,7 +51,7 @@ import { login } from '../../actions/user.js';
 export class LoginView extends connect(store)(LitElement) {
   
   static get styles() {
-    return [customCss,
+    return [customCss
     ];
   }
   
@@ -133,7 +133,7 @@ export class LoginView extends connect(store)(LitElement) {
     } else{
       this.userNameInput.setAttribute("invalid",'');
       this.showMsgSubmit = "";
-      this.submitErrorMessage = "Debes ingresar nombre de usuario";
+      this.submitErrorMessage = "Debes ingresar tu nombre de usuario";
     }
   }
   _showPassword(){
@@ -152,83 +152,87 @@ export class LoginView extends connect(store)(LitElement) {
 
   protected render() {
     return html`
-    <div class="login-layout">
-      <wl-nav shadow fixed style="--nav-color:#fff;--nav-bg:#18395A">
-        <div slot="left">
-          <img style="width:60%" src="/images/usm.jpg" alt="logo" />
-        </div>
-        <span slot="title" style="text-align:center;">SISTEMA DE INFORMACIÓN DE GESTIÓN ACADÉMICA</span>
-      </wl-nav>
-      <div class="card-container">
-        <wl-tab-group>
-          <wl-tab vertical>
-              <wl-icon slot="before">meeting_room</wl-icon>
-              <span>Entrar</span>
-          </wl-tab>
-          <wl-tab vertical>
-              <wl-icon slot="before">help</wl-icon>
-              <span>¿Qué es Siga?</span>
-          </wl-tab>
-          <wl-tab vertical>
-              <wl-icon slot="before">people_alt</wl-icon>
-              <span>Contacto</span>
-          </wl-tab>
-        </wl-tab-group>
-        <wl-card class="card">
-          <!--header -->
-          <app-header effects="waterfall">
-            <app-toolbar>Bienvenid@</app-toolbar>
-          </app-header>
-          <!-- header/ -->
-          <!--Warning message -->
-          <div ?hidden="${this.showMsgSubmit}" style="width: 80%; align-self:center;">
-            <wl-banner style="--banner-icon-color: #dc3545!important; --banner-color: aliceblue; --banner-bg: #fdfdfd4a;">
-                <wl-icon slot="icon">error</wl-icon>
-                <wl-text size="small">
-                  ${this.submitErrorMessage}
-                </wl-text>  
-                <wl-button slot="action" fab flat inverted @click="${this.closeErrorBanner}"><wl-icon style="color: #dc3545!important;">close</wl-icon></wl-button>
-            </wl-banner>
-          </div>
-          <!--Warning message/ -->
-          <div class="row">
-              <div class="column">
-                <wl-textfield
-                        class="username input-text"
-                        label="${this.userNameLabel}" 
-                        type="text" required>
-                        <wl-icon slot="before">person_pin</wl-icon>
-                        </wl-textfield>
+        <div id="main">
+                <wl-nav shadow fixed>
+                        <div slot="left">
+                        <img style="width:60%" src="/images/usm.jpg" alt="logo" />
+                        </div>
+                        <span slot="title" style="text-align:center;">SISTEMA DE INFORMACIÓN DE GESTIÓN ACADÉMICA</span>
+              </wl-nav>
+                <div id="content">
+                        <div class="card-container">
+                                        <wl-tab-group>
+                                                <wl-tab vertical checked>
+                                                        <wl-icon slot="before">meeting_room</wl-icon>
+                                                        <span>Entrar</span>
+                                                </wl-tab>
+                                                <wl-tab vertical>
+                                                        <wl-icon slot="before">help</wl-icon>
+                                                        <span>¿Qué es Siga?</span>
+                                                </wl-tab>
+                                                <wl-tab vertical>
+                                                        <wl-icon slot="before">people_alt</wl-icon>
+                                                        <span>Contacto</span>
+                                                </wl-tab>
+                                        </wl-tab-group>
+                                                <wl-card class="card">
+                                                        <app-header effects="waterfall">
+                                                                <app-toolbar>Bienvenid@</app-toolbar>
+                                                        </app-header>
+                                                        <!--Warning message -->
+                                                        <div ?hidden="${this.showMsgSubmit}" style="width: 80%; align-self:center;">
+                                                                <wl-banner
+                                                                        style="--banner-icon-color: #dc3545!important;; --banner-bg: #ff52524a;">
+                                                                        <wl-icon slot="icon">error</wl-icon>
+                                                                        <wl-text size="small">
+                                                                                ${this.submitErrorMessage}
+                                                                        </wl-text>
+                                                                        <wl-button slot="action" fab flat inverted @click="${this.closeErrorBanner}">
+                                                                                <wl-icon style="color: #dc3545!important;">close</wl-icon>
+                                                                        </wl-button>
+                                                                </wl-banner>
+                                                        </div>
+                                                        <!--Warning message/ -->
+                                                        <!-- User and host -->
+                                                        <div class="row">
+                                                                <div class="column">
+                                                                        <wl-textfield class="username input-text" label="${this.userNameLabel}"
+                                                                                type="text" required outlined>
+                                                                                <wl-icon slot="before">person_pin</wl-icon>
+                                                                        </wl-textfield>
+                                                                </div>
+                                                                <div class="column">
+                                                                        <wl-select outlined>
+                                                                                <wl-icon slot="before">alternate_email</wl-icon>
+                                                                                <option class="special" value="1" selected>sansano.usm.cl</option>
+                                                                                <option class="special" value="2">alumnos.usm.cl</option>
+                                                                                <option class="special" value="3">pregrado.usm.cl</option>
+                                                                                <option class="special" value="4">usm.cl</option>
+                                                                        </wl-select>
+                                                                </div>
+                                                        </div>
+                                                        <!-- User and host/ -->
+                                                        <div class="row-password">
+                                                                <wl-textfield class="password input-text" label="${this.passwordLabel}"
+                                                                        type="${this.passwordInputType}" outlined>
+                                                                        <wl-icon @click="${this._showPassword}" slot="after">${this.visibility}
+                                                                        </wl-icon>
+                                                                </wl-textfield>
+                                                        </div>
+                                                        <div class="row">
+                                                                <div class="column" style="text-align:center; padding: 1em;">
+                                                                        <a href="" part="login__forgotPass">${this.forgotPasswordText}</a>
+                                                                </div>
+                                                        </div>
+                                                        <div class="login-button">
+                                                                <wl-button class="btn-showPassword" @click="${this._logIn}" style="width:100%;">
+                                                                        ${this.loginButtonText}</wl-button>
+                                                        </div>
+                                                </wl-card>
+                                </div>
                 </div>
-                <div class="column">
-                        <wl-select style="--input-before-after-color: #fff;--input-padding-top-bottom:15px;" >
-                                <wl-icon slot="before">alternate_email</wl-icon>
-                                <option class="special" value="1" selected>sansano.usm.cl</option>
-                                <option class="special" value="2">alumnos.usm.cl</option>
-                                <option class="special" value="3">pregrado.usm.cl</option>
-                                <option class="special" value="4">usm.cl</option>
-                        </wl-select>
-                </div>
-
+                <div id="footer"></div>
         </div>
-          <div class="row-password">
-            <wl-textfield class="password input-text" label="${this.passwordLabel}" type="${this.passwordInputType}">
-              <wl-icon @click="${this._showPassword}" slot="after">${this.visibility}</wl-icon>
-            </wl-textfield>
-          </div>
-          <div class="row">
-            <div class="column" style="text-align:center; padding: 1em;" >
-              <a style="color:antiquewhite;" href="" part="login__forgotPass">${this.forgotPasswordText}</a>
-            </div>  
-          </div>
-          <div class="login-button" >
-            <wl-button class="btn-showPassword" @click="${this._logIn}" style="width:100%;">${this.loginButtonText}</wl-button>
-          </div>
-          <br>
-        </wl-card>
-      </div>
-      </div>
-      <footer style="background-color:#ff9900"><span>Powered by Lionbit @v0.0.20</span></footer>
         <!--Login-component/-->
       `;
   }

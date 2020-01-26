@@ -11,10 +11,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 import { css } from 'lit-element';
 
 export const SharedStyles = css`
-  :host {
-    display: block;
-    box-sizing: border-box;
-  }
 
   section {
     padding: 24px;
@@ -55,4 +51,47 @@ export const SharedStyles = css`
     font-size: 30px;
     line-height: 64px;
   }
+
+      #main {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 300px calc(100% - 300px);
+        grid-template-rows: 80px calc(100% - 160px) 80px;
+      }
+
+      #header {
+        background-color: #0d1e52;
+        text-align: left;
+        color: white;
+        padding: 2%;
+        grid-row: 1;
+        grid-column: 1 / 3;
+      }
+
+      #nav-bar {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      #content {
+        grid-row: 2;
+        grid-column: 2;
+      }
+      
+      #footer {
+      grid-column: 1 / 3;
+      background-color: #faba25;
+      align-content: center;
+      }
+
+      .centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      
+      .component-margin {
+        margin: 10% 10%
+      }
 `;
