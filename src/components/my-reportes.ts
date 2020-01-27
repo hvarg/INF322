@@ -75,13 +75,20 @@ export class Reportes extends connect(store)(LitElement) {
   
   protected render() {
     return html`
-      <h2>Reporteria</h2>
+      <h2>Resumen académico y reportes </h2>
+      <div class="dropdown">
+      <button class="dropbtn">Resumen académico</button>
+      <div class="dropdown-content">
+        <a href="#">Listar aquí planes del estudiante</a>
+      </div>
+      </div>
       <div class="dropdown">
         <button class="dropbtn">Certificados</button>
         <div class="dropdown-content">
           <a href="#">Solicitar certificado</a>
-          <a href="#">Certificados excentos</a>
-          <a href="#">Otros certificados</a>
+          <a href="#">Certificados exentos</a>
+          <a href="#">Anular certificado</a>
+          <a href="#">Listados de certificados</a>
         </div>
       </div>
     `;
