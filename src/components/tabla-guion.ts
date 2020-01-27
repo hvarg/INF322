@@ -222,10 +222,11 @@ export class TablaGuion extends connect(store)(LitElement) {
         <button @click="${this.onClick}">
             <fontawesome-icon prefix="far" name="envelope" fixed-width ></fontawesome-icon>
         </button>
-        <button>
+        <span style="float: right">
+        <button >
             <fontawesome-icon name="times" fixed-width></fontawesome-icon>
         </button>
-        
+        </span>
         </h3>
         <table>
         
