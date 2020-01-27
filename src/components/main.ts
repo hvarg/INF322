@@ -81,7 +81,7 @@ export class MainPage extends connect(store)(LitElement) {
         }
 
         #nav-bar {
-          grid-row: 2 / 3;
+          grid-row: 2 ;
           grid-column: 1;
           height: 638px;
           width: 300px;
@@ -89,13 +89,16 @@ export class MainPage extends connect(store)(LitElement) {
           border:black 3px solid;
         }
         #menu {
-          margin: 0;
+          margin: 10px;
           width: 140px;
-          background-color: aliceblue;
+          height: 100px;
+          background-color: antiquewhite;
           font-size: 30px; 
+          display: inline-block;
+          padding: 0%;
         }
         
-        #content {
+      #content {
           grid-row: 2;
           grid-column: 2;
         }
@@ -165,7 +168,7 @@ export class MainPage extends connect(store)(LitElement) {
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                <h2>Sistema de volas</h2>
+                <h2>Sistema de Estudiante / Carrera</h2>
               </div>
 
               <div id="nav-bar">
@@ -196,7 +199,7 @@ export class MainPage extends connect(store)(LitElement) {
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                <h2>Sistema de volas</h2>
+                <h2>Sistema de Estudiante / Carrera</h2>
               </div>
 
               <div id="nav-bar">
@@ -224,7 +227,7 @@ export class MainPage extends connect(store)(LitElement) {
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                  <h2>Sistema de volas</h2>
+                  <h2>Sistema de Estudiante / Carrera</h2>
               </div>
 
               <div id="nav-bar">
