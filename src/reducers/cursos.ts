@@ -34,6 +34,7 @@ export interface Horario {
 export interface Paralelo {
   id: number;
   profesor: string;
+  correo: string;
   cupos: number;
   horarios: Array<Horario>;
 }

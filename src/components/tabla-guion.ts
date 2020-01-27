@@ -29,8 +29,11 @@ export class TablaGuion extends connect(store)(LitElement) {
 
     public id = "2";
     public profesor : any;
+    public correo: any;
     public horarios :any;
     public existe :any;
+
+
 
     protected filter() {
         Object.keys(this.cursos).map((key) => {
@@ -53,6 +56,7 @@ export class TablaGuion extends connect(store)(LitElement) {
                 this.id = item.id;
                 this.profesor = item.profesor;
                 this.horarios = item.horarios;
+                this.correo = item.correo;
                 console.log("Entró");
                 console.log(this.curso);
             }
@@ -78,7 +82,34 @@ export class TablaGuion extends connect(store)(LitElement) {
         return [testCss,
             ButtonSharedStyles,
             css`
-         
+        
+        #box{
+        box-sizing: border-box;
+        max-width: 700px;
+        border: 1px solid black;
+        float: left;
+        border-radius: 10px 10px 10px 10px;
+        padding: 10px;
+
+        }
+        
+        #no-margin{
+        margin: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        }
+        
+        #ladospunteados{
+            border-right: thin dotted #005959;
+            border-left: thin dotted #005959;
+        }
+        
+        #ultimobloc{
+            border-bottom: thin dotted #005959;
+        }
+        
+
+        
         :host {
             display: block;
         }
@@ -177,15 +208,37 @@ export class TablaGuion extends connect(store)(LitElement) {
         }
     }
 
+    onClick(){
+        window.location.href = `mailto:${this.correo}`;
+    }
+
+
     protected render() {
         return html`
         ${this.filter()}
         ${this.filter_by_paralelo()}
-        <h2>Paralelo: ${this.id} Profesor: ${this.profesor}</h2>
+    <div id="box">
+        <h3 id="no-margin">Paralelo: ${this.id} &nbsp;&nbsp;Profesor: ${this.profesor}
+        <button @click="${this.onClick}">
+            <fontawesome-icon prefix="far" name="envelope" fixed-width ></fontawesome-icon>
+        </button>
+        <button>
+            <fontawesome-icon name="times" fixed-width></fontawesome-icon>
+        </button>
+        
+        </h3>
         <table>
+        
+           
     <body>
         <tr>
-        <th></th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th><th>Sábado</th>
+        <th style="border-top: none"></th>
+        <th id="ladospunteados">Lunes</th>
+        <th id="ladospunteados">Martes</th>
+        <th id="ladospunteados">Miércoles</th>
+        <th id="ladospunteados">Jueves</th>
+        <th id="ladospunteados">Viernes</th>
+        <th id="ladospunteados">Sábado</th>
         </tr>
         <tr>
             <th>1-2</th> 
@@ -419,7 +472,7 @@ export class TablaGuion extends connect(store)(LitElement) {
   
         </tr>
         <tr>
-            <th>13-14</th> 
+            <th id="ultimobloc">13-14</th> 
             ${this.getSala("lunes",'13-14')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
@@ -460,6 +513,7 @@ export class TablaGuion extends connect(store)(LitElement) {
        
     </body>
 </table>
+</div> 
     `;
 
     }

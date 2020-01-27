@@ -38,6 +38,10 @@ export const testCss = css`
         th {
             font-weight: normal;
             border-top: thin dotted #ccc;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            border-radius: 0.1rem;
+            transition: opacity 0.3s ease;
         }
 
         td {
@@ -79,13 +83,19 @@ export const testCss = css`
     
     th {
             font-weight: normal;
-            border-top: thin dotted #ccc;
+            border-top: thin dotted #005959;
             min-width: 45px;
+            line-height: 1.4;
+            border-radius: 0.1rem;
+            transition: opacity 0.3s ease;
     }
+    
 
 
 
     .stage-saturn {background-color: #26C6DA};
+    
+    
     
     
     

@@ -24,15 +24,15 @@ type ThunkResult = ThunkAction<void, RootState, undefined, CursosAction>;
 
 const CURSOS_LIST = [
   { "id": 1, "sigla": 'IWI131', "asignatura": 'Programación', "departamento": 'Informática' ,
-    "paralelos": [{ "id": 1, "profesor": 'profe1', "cupos": 20, "horarios":[{"dia":'lunes',"bloque":'1-2', "sala":'M-302'}]},
-                  { "id": 2, "profesor": 'profe2', "cupos": 30, "horarios":[{"dia":'martes',"bloque": '1-2', "sala":'M-123'},
+    "paralelos": [{ "id": 1, "profesor": 'profe1', "correo":'correo1@correo.cl', "cupos": 20, "horarios":[{"dia":'lunes',"bloque":'1-2', "sala":'M-302'}]},
+                  { "id": 2, "profesor": 'profe2', "correo":'correo2@correo.cl', "cupos": 30, "horarios":[{"dia":'martes',"bloque": '1-2', "sala":'M-123'},
                                                                            {"dia":'miércoles',"bloque": '3-4', "sala":'F-106'}]}]},
   { "id": 3, "sigla": 'FIS100', "asignatura": 'Introducción a la Física', "departamento": 'Física' ,
-    "paralelos": [{"id": 1, "profesor": 'Hakobyan', "cupos": 50, "horarios":[{"dia":'jueves',"bloque": '13-14', "sala":'A-234'}]}] },
+    "paralelos": [{"id": 1, "profesor": 'Hakobyan', "correo":'correo3@correo.cl', "cupos": 50, "horarios":[{"dia":'jueves',"bloque": '13-14', "sala":'A-234'}]}] },
   { "id": 4, "sigla": 'MAT021' , "asignatura": 'Matemáticas I', "departamento": 'Matemáticas',
-    "paralelos": [{"id": 1, "profesor": 'El maravilloso Yansen', "cupos": 25,"horarios":[{"dia":'viernes',"bloque":'9-10', "sala":'G-213'}]}] },
+    "paralelos": [{"id": 1, "profesor": 'El maravilloso Yansen', "correo":'correo4@correo.cl', "cupos": 25,"horarios":[{"dia":'viernes',"bloque":'9-10', "sala":'G-213'}]}] },
   { "id": 5, "sigla": 'MAT022' , "asignatura": 'Matemáticas II' , "departamento": 'Matemáticas' ,
-    "paralelos": [{"id": 1, "profesor": 'tuma', "cupos": 14, "horarios":[{"dia":'sábado',"bloque":'13-14',"sala":'labpro'}]}] }
+    "paralelos": [{"id": 1, "profesor": 'tuma', "correo":'correo5@correo.cl', "cupos": 14, "horarios":[{"dia":'sábado',"bloque":'13-14',"sala":'labpro'}]}] }
 ];
 
 export const getAllCursos: ActionCreator<ThunkResult> = () => (dispatch) => {

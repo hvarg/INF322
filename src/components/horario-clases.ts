@@ -116,7 +116,9 @@ new List('asignaturas',
             ${item.asignatura}
           </td>
           <td>
-          <button @click="${this.handleClick}"><fontawesome-icon id="${item.sigla}" prefix="far" name="plus-square" fixed-width></fontawesome-icon></button>
+          <button @click="${this.handleClick}">
+            <fontawesome-icon id="${item.sigla}" prefix="far" name="plus-square" fixed-width></fontawesome-icon>
+          </button>
           </td> 
         </tr>
           `;
