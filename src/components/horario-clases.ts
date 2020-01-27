@@ -70,6 +70,25 @@ export class HorarioClases extends connect(store)(LitElement) {
   protected render() {
     return html`
     <h2>Listado de Cursos</h2>
+    <select>
+    <option>Ingeniería Civil Informática</option>
+    <option>Ingeniería Civil Mecánica</option>
+    <option>Ingeniería Civil Industrial</option>
+    </select>
+    <select>
+    <option>1er Semestre</option>
+    <option>2do Semestre</option>
+    <option>3er Semestre</option>
+    <option>4to Semestre</option>
+    <option>5to Semestre</option>
+    <option>6to Semestre</option>
+    <option>7mo Semestre</option>
+    <option>8vo Semestre</option>
+    <option>9no Semestre</option>
+    <option>10mo Semestre</option>
+    <option>11vo Semestre</option>
+    <option>12vo Semestre</option>
+    </select>
     <table class="left">
       <tbody>
         <tr>
