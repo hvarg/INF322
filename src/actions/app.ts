@@ -40,10 +40,6 @@ export const navigate: ActionCreator<ThunkResult> = (path: string) => (dispatch)
 
 const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
   switch(page) {
-    case 'reportes':
-      import('../components/my-reportes').then((_module) => {
-      });
-      break;
     case 'main':
       import('../components/main').then((_module) => {
       });

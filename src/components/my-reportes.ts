@@ -24,36 +24,50 @@ export class Reportes extends connect(store)(LitElement) {
             display: block;
         }
 
-        .sigla {
-            width: 10% 
+        .dropbtn {
+          background-color: #faba25;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
         }
         
-        .asignatura{
-            width: 25%
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+          position: relative;
+          display: inline-block;
         }
         
-        .departamento{
-            width: 13%
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
         }
         
-        .paralelo{
-            width: 22%
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
         }
         
-        .profesor{
-            width: 15%
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+          display: block;
         }
         
-        .cupos{
-            width: 5%
-        }
-        
-        .horario{
-            width: 10%
-        }
-        
-        .left{
-            text-align: left;
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+          background-color: #e2a822;
         }
       `
     ];
@@ -61,7 +75,15 @@ export class Reportes extends connect(store)(LitElement) {
   
   protected render() {
     return html`
-      <h2>Reportes</h2>
+      <h2>Reporteria</h2>
+      <div class="dropdown">
+        <button class="dropbtn">Certificados</button>
+        <div class="dropdown-content">
+          <a href="#">Solicitar certificado</a>
+          <a href="#">Certificados excentos</a>
+          <a href="#">Otros certificados</a>
+        </div>
+      </div>
     `;
   
   }

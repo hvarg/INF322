@@ -145,12 +145,10 @@ export class MainPage extends connect(store)(LitElement) {
            
         <div id="content">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
-                 el nombre de la variable del componente (public) -->
-            <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
+                 el nombre de la variable del componente (public) 
+            <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> -->
 
-            <p>aqui</p>
-            <my-reportes class="page" ?active="${this._page === 'my-reportes'}"></my-reportes>
-            <p>--</p>
+            <my-reportes class="component-margin" ?active="${this._page === 'my-reportes'}"></my-reportes>
 
         </div>
 
