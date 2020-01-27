@@ -106,6 +106,11 @@ export class TablaGuion extends connect(store)(LitElement) {
         
         #ultimobloc{
             border-bottom: thin dotted #005959;
+            border-left: thin dotted #005959;
+        }
+        
+        #bloquesizq{
+            border-left: thin dotted #005959;
         }
         
 
@@ -242,7 +247,7 @@ export class TablaGuion extends connect(store)(LitElement) {
         <th id="ladospunteados">Sábado</th>
         </tr>
         <tr>
-            <th>1-2</th> 
+            <th id="bloquesizq">1-2</th> 
             ${this.getSala("lunes",'1-2')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
@@ -281,7 +286,7 @@ export class TablaGuion extends connect(store)(LitElement) {
 
         </tr>
         <tr>
-            <th>3-4</th>
+            <th  id="bloquesizq">3-4</th>
             ${this.getSala("lunes",'3-4')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
@@ -320,7 +325,7 @@ export class TablaGuion extends connect(store)(LitElement) {
         
         </tr>
         <tr>
-            <th>5-6</th> 
+            <th id="bloquesizq">5-6</th> 
             ${this.getSala("lunes",'5-6')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
@@ -358,7 +363,7 @@ export class TablaGuion extends connect(store)(LitElement) {
             `}
         </tr>
         <tr>
-            <th>7-8</th>
+            <th id="bloquesizq">7-8</th>
             ${this.getSala("lunes",'7-8')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
@@ -396,7 +401,7 @@ export class TablaGuion extends connect(store)(LitElement) {
             `}
         </tr>
         <tr>
-            <th>9-10</th> 
+            <th id="bloquesizq">9-10</th> 
             ${this.getSala("lunes",'9-10')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
@@ -434,7 +439,7 @@ export class TablaGuion extends connect(store)(LitElement) {
             `}
         </tr>
         <tr>
-            <th>11-12</th> 
+            <th id="bloquesizq">11-12</th> 
             ${this.getSala("lunes",'11-12')} 
             ${this.existe ? html`
             <td class="stage-earth"> ${this.sala}</td>
