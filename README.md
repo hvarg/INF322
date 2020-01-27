@@ -1,3 +1,10 @@
+# Los DIO-Boyz: Avances y TODO
+
+* Agregada tabla de horario (mediante el Web Component "horario-paralelo")
+* TODO: colorear los bloques respectivos
+
+---
+
 # Evaluación interfaz: SIGA (Alumnos)
 
 Los objetivos de este escrito son los siguientes:

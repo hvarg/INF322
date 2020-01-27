@@ -52,7 +52,7 @@ export class MainPage extends connect(store)(LitElement) {
   @property({type: String})
   private _page: string = '';
 
-  private appTitle : string = 'Siga';
+  private appTitle : string = 'SIGA';
   
   static get styles() {
     return [customCss,
@@ -70,7 +70,7 @@ export class MainPage extends connect(store)(LitElement) {
         }
 
         #header {
-          background-color: #0d1e52;
+          background-color: #033558;
           text-align: left;
           color: white;
           padding: 2%;
@@ -102,7 +102,7 @@ export class MainPage extends connect(store)(LitElement) {
         
         #footer {
         grid-column: 1 / 3;
-        background-color: #faba25;
+        background-color: #ff9900;
         align-content: center;
         }
 
@@ -114,7 +114,7 @@ export class MainPage extends connect(store)(LitElement) {
         }
         
         .component-margin {
-          margin: 10% 10%
+          margin: 2% 2%
         }
         
       `
@@ -140,12 +140,12 @@ export class MainPage extends connect(store)(LitElement) {
             Sesión de ALUMNO NOMBRE APELLIDO
         </div>
            
-        <div id="nav-bar"></div>
+        <div id="nav-bar" style="background-color:Gainsboro;"></div>
            
         <div id="content">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                  el nombre de la variable del componente (public) -->
-            <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
+            <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases>
         </div>
         
         <div id="footer">
