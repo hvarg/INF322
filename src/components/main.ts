@@ -80,18 +80,104 @@ export class MainPage extends connect(store)(LitElement) {
           grid-column: 1 / 3;
         }
 
-        #nav-bar {
+        #nav-bar > ul {
           grid-row: 2 / 3;
           grid-column: 1;
-          height: 638px;
-          width: 300px;
-          background-color: antiquewhite;
-          border:black 3px solid;
+          height: 300px;
+          width: 200px;
+          background-color: #FE9900;
+          border:#0D1E52 3px solid;
         }
+        /*revisar navbar*/
+        .navbar{
+          width:100%;
+          margin:15px top;
+          text-align: auto;
+          background: #FE9900;
+          margin-left:45px;
+          height: 100px;
+          width: 170px;
+          color: black;
+          border:#0D1E52 3px solid;
+          border-radius: 10px;
+        }
+
+        nav>ul>li{
+          list-style: none;
+          display: inline-block;
+          padding: 15px 25px;
+          cursor: pointer;
+          font-weight: 500;
+          position: relative;
+
+        }
+
+        ul>li:hover {
+          /*background-color:#FEB74C;*/
+          background-color:#FE9900;
+        }
+
+        ul.dropdown{
+          position: absolute;
+          list-style: none;
+          margin:0;
+          padding:0;
+          width:100%;
+          margin-left: 5px;
+          padding-top: 15px;
+          display:none;
+          
+        }
+        ul.dropdown>li{
+          text-align: center;
+          padding: 10px;
+          background-color: #FE9900;
+          margin: 1px;
+          border:#0D1E52 3px solid;
+
+        }
+        .navbar li:hover .dropdown{
+          display: inherit;
+        }
+
+        ul.dropdown>li:hover {
+          background-color:#e48900;
+        }
+
+        ul.submenu{
+          position: absolute;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: inline-block;
+          width:100%;
+          display: none;
+          padding-left: auto;
+        }
+        ul.submenu li{
+          width: 100%;
+          text-align: center;
+          padding: 10px;
+          background-color: #FE9900;
+          margin: 1px;
+        }
+        ul.submenu>li:hover{
+          background-color: #e48900;
+        }
+
+        ul.dropdown>li:hover ul.submenu{
+          display: inline-block;
+        }
+
+        li{
+          border-radius:5px;
+        }
+
+
         #menu {
           margin: 0;
           width: 140px;
-          background-color: aliceblue;
+          background-color: #FE9900;
           font-size: 30px; 
         }
         
@@ -114,7 +200,7 @@ export class MainPage extends connect(store)(LitElement) {
         
         #footer {
         grid-column: 1 / 3;
-        background-color: #faba25;
+        background-color: #FE9900;
         align-content: center;
         background-image: url("images/logo.gif");
         background-repeat: no-repeat;
@@ -165,20 +251,21 @@ export class MainPage extends connect(store)(LitElement) {
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                <h2>Sistema de volas</h2>
+                <h2>Sistema de Informacion de Gestion Académica</h2>
               </div>
+              
+              <nav class="navbar">
+                <ul>
+                  <li>Menu
+                    <ul class="dropdown">   
+                      <li> <a  href="/">Inicio</a> </li>
+                      <li> <a  href="/MiPerfil">MiPerfil</a> </li>
+                  <!--<a  href="/View1">View1</a>-->
+                  </li>
+                </ul>
+              </nav>
 
-              <div id="nav-bar">
-                <div id="listaNavegacion">
-                  <nav class="menu" id="menu">
-                    <ul>
-                      <a  href="/">Inicio</a>
-                      <a  href="/MiPerfil">MiPerfil</a>
-                      <!--<a  href="/View1">View1</a>-->
-                    </ul>
-                  </nav>
-                </div>
-              </div>
+
 
               <div id="content">
                   <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
@@ -186,7 +273,7 @@ export class MainPage extends connect(store)(LitElement) {
                   <perfil-alumno class="component-margin"></perfil-alumno>
               </div>
 
-              <div id="footer">w
+              <div id="footer">
               </div>
 
           </div>
@@ -196,18 +283,19 @@ export class MainPage extends connect(store)(LitElement) {
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                <h2>Sistema de volas</h2>
+                <h2>Sistema de Informacion de Gestion Académica</h2>
               </div>
 
-              <div id="nav-bar">
-                <nav class="menu" id="menu">
-                    <ul>
-                      <a  href="/">Inicio</a>
-                      <a  href="/MiPerfil">MiPerfil</a>
-                      <!--<a ?selected="${this._page === 'View1'}" href="/View1">View1</a>
-                    </ul>
-                </nav>  
-              </div>
+              <nav class="navbar">
+                <ul>
+                  <li>Menu
+                    <ul class="dropdown">   
+                      <li> <a  href="/">Inicio</a> </li>
+                      <li> <a  href="/MiPerfil">MiPerfil</a> </li>
+                    <!--<a ?selected="${this._page === 'View1'}" href="/View1">View1</a>
+                  </li>
+                </ul>
+              </nav>  
 
               <div id="content">
                   ACA está la utilización del componente, para pasarle datos usen un punto '.' más
@@ -215,7 +303,7 @@ export class MainPage extends connect(store)(LitElement) {
                   <!-- <view-1 class="component-margin"></view-1> -->
               </div>
 
-              <div id="footer">w
+              <div id="footer">
               </div>
 
           </div>
@@ -224,18 +312,19 @@ export class MainPage extends connect(store)(LitElement) {
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                  <h2>Sistema de volas</h2>
+                  <h2>Sistema de Informacion de Gestion Académica</h2>
               </div>
 
-              <div id="nav-bar">
-                    <nav class="menu" id="menu">
-                        <ul>
-                          <a ?selected="${this._page === 'Inicio'}" href="/">Inicio</a>
-                          <a ?selected="${this._page === 'MiPerfil'}" href="/MiPerfil">MiPerfil</a>
-                          <!--<a ?selected="${this._page === 'View1'}" href="/View1">View1</a>-->
-                        </ul>
-                    </nav>
-              </div>
+              <nav class="navbar">
+                <ul>
+                  <li>Menu
+                    <ul class="dropdown">   
+                      <li> <a ?selected="${this._page === 'Inicio'}" href="/">Inicio</a> </li>
+                      <li> <a ?selected="${this._page === 'MiPerfil'}" href="/MiPerfil">MiPerfil</a> </li>
+                      <!--<a ?selected="${this._page === 'View1'}" href="/View1">View1</a>-->
+                    </ul>
+                  </li>
+              </nav>
 
               <div id="content">
                   <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
@@ -243,7 +332,7 @@ export class MainPage extends connect(store)(LitElement) {
                   <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
               </div>
 
-              <div id="footer">w
+              <div id="footer">
               </div>
 
           </div>

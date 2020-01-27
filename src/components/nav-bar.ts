@@ -30,11 +30,11 @@ export class NavBar extends connect(store)(LitElement) {
         .listaNavegacion
         {
             background-color: aqua;
-            font-size: large;
+            font-size: medium;
         }
         .seccion
         {
-            font-size: large;
+            font-size: medium;
             
         }
         
