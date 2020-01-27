@@ -39,6 +39,7 @@ import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import './snack-bar.js';
 
 // Aqui se importan los componentes.
+import './my-reportes';
 import './horario-clases';
 
 @customElement('main-page')
@@ -122,7 +123,7 @@ export class MainPage extends connect(store)(LitElement) {
   }
 
   _logIn () {
-    this._loggedIn = (Math.random() > .5);
+    this._loggedIn = true; //(Math.random() > .5);
     if (!this._loggedIn) {
         alert('try again!');
     }
@@ -146,11 +147,17 @@ export class MainPage extends connect(store)(LitElement) {
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                  el nombre de la variable del componente (public) -->
             <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
+
+            <p>aqui</p>
+            <my-reportes class="page" ?active="${this._page === 'my-reportes'}"></my-reportes>
+            <p>--</p>
+
         </div>
-        
+
         <div id="footer">
+
         </div>
-        
+
     </div>
     ` : html`
     <div class="centered">
