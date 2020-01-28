@@ -182,14 +182,6 @@ export class MainPage extends connect(store)(LitElement) {
     }
   }
 
-  _mostrar()  {
-    console.log("mostrar");
-  }
-
-  _ocultar()  {
-    console.log("ocultar");
-  }
-
   /* Render se ejecuta cada vez que se modifica una variable marcada como property, OJO: no se verifican las
    * subpropiedades de los objetos, pueden requerir una actualización usando this.requestUpdate();
    * Más info: https://polymer-library.polymer-project.org/3.0/docs/devguide/observers */
