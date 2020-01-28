@@ -54,7 +54,16 @@ export class HorarioClases extends connect(store)(LitElement) {
         .horario{
             width: 10%
         }
+
+        .selector{
+            width: 30%
+            font-family: Arial
+            border: 6px solid transparent;
+            border-color: #fff transparent transparent transparent;
+        }
         
+        
+
         .left{
             text-align: left;
         }
@@ -70,12 +79,12 @@ export class HorarioClases extends connect(store)(LitElement) {
   protected render() {
     return html`
     <h2>Listado de Cursos</h2>
-    <select>
+    <select class="selector" style="background-color:#ffae19;" >
     <option>Ingeniería Civil Informática</option>
     <option>Ingeniería Civil Mecánica</option>
     <option>Ingeniería Civil Industrial</option>
     </select>
-    <select>
+    <select class="selector" style="background-color:#ffae19;">
     <option>1er Semestre</option>
     <option>2do Semestre</option>
     <option>3er Semestre</option>
@@ -88,7 +97,7 @@ export class HorarioClases extends connect(store)(LitElement) {
     <option>10mo Semestre</option>
     <option>11vo Semestre</option>
     <option>12vo Semestre</option>
-    </select>
+    </select> 
     <table class="left">
       <tbody>
         <tr>
