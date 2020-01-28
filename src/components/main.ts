@@ -41,7 +41,7 @@ import './snack-bar.js';
 // Aqui se importan los componentes.
 import './horario-clases';
 import './perfil-alumno';
-import './view-1';
+import './search-box';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
@@ -77,25 +77,40 @@ export class MainPage extends connect(store)(LitElement) {
           color: white;
           padding: 2%;
           grid-row: 1;
-          grid-column: 1 / 3;
+          grid-column: 1 / 4;
         }
-
+        #titulo {
+          grid-row: 1;
+          grid-column: 1/3;
+          margin-right: 300px;
+        }
+        #box {
+          grid-row: 1;
+          grid-column: 3/4;
+        }
         #nav-bar {
-          grid-row: 2 ;
-          grid-column: 1;
-          height: 638px;
-          width: 300px;
-          background-color: antiquewhite;
-          border:black 3px solid;
+          width:100%;
+          text-align: auto;
+          background: antiquewhite;
+          height: 639px;
+          width: 270px;
+          color: black;
+          border:#0D1E52 3px solid;
+          border-radius: 10px;
         }
         #menu {
-          margin: 10px;
-          width: 140px;
-          height: 100px;
-          background-color: antiquewhite;
+          margin-top: 15px;
+          margin-left: 25px;
+          margin-right: 15px;
+          margin-bottom: 15px;
+          width: 210px;
+          height: 600px;
+          background-color: #FE9900;
           font-size: 30px; 
           display: inline-block;
           padding: 0%;
+          border: black 1px solid;
+          border-radius: 10px;
         }
         
       #content {
@@ -109,14 +124,28 @@ export class MainPage extends connect(store)(LitElement) {
           border-radius: 4px;
           padding: 5px;
           background: aliceblue;
+          font-style: italic;
         }
 
         #logInButton:hover {
           background: aqua;
         }
+
+        #logOutButton {
+          cursor: pointer;
+          border: 1px solid white;
+          border-radius: 4px;
+          padding: 5px;
+          background:black;
+          
+        }
+
+        #logOutButton:hover {
+          background: orangered;
+        }
         
         #footer {
-        grid-column: 1 / 3;
+        grid-column: 1 / 4;
         background-color: #faba25;
         align-content: center;
         background-image: url("images/logo.gif");
@@ -138,11 +167,18 @@ export class MainPage extends connect(store)(LitElement) {
       `
     ];
   }
-   
   _logIn () {
     this._loggedIn = true;
     if (!this._loggedIn) {
         alert('try again!');
+    }
+  }
+
+  _logOut () {
+    this._loggedIn = false;
+    console.log("proceso de deslogueo satisfactorio");
+    if (this._loggedIn) {
+      alert ('try again');
     }
   }
 
@@ -163,30 +199,37 @@ export class MainPage extends connect(store)(LitElement) {
     {
       switch (this._page)
       {
-        case "MiPerfil":
-          console.log("reconocio la wea");
+        case "Ramos":
           return html`
           <div id="main">
-              <div id="header" style="vertical-align: middle;">
-                <h2>Sistema de Estudiante / Carrera</h2>
+              <div id="header" class="container" style="vertical-align: middle;">
+                <div id="titulo">
+                  <span id="logOutButton" @click="${this._logOut}">
+                    USM
+                  </span>
+                </div>
               </div>
 
               <div id="nav-bar">
-                <div id="listaNavegacion">
-                  <nav class="menu" id="menu">
-                    <ul>
-                      <a  href="/">Inicio</a>
-                      <a  href="/MiPerfil">MiPerfil</a>
-                      <!--<a  href="/View1">View1</a>-->
-                    </ul>
-                  </nav>
-                </div>
+                <nav class="menu" id="menu">
+                  <ul>
+                    <hr/>
+                    <a  href="/">Noticias</a>
+                    <hr/>
+                    <a  href="/Ramos">Ramos</a>
+                    <hr/>
+                    <a  href="/">Solicitudes Externas</a>
+                    <hr/>
+                    <a  href="/">Enlaces Externos</a>
+                    <hr/>
+                  </ul>
+                </nav>
               </div>
 
               <div id="content">
                   <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                        el nombre de la variable del componente (public) -->
-                  <perfil-alumno class="component-margin"></perfil-alumno>
+                  <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
               </div>
 
               <div id="footer">w
@@ -195,47 +238,35 @@ export class MainPage extends connect(store)(LitElement) {
           </div>
             `
             break;
-        case "View1":
-          return html`
-          <div id="main">
-              <div id="header" style="vertical-align: middle;">
-                <h2>Sistema de Estudiante / Carrera</h2>
-              </div>
-
-              <div id="nav-bar">
-                <nav class="menu" id="menu">
-                    <ul>
-                      <a  href="/">Inicio</a>
-                      <a  href="/MiPerfil">MiPerfil</a>
-                      <!--<a ?selected="${this._page === 'View1'}" href="/View1">View1</a>
-                    </ul>
-                </nav>  
-              </div>
-
-              <div id="content">
-                  ACA está la utilización del componente, para pasarle datos usen un punto '.' más
-                       el nombre de la variable del componente (public) -->
-                  <!-- <view-1 class="component-margin"></view-1> -->
-              </div>
-
-              <div id="footer">w
-              </div>
-
-          </div>
-          `
         default:
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                  <h2>Sistema de Estudiante / Carrera</h2>
+                <!--<h2>Sistema de Estudiante / Carrera</h2>-->
+                <div id="titulo"> 
+                  <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
+                  <span id="logOutButton" @click="${this._logOut}">
+                    USM
+                  </span>
+                </div>
+                <!--<div id="box">
+                  <search-box ></search-box>
+                </div>-->   
               </div>
 
               <div id="nav-bar">
                     <nav class="menu" id="menu">
                         <ul>
-                          <a ?selected="${this._page === 'Inicio'}" href="/">Inicio</a>
-                          <a ?selected="${this._page === 'MiPerfil'}" href="/MiPerfil">MiPerfil</a>
-                          <!--<a ?selected="${this._page === 'View1'}" href="/View1">View1</a>-->
+                          <hr/>
+                          <a ?selected="${this._page === 'Noticias'}" href="/">Noticias</a>
+                          <hr/>
+                          <a ?selected="${this._page === 'Ramos'}" href="/Ramos">Ramos</a>
+                          <hr/>
+                          <a  href="/">Solicitudes Externas</a>
+                          <hr/>
+                          <a  href="/">Enlaces Externos</a>
+                          <hr/>
+                          <!--<a ?selected="${this._page === 'View1'}" href=""></a>-->
                         </ul>
                     </nav>
               </div>
@@ -243,7 +274,7 @@ export class MainPage extends connect(store)(LitElement) {
               <div id="content">
                   <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                        el nombre de la variable del componente (public) -->
-                  <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
+                  
               </div>
 
               <div id="footer">w

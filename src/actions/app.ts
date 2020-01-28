@@ -46,7 +46,7 @@ const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
         // navigating to view1 after my-view1.js is loaded.
       });
       break;
-    case 'MiPerfil':
+    case 'Ramos':
         import('../components/perfil-alumno').then((_module) => {
 
         });
