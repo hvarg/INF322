@@ -47,10 +47,15 @@ const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
       });
       break;
     case 'Ramos':
-        import('../components/perfil-alumno').then((_module) => {
+        import('../components/horario-clases').then((_module) => {
 
         });
         break;
+    case 'MiPerfil':
+      import('../components/perfil-alumno').then((_module) => {
+
+      });
+      break;
     default:
       page = 'view404';
       import('../components/my-view404.js');

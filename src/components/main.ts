@@ -86,7 +86,7 @@ export class MainPage extends connect(store)(LitElement) {
         }
         #box {
           grid-row: 1;
-          grid-column: 3/4;
+          margin-left: 1350px;
         }
         #nav-bar {
           width:100%;
@@ -200,6 +200,10 @@ export class MainPage extends connect(store)(LitElement) {
                     USM
                   </span>
                 </div>
+                <div id="box">
+                  <a href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
+                </div>
+
               </div>
 
               <div id="nav-bar">
@@ -230,6 +234,49 @@ export class MainPage extends connect(store)(LitElement) {
           </div>
             `
             break;
+        case "MiPerfil":
+          return html`
+          <div id="main">
+              <div id="header" class="container" style="vertical-align: middle;">
+                <div id="titulo">
+                  <span id="logOutButton" @click="${this._logOut}">
+                    USM
+                  </span>
+                </div>
+                <div id="box">
+                  <a href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
+                </div>
+
+              </div>
+
+              <div id="nav-bar">
+                <nav class="menu" id="menu">
+                  <ul>
+                    <hr/>
+                    <a  href="/">Noticias</a>
+                    <hr/>
+                    <a  href="/Ramos">Ramos</a>
+                    <hr/>
+                    <a  href="/">Solicitudes Externas</a>
+                    <hr/>
+                    <a  href="/">Enlaces Externos</a>
+                    <hr/>
+                  </ul>
+                </nav>
+              </div>
+
+              <div id="content">
+                  <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
+                       el nombre de la variable del componente (public) -->
+                  <perfil-alumno></perfil-alumno>
+              </div>
+
+              <div id="footer">w
+              </div>
+
+          </div>
+            `
+          break;
         default:
           return html`
           <div id="main">
@@ -241,9 +288,13 @@ export class MainPage extends connect(store)(LitElement) {
                     USM
                   </span>
                 </div>
+                <div id="box">
+                  <a href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
+                </div>
+                <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
                 <!--<div id="box">
-                  <search-box ></search-box>
-                </div>-->   
+                  <search-box ></search-box> 
+                </div>  -->
               </div>
 
               <div id="nav-bar">
@@ -258,7 +309,6 @@ export class MainPage extends connect(store)(LitElement) {
                           <hr/>
                           <a  href="/">Enlaces Externos</a>
                           <hr/>
-                          <!--<a ?selected="${this._page === 'View1'}" href=""></a>-->
                         </ul>
                     </nav>
               </div>
