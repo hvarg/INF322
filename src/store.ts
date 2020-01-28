@@ -27,7 +27,10 @@ import thunk, { ThunkMiddleware } from 'redux-thunk';
 import { lazyReducerEnhancer } from 'pwa-helpers/lazy-reducer-enhancer.js';
 
 import app, { AppState } from './reducers/app.js';
+
+import user, { UserState } from './reducers/user.js';
 import { AppAction } from './actions/app.js';
+import { UserAction } from './actions/user.js';
 
 /* Estos archivos manejan el store (la memoria de la página), usa redux así que cada elemento
  * es definido por un archivo en actions (que contiene las funciones que usa la vista) y uno
@@ -39,11 +42,12 @@ import { CursosAction } from './actions/cursos';
 // Este es el state principal, se define la estructura de datos...
 export interface RootState {
   app?: AppState;
+  user: UserState;
   cursos?: CursosState;
 }
 
 // Se agrega el tipo de las acciones que creemos al tipo root.
-export type RootAction = AppAction | CursosAction;
+export type RootAction = AppAction | UserAction | CursosAction;
 
 // Sets up a Chrome extension for time travel debugging.
 // See https://github.com/zalmoxisus/redux-devtools-extension for more information.
@@ -65,5 +69,6 @@ export const store = createStore(
 );
 
 // Cargar reducers, aquí es donde se conectan los básicos, se pueden cargar a demanda tambien.
+store.addReducers({ user});
 store.addReducers({ app });
 store.addReducers({ cursos });

@@ -37,6 +37,15 @@ import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import './snack-bar.js';
+import 'weightless/button';
+import 'weightless/card';
+import 'weightless/textfield';
+
+import { logout } from '../actions/user.js';
+
+// Aqui se importan los componentes.
+import './horario-clases';
+import { SharedStyles } from './shared-styles.js';
 
 // Aqui se importan los componentes.
 import './horario-clases';
@@ -47,85 +56,35 @@ export class MainPage extends connect(store)(LitElement) {
   private _cursos: ListaCursos = {};
 
   @property({type: Boolean})
-  private _loggedIn: boolean = false;
+  private _loggedIn: Boolean | undefined;
 
   @property({type: String})
   private _page: string = '';
 
-  private appTitle : string = 'Siga';
+  @property({type: String})
+  private appTitle : string = '';
   
   static get styles() {
     return [customCss,
-      css`
-        :host {
-          display: block;
-          height: 100vh;
-        }
-
-        #main {
-          display: grid;
-          height: 100%;
-          grid-template-columns: 300px calc(100% - 300px);
-          grid-template-rows: 80px calc(100% - 160px) 80px;
-        }
-
-        #header {
-          background-color: #0d1e52;
-          text-align: left;
-          color: white;
-          padding: 2%;
-          grid-row: 1;
-          grid-column: 1 / 3;
-        }
-
-        #nav-bar {
-          grid-row: 2;
-          grid-column: 1;
-        }
-
-        #content {
-          grid-row: 2;
-          grid-column: 2;
-        }
-
-        #logInButton {
-          cursor: pointer;
-          border: 1px solid gray;
-          border-radius: 4px;
-          padding: 5px;
-          background: aliceblue;
-        }
-
-        #logInButton:hover {
-          background: aqua;
-        }
-        
-        #footer {
-        grid-column: 1 / 3;
-        background-color: #faba25;
-        align-content: center;
-        }
-
-        .centered {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-        }
-        
-        .component-margin {
-          margin: 10% 10%
-        }
-        
+        SharedStyles,
+        css`
+                :host {
+                display: block;
+                height: 100vh;
+                }
       `
     ];
   }
 
-  _logIn () {
-    this._loggedIn = (Math.random() > .5);
-    if (!this._loggedIn) {
-        alert('try again!');
-    }
+  //Magia de redux: esto puede suceder en otro lugar
+  //y cambiará el estado gracias a la ultima función de
+  //esta clase.
+  // _logIn () {
+  //   console
+  //   store.dispatch(getUserState(store.getState()));
+  // }
+  _logOut(){
+    store.dispatch(logout());
   }
 
   /* Render se ejecuta cada vez que se modifica una variable marcada como property, OJO: no se verifican las
@@ -134,37 +93,35 @@ export class MainPage extends connect(store)(LitElement) {
   protected render() {
     /* Acá está la página principal, cada componente debería tener un lugar donde puedan probarlo. */
     return html`
-    ${this._loggedIn ? html`
-    <div id="main">
-        <div id="header" style="vertical-align: middle;">
-            Sesión de ALUMNO NOMBRE APELLIDO
-        </div>
-           
-        <div id="nav-bar"></div>
-           
+    ${
+      this._loggedIn ? html`
+      <div id="main">
+          <div id="header">
+            <wl-button @click="${this._logOut}">Cerrar sesión</wl-button>
+          </div>
+          <div id="nav-bar">
+          </div>
         <div id="content">
-            <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
-                 el nombre de la variable del componente (public) -->
-            <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
-        </div>
-        
-        <div id="footer">
-        </div>
-        
+        <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
+             el nombre de la variable del componente (public) -->
+        <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
+
     </div>
-    ` : html`
-    <div class="centered">
-        <span id="logInButton" @click="${this._logIn}">
-            Click here to try to log in!
-        </span>
-    </div>`}
-    `;
+
+    <div id="footer">
+    </div>
+    
+      </div>
+      <!--home-component/-->
+      ` : 
+      html`
+      <login-view ></login-view>
+      `}  
+        `;
   }
 
   constructor() {
     super();
-    // To force all event listeners for gestures to be passive.
-    // See https://www.polymer-project.org/3.0/docs/devguide/settings#setting-passive-touch-gestures
     setPassiveTouchGestures(true);
   }
 
@@ -199,6 +156,7 @@ export class MainPage extends connect(store)(LitElement) {
   /* Esta función se ejecuta cada vez que el state cambia, se usa para leer la memoria. */
   stateChanged(state: RootState) {
     this._page = state.app!.page;
+    this._loggedIn = state.user.isLoggedIn;
     this._cursos = state.cursos!.cursos;
   }
 }
