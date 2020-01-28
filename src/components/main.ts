@@ -47,6 +47,9 @@ import { logout } from '../actions/user.js';
 import './horario-clases';
 import { SharedStyles } from './shared-styles.js';
 
+// Aqui se importan los componentes.
+import './horario-clases';
+
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
   @property({type: Object})
