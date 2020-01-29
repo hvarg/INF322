@@ -89,17 +89,17 @@ new List('asignaturas',
 <div class="asignaturas">
 <strong>Buscar:</strong> <input type="text" class="search" />
 <h2>Listado de Cursos</h2>
-    <table>
+    <table style="box-sizing: content-box">
       <tbody>
       <div class="list">
       <tr>
-          <th class="Sigla">
+          <th class="Sigla" style="text-align: left">
             <strong> Sigla </strong>
           </th>
-          <th class="Asignatura">
+          <th class="Asignatura" style="text-align: left">
             <strong> Asignatura </strong>
           </th>
-          <th class="cupos">
+          <th class="cupos" style="text-align: left">
           <strong> Más información </strong>
           </th>
         </tr>
@@ -110,13 +110,13 @@ new List('asignaturas',
                 if (idies == '0') {
                     return html `
           <tr>
-          <td class="sigla">
+          <td class="sigla" style="width: 9%; text-align: center; background-color: #f5f3ed">
             ${item.sigla}
           </td>
-          <td class="asignatura">
+          <td class="asignatura" style="width: 9%;  background-color: #f5f3ed">
             ${item.asignatura}
           </td>
-          <td>
+          <td style="width: 9%; text-align: center; background-color: #f5f3ed">
           <button @click="${this.handleClick}">
             <fontawesome-icon id="${item.sigla}" prefix="far" name="plus-square" fixed-width></fontawesome-icon>
           </button>
