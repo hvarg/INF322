@@ -42,6 +42,7 @@ import './snack-bar.js';
 import './horario-clases';
 import './perfil-alumno';
 import './search-box';
+import './view-notices';
 
 @customElement('main-page')
 export class MainPage extends connect(store)(LitElement) {
@@ -394,9 +395,7 @@ export class MainPage extends connect(store)(LitElement) {
               </div>
 
               <div id="content">
-                  <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
-                       el nombre de la variable del componente (public) -->
-                  
+                  <view-notices></view-notices>
               </div>
 
               <div id="footer">
