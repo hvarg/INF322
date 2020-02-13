@@ -70,7 +70,9 @@ export class MainPage extends connect(store)(LitElement) {
           grid-template-columns: 300px calc(100% - 300px);
           grid-template-rows: 80px calc(100% - 160px) 80px;
         }
-
+        
+        
+        
         #header {
           background-color: #0d1e52;
           text-align: left;
@@ -78,39 +80,88 @@ export class MainPage extends connect(store)(LitElement) {
           padding: 2%;
           grid-row: 1;
           grid-column: 1 / 4;
+          display: block;
         }
         #titulo {
           grid-row: 1;
-          grid-column: 1/3;
+          grid-column: 1/2;
           margin-right: 300px;
         }
+        
         #box {
           grid-row: 1;
+          grid-column: 2;
+          grid-auto-rows: auto;
+          grid-auto-columns: auto;
           margin-left: 1350px;
         }
+        
         #nav-bar {
           width:100%;
           text-align: auto;
           background: antiquewhite;
           height: 639px;
-          width: 270px;
+          width: 260px;
           color: black;
           border:#0D1E52 3px solid;
           border-radius: 10px;
         }
         #menu {
-          margin-top: 15px;
-          margin-left: 25px;
-          margin-right: 15px;
-          margin-bottom: 15px;
-          width: 210px;
-          height: 600px;
+          margin-top: 10px;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          width: 238px;
+          height: 615px;
           background-color: #FE9900;
-          font-size: 30px; 
+          font-size: 25px; 
           display: inline-block;
           padding: 0%;
-          border: black 1px solid;
+          border: black 2px solid;
           border-radius: 10px;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        #menu li {
+          list-style: none;
+          font-weight: 620;
+        }
+        #menu li a{
+          background-color: #FE9900;
+          color: black;
+          text-decoration: none;
+        }
+        
+        #menu li a:hover{
+          background-color:antiquewhite;
+        }
+        #menu li ul{
+          font-weight: 400;
+          display: none;
+        }
+        #menu li:hover > ul{
+          display: block;
+        }
+        #menu li ul li {
+          list-style: circle;
+        }
+        #menu li ul li a{
+          color: black;
+          text-decoration: none;
+          display: block;
+          font-size: 22px;
+        }
+        #linkPerfil {
+          width: 100px;
+          height: 200px;
+        }
+        #linkPerfil:hover {
+          img{
+            transform: scale(1.2);
+            -ms-transform:scale(1.2); // IE 9 
+            -moz-transform:scale(1.2); // Firefox 
+            -webkit-transform:scale(1.2); // Safari and Chrome 
+            -o-transform:scale(1.2); // Opera
+          }
         }
         
       #content {
@@ -136,7 +187,7 @@ export class MainPage extends connect(store)(LitElement) {
           border: 1px solid white;
           border-radius: 4px;
           padding: 5px;
-          background:black;
+          background: coral;
           
         }
 
@@ -146,11 +197,14 @@ export class MainPage extends connect(store)(LitElement) {
         
         #footer {
         grid-column: 1 / 4;
-        background-color: #faba25;
+        background-color: #FE9900;
         align-content: center;
         background-image: url("images/logo.gif");
+        background-position-x: center;
         background-repeat: no-repeat;
         background-size: auto;
+        border: black 2px solid;
+        border-radius: 0px;
         }
 
         .centered {
@@ -158,6 +212,7 @@ export class MainPage extends connect(store)(LitElement) {
           align-items: center;
           justify-content: center;
           height: 100%;
+          width: 100%;
         }
         
         .component-margin {
@@ -201,25 +256,31 @@ export class MainPage extends connect(store)(LitElement) {
                   </span>
                 </div>
                 <div id="box">
-                  <a href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
+                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
                 </div>
 
               </div>
 
               <div id="nav-bar">
-                <nav class="menu" id="menu">
-                  <ul>
-                    <hr/>
-                    <a  href="/">Noticias</a>
-                    <hr/>
-                    <a  href="/Ramos">Ramos</a>
-                    <hr/>
-                    <a  href="/">Solicitudes Externas</a>
-                    <hr/>
-                    <a  href="/">Enlaces Externos</a>
-                    <hr/>
-                  </ul>
-                </nav>
+                    <nav id="menu">
+                        <ul>
+                          <hr/>
+                          <li><a  href="/">Noticias</a></li>
+                          <hr/>
+                          <li><a  href="/Ramos">Ramos</a>
+                            <ul>
+                              <li><a href="">Busqueda de ramos</a></li>
+                              <li><a href="">Asignaturas escritas</a></li>
+                              <li><a href="">Inscripción</a></li>
+                            </ul>
+                          </li>
+                          <hr/>
+                          <li><a  href="/">Solicitudes Externas</a></li>
+                          <hr/>
+                          <li><a  href="/">Enlaces Externos</a></li>
+                          <hr/>
+                        </ul>
+                    </nav>
               </div>
 
               <div id="content">
@@ -228,7 +289,7 @@ export class MainPage extends connect(store)(LitElement) {
                   <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
               </div>
 
-              <div id="footer">w
+              <div id="footer">
               </div>
 
           </div>
@@ -244,25 +305,31 @@ export class MainPage extends connect(store)(LitElement) {
                   </span>
                 </div>
                 <div id="box">
-                  <a href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
+                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
                 </div>
 
               </div>
 
               <div id="nav-bar">
-                <nav class="menu" id="menu">
-                  <ul>
-                    <hr/>
-                    <a  href="/">Noticias</a>
-                    <hr/>
-                    <a  href="/Ramos">Ramos</a>
-                    <hr/>
-                    <a  href="/">Solicitudes Externas</a>
-                    <hr/>
-                    <a  href="/">Enlaces Externos</a>
-                    <hr/>
-                  </ul>
-                </nav>
+                    <nav id="menu">
+                        <ul>
+                          <hr/>
+                          <li><a  href="/">Noticias</a></li>
+                          <hr/>
+                          <li><a  href="/Ramos">Ramos</a>
+                            <ul>
+                              <li><a href="">Busqueda de ramos</a></li>
+                              <li><a href="">Asignaturas escritas</a></li>
+                              <li><a href="">Inscripción</a></li>
+                            </ul>
+                          </li>
+                          <hr/>
+                          <li><a  href="/">Solicitudes Externas</a></li>
+                          <hr/>
+                          <li><a  href="/">Enlaces Externos</a></li>
+                          <hr/>
+                        </ul>
+                    </nav>
               </div>
 
               <div id="content">
@@ -271,7 +338,7 @@ export class MainPage extends connect(store)(LitElement) {
                   <perfil-alumno></perfil-alumno>
               </div>
 
-              <div id="footer">w
+              <div id="footer">
               </div>
 
           </div>
@@ -281,15 +348,22 @@ export class MainPage extends connect(store)(LitElement) {
           return html`
           <div id="main">
               <div id="header" style="vertical-align: middle;">
-                <!--<h2>Sistema de Estudiante / Carrera</h2>-->
                 <div id="titulo"> 
                   <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
                   <span id="logOutButton" @click="${this._logOut}">
                     USM
                   </span>
+                  <!--<form>
+                    <div id="search">
+                      <input type="search" id="miBusqueda" name="q">
+                      <button>Buscar</button>
+                    </div>
+                  </form>-->
                 </div>
                 <div id="box">
-                  <a href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
+                  
+                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
+                  
                 </div>
                 <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
                 <!--<div id="box">
@@ -298,16 +372,22 @@ export class MainPage extends connect(store)(LitElement) {
               </div>
 
               <div id="nav-bar">
-                    <nav class="menu" id="menu">
+                    <nav id="menu">
                         <ul>
                           <hr/>
-                          <a ?selected="${this._page === 'Noticias'}" href="/">Noticias</a>
+                          <li><a ?selected="${this._page === 'Noticias'}" href="/">Noticias</a></li>
                           <hr/>
-                          <a ?selected="${this._page === 'Ramos'}" href="/Ramos">Ramos</a>
+                          <li><a ?selected="${this._page === 'Ramos'}" href="/Ramos">Ramos</a>
+                            <ul>
+                              <li><a href="">Busqueda de ramos</a></li>
+                              <li><a href="">Asignaturas escritas</a></li>
+                              <li><a href="">Inscripción</a></li>
+                            </ul>
+                          </li>
                           <hr/>
-                          <a  href="/">Solicitudes Externas</a>
+                          <li><a  href="/">Solicitudes Externas</a></li>
                           <hr/>
-                          <a  href="/">Enlaces Externos</a>
+                          <li><a  href="/">Enlaces Externos</a></li>
                           <hr/>
                         </ul>
                     </nav>
@@ -319,13 +399,12 @@ export class MainPage extends connect(store)(LitElement) {
                   
               </div>
 
-              <div id="footer">w
+              <div id="footer">
               </div>
 
           </div>
           `
-      }
-         
+      }  
     }
     return html`
       <div class="centered">

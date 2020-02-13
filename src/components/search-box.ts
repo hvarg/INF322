@@ -25,8 +25,8 @@ export class SearchBox extends connect(store)(LitElement) {
       ButtonSharedStyles,
       css`
         .flexsearch--wrapper {
-            height: auto;
-            width: auto;
+            /*height: auto;
+            width: auto;*/
             max-width: 100%;
             overflow: hidden;
             background: transparent;

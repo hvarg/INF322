@@ -29,15 +29,8 @@ export class PerfilAlumno extends connect(store)(LitElement) {
             display: block;
 
         }
-        .listaNavegacion
-        {
-            background-color: aqua;
-            font-size: large;
-        }
-        .seccion
-        {
-            font-size: large;
-            
+        .perfil{
+            margin-left: 200px;
         }
         
       `
