@@ -91,6 +91,7 @@ export class MainPage extends connect(store)(LitElement) {
         #miBusqueda {
           height: 25px;
         }
+        
         #botonBusqueda {
           height: 25px;
           font-size: 14px;
@@ -101,6 +102,7 @@ export class MainPage extends connect(store)(LitElement) {
           height: 300px;
           clear: left;
         }
+        
         
         #box {
           grid-column: 2 / 3;
@@ -147,6 +149,7 @@ export class MainPage extends connect(store)(LitElement) {
         
         #menu li a:hover{
           background-color:antiquewhite;
+          opacity: 0.7;
         }
         #menu li ul{
           font-weight: 400;
@@ -170,13 +173,7 @@ export class MainPage extends connect(store)(LitElement) {
           float: right;
         }
         #linkPerfil:hover {
-          img{
-            transform: scale(1.2);
-            -ms-transform:scale(1.2); // IE 9 
-            -moz-transform:scale(1.2); // Firefox 
-            -webkit-transform:scale(1.2); // Safari and Chrome 
-            -o-transform:scale(1.2); // Opera
-          }
+          opacity: 0.7;
         }
         
       #content {
@@ -278,7 +275,7 @@ export class MainPage extends connect(store)(LitElement) {
                     <input type="search" id="miBusqueda" name="q">
                     <button id="botonBusqueda">Buscar</button>
                 </span>
-                
+
                 <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
                 <!--<div id="box">
                   <search-box ></search-box> 
@@ -384,11 +381,12 @@ export class MainPage extends connect(store)(LitElement) {
                   USM
                 </span>
                 <span id="box">               
-                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
+                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                
                 </span>
                 <span id="search">
-                    <input type="search" id="miBusqueda" name="q">
+                    <input type="search" value="Ingrese su búsqueda" id="miBusqueda" name="q">
                     <button id="botonBusqueda">Buscar</button>
+                     
                 </span>
                 
                 <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
