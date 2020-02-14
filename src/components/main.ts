@@ -88,13 +88,26 @@ export class MainPage extends connect(store)(LitElement) {
           grid-column: 1/2;
           margin-right: 300px;
         }
+        #miBusqueda {
+          height: 25px;
+        }
+        #botonBusqueda {
+          height: 25px;
+          font-size: 14px;
+        }
+        #search {
+          margin-left: 600px;
+          width: 300px;
+          height: 300px;
+          clear: left;
+        }
         
         #box {
-          grid-row: 1;
-          grid-column: 2;
+          grid-column: 2 / 3;
           grid-auto-rows: auto;
-          grid-auto-columns: auto;
+          grid-row: 1;
           margin-left: 1350px;
+          float: right;
         }
         
         #nav-bar {
@@ -154,6 +167,7 @@ export class MainPage extends connect(store)(LitElement) {
         #linkPerfil {
           width: 100px;
           height: 200px;
+          float: right;
         }
         #linkPerfil:hover {
           img{
@@ -189,6 +203,8 @@ export class MainPage extends connect(store)(LitElement) {
           border-radius: 4px;
           padding: 5px;
           background: coral;
+          grid-column: 1/1;
+          float: left;
           
         }
 
@@ -250,16 +266,23 @@ export class MainPage extends connect(store)(LitElement) {
         case "Ramos":
           return html`
           <div id="main">
-              <div id="header" class="container" style="vertical-align: middle;">
-                <div id="titulo">
-                  <span id="logOutButton" @click="${this._logOut}">
-                    USM
-                  </span>
-                </div>
-                <div id="box">
-                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
-                </div>
-
+              <div id="header" style="vertical-align: middle;"> 
+                <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
+                <span id="logOutButton" @click="${this._logOut}">
+                  USM
+                </span>
+                <span id="box">               
+                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
+                </span>
+                <span id="search">
+                    <input type="search" id="miBusqueda" name="q">
+                    <button id="botonBusqueda">Buscar</button>
+                </span>
+                
+                <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
+                <!--<div id="box">
+                  <search-box ></search-box> 
+                </div>  -->
               </div>
 
               <div id="nav-bar">
@@ -299,16 +322,23 @@ export class MainPage extends connect(store)(LitElement) {
         case "MiPerfil":
           return html`
           <div id="main">
-              <div id="header" class="container" style="vertical-align: middle;">
-                <div id="titulo">
-                  <span id="logOutButton" @click="${this._logOut}">
-                    USM
-                  </span>
-                </div>
-                <div id="box">
-                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
-                </div>
+              <div id="header" style="vertical-align: middle;"> 
+                <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
+                <span id="logOutButton" @click="${this._logOut}">
+                  USM
+                </span>
+                <span id="box">               
+                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
+                </span>
+                <span id="search">
+                    <input type="search" id="miBusqueda" name="q">
+                    <button id="botonBusqueda">Buscar</button>
+                </span>
 
+                <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
+                <!--<div id="box">
+                  <search-box ></search-box> 
+                </div>  -->
               </div>
 
               <div id="nav-bar">
@@ -348,24 +378,19 @@ export class MainPage extends connect(store)(LitElement) {
         default:
           return html`
           <div id="main">
-              <div id="header" style="vertical-align: middle;">
-                <div id="titulo"> 
-                  <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
-                  <span id="logOutButton" @click="${this._logOut}">
-                    USM
-                  </span>
-                  <!--<form>
-                    <div id="search">
-                      <input type="search" id="miBusqueda" name="q">
-                      <button>Buscar</button>
-                    </div>
-                  </form>-->
-                </div>
-                <div id="box">
-                  
-                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>
-                  
-                </div>
+              <div id="header" style="vertical-align: middle;"> 
+                <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
+                <span id="logOutButton" @click="${this._logOut}">
+                  USM
+                </span>
+                <span id="box">               
+                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
+                </span>
+                <span id="search">
+                    <input type="search" id="miBusqueda" name="q">
+                    <button id="botonBusqueda">Buscar</button>
+                </span>
+                
                 <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
                 <!--<div id="box">
                   <search-box ></search-box> 
