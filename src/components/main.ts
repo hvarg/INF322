@@ -68,6 +68,7 @@ export class MainPage extends connect(store)(LitElement) {
         #main {
           display: grid;
           height: 100%;
+          width: 100%;
           grid-template-columns: 300px calc(100% - 300px);
           grid-template-rows: 80px calc(100% - 160px) 80px;
         }
@@ -80,7 +81,7 @@ export class MainPage extends connect(store)(LitElement) {
           color: white;
           padding: 2%;
           grid-row: 1;
-          grid-column: 1 / 4;
+          grid-column: 1/4 ;
           display: block;
         }
         #titulo {
@@ -105,9 +106,7 @@ export class MainPage extends connect(store)(LitElement) {
         
         
         #box {
-          grid-column: 2 / 3;
-          grid-auto-rows: auto;
-          grid-row: 1;
+          
           margin-left: 1350px;
           float: right;
         }
@@ -168,13 +167,17 @@ export class MainPage extends connect(store)(LitElement) {
           font-size: 22px;
         }
         #linkPerfil {
-          width: 100px;
+          width: 200px;
           height: 200px;
           float: right;
         }
         #linkPerfil:hover {
           opacity: 0.7;
         }
+        #linkPerfil img {
+          float: right;
+        }
+        
         
       #content {
           grid-row: 2;
@@ -266,7 +269,7 @@ export class MainPage extends connect(store)(LitElement) {
               <div id="header" style="vertical-align: middle;"> 
                 <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
                 <span id="logOutButton" @click="${this._logOut}">
-                  USM
+                  Cerrar Sesión
                 </span>
                 <span id="box">               
                   <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
@@ -322,7 +325,7 @@ export class MainPage extends connect(store)(LitElement) {
               <div id="header" style="vertical-align: middle;"> 
                 <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
                 <span id="logOutButton" @click="${this._logOut}">
-                  USM
+                  Cerrar Sesión
                 </span>
                 <span id="box">               
                   <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
@@ -378,10 +381,10 @@ export class MainPage extends connect(store)(LitElement) {
               <div id="header" style="vertical-align: middle;"> 
                 <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
                 <span id="logOutButton" @click="${this._logOut}">
-                  USM
+                  Cerrar Sesión
                 </span>
                 <span id="box">               
-                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                
+                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
                 </span>
                 <span id="search">
                     <input type="search" value="Ingrese su búsqueda" id="miBusqueda" name="q">

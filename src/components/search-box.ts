@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html, css, property, customElement } from 'lit-element';
+import { LitElement, html, css, customElement } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store.js';
 import { ButtonSharedStyles } from './button-shared-styles.js';
@@ -17,8 +17,7 @@ import { ButtonSharedStyles } from './button-shared-styles.js';
 
 @customElement('search-box')
 export class SearchBox extends connect(store)(LitElement) {
-  @property({type: Object})
-  public isPressed: number = -1;
+  
 
   static get styles() {
     return [
@@ -119,13 +118,6 @@ export class SearchBox extends connect(store)(LitElement) {
   }
   
 
-  handleClick(which: number) {
-    this.isPressed = which;
-    console.log(which);
-    console.log("letal");
-    //Aca realizar el proceso de cambio de pagina, dado que aca ya se presiono el boton
-    
-  }
 
 
   protected render() {
