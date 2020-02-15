@@ -185,25 +185,33 @@ export class MainPage extends connect(store)(LitElement) {
         }
 
         #logInButton {
-          cursor: pointer;
-          border: 1px solid gray;
+          border: none;
+          outline: none;
+          background: #FE9900;
+          color: #000;
+          font-size: 18px;
+          border-radius: 20px;
+          padding-top:10px;
           border-radius: 4px;
-          padding: 5px;
-          background: aliceblue;
-          font-style: italic;
+          height: 40px;
+          display:block;
+          text-align:center;
         }
 
         #logInButton:hover {
-          background: aqua;
+          cursor: pointer;
+          background: #ffc107;
+          color: #000;
         }
 
         #logOutButton {
           cursor: pointer;
           border: 1px solid white;
           border-radius: 4px;
-          padding: 5px;
+          padding: 3px;
           background: coral;
           grid-column: 1/1;
+          
           float: left;
           
         }
@@ -235,7 +243,96 @@ export class MainPage extends connect(store)(LitElement) {
         .component-margin {
           margin: 10% 10%
         }
+        .loginbox{
+          width: 320px;
+          height: 420px;
+          background: #fff;
+          color: #000;
+          top: 50%;
+          left: 50%;
+          position: absolute;
+          transform: translate(-50%,-50%);
+          box-sizing: border-box;
+          padding: 70px 30px;
+          }
+
+        .avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+        }
         
+        h1{
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+        
+        .loginbox p{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .loginbox input{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .loginbox input[type="text"], input[type="password"]
+        {
+            border: none;
+            border-bottom: 1px solid #000;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #000;
+            font-size: 16px;
+        }
+        .loginbox input[type="submit"]
+        {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #FE9900;
+            color: #000;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        .loginbox input[type="submit"]:hover
+        {
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+        .loginbox a{
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: darkgrey;
+        }
+        
+        .loginbox a:hover
+        {
+            color: #ffc107;
+        }
+      
+        #logInbuttonnew {
+          cursor: pointer;
+          background: #ffc107;
+          color: #000;
+          border: none;
+          outline: none;
+          height: 40px;
+          background: #FE9900;
+          color: #000;
+          font-size: 18px;
+          border-radius: 20px;
+        }
       `
     ];
   }
@@ -383,6 +480,7 @@ export class MainPage extends connect(store)(LitElement) {
                 <span id="logOutButton" @click="${this._logOut}">
                   Cerrar Sesión
                 </span>
+                
                 <span id="box">               
                   <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
                 </span>
@@ -432,11 +530,23 @@ export class MainPage extends connect(store)(LitElement) {
       }  
     }
     return html`
-      <div class="centered">
-        <span id="logInButton" @click="${this._logIn}">
-            Click here to try to log in!
-        </span>
-    </div>
+      <img src="images/manifest/edA.png" height=100%>
+        <div class="loginbox">
+        <img src="images/manifest/perfil.png" class="avatar">
+        <h1>Login USM</h1>
+            <p>Nombre de usuario</p>
+            <input type="text" name="username" id="username" placeholder="Ingresa tu nombre de usuario">
+
+            <p>Contraseña</p>
+            <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña">
+
+            <span id="logInButton" @click="${this._logIn}">
+            Login
+            </span><br>
+
+            <a href="#">¿Olvidaste tu contraseña?</a><br>
+            <a>¿No tienes cuenta?</a> <a href="#">Registrate ahora</a>
+        </div>
     `
     }
   
