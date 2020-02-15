@@ -272,7 +272,7 @@ export class MainPage extends connect(store)(LitElement) {
                   <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
                 </span>
                 <span id="search">
-                    <input type="search" id="miBusqueda" name="q">
+                    <input type="search" value="Ingrese su búsqueda" id="miBusqueda" name="q">
                     <button id="botonBusqueda">Buscar</button>
                 </span>
 
@@ -328,7 +328,7 @@ export class MainPage extends connect(store)(LitElement) {
                   <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
                 </span>
                 <span id="search">
-                    <input type="search" id="miBusqueda" name="q">
+                    <input type="search" value="Ingrese su búsqueda" id="miBusqueda" name="q">
                     <button id="botonBusqueda">Buscar</button>
                 </span>
 
