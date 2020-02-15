@@ -102,8 +102,11 @@ export class MainPage extends connect(store)(LitElement) {
           width: 300px;
           height: 300px;
           clear: left;
+          
         }
-        
+        #home {
+          float: left;
+        }
         
         #box {
           
@@ -212,7 +215,7 @@ export class MainPage extends connect(store)(LitElement) {
           background: coral;
           grid-column: 1/1;
           
-          float: left;
+          float: right;
           
         }
 
@@ -264,7 +267,13 @@ export class MainPage extends connect(store)(LitElement) {
             top: -50px;
             left: calc(50% - 50px);
         }
-        
+        .image1{
+          display: block;
+          width: 100vw;
+          height: 100vh;
+          object-fit: cover;
+        }
+
         h1{
             margin: 0;
             padding: 0 0 20px;
@@ -368,6 +377,9 @@ export class MainPage extends connect(store)(LitElement) {
                 <span id="logOutButton" @click="${this._logOut}">
                   Cerrar Sesión
                 </span>
+                <span>
+                  <a id="home" href="/"><img src="images/manifest/home.png" width="45px" height="45px"></a>
+                </span>
                 <span id="box">               
                   <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
                 </span>
@@ -423,6 +435,9 @@ export class MainPage extends connect(store)(LitElement) {
                 <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
                 <span id="logOutButton" @click="${this._logOut}">
                   Cerrar Sesión
+                </span>
+                <span>
+                  <a id="home" href="/"><img src="images/manifest/home.png" width="45px" height="45px"></a>
                 </span>
                 <span id="box">               
                   <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
@@ -481,14 +496,18 @@ export class MainPage extends connect(store)(LitElement) {
                   Cerrar Sesión
                 </span>
                 
-                <span id="box">               
-                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
-                </span>
                 <span id="search">
                     <input type="search" value="Ingrese su búsqueda" id="miBusqueda" name="q">
                     <button id="botonBusqueda">Buscar</button>
                      
                 </span>
+                <span>
+                  <a id="home" href="/"><img src="images/manifest/home.png" width="45px" height="45px"></a>
+                </span>
+                <span id="box">               
+                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
+                </span>
+                
                 
                 <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
                 <!--<div id="box">
@@ -530,7 +549,7 @@ export class MainPage extends connect(store)(LitElement) {
       }  
     }
     return html`
-      <img src="images/manifest/edA.png" height=100%>
+      <img src="images/manifest/edA.png" class="image1" height=100%>
         <div class="loginbox">
         <img src="images/manifest/perfil.png" class="avatar">
         <h1>Login USM</h1>
