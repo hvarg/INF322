@@ -45,6 +45,9 @@ export class MainPage extends connect(store)(LitElement) {
   @property({type: String})
   private _page: string = '';
 
+  @property({type: Object})
+  private _user: any = null;
+
   private appTitle : string = 'SIGA';
   
   static get styles() {
@@ -52,12 +55,16 @@ export class MainPage extends connect(store)(LitElement) {
   }
 
   protected render() {
+    /* (2) Aca la forma de separar el contendio es simple, si estamos logeados mostramos componentes dependiendo de 'page',
+     * en caso contrario mostramos el componente de login. */
     return html`
     <p>Current page: ${this._page}</p>
-    <login-page class="page" ?active="${this._page === 'login'}"></login-page>
-    <home-page class="page" ?active="${this._page === 'home'}"></home-page>
-    <view404-page class="page" ?active="${this._page === 'view404'}"></view404-page>
-    `;
+    ${this._user ? html`
+        <home-page class="page" ?active="${this._page === 'home'}"></home-page>
+        <view404-page class="page" ?active="${this._page === 'view404'}"></view404-page>
+    ` : html`
+        <login-page class="page" active></login-page>
+    `}`;
   }
 
   constructor() {
@@ -87,5 +94,6 @@ export class MainPage extends connect(store)(LitElement) {
 
   stateChanged(state: RootState) {
     this._page = state.app!.page;
+    this._user = state.app!.user;
   }
 }

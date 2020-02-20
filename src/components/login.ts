@@ -8,92 +8,49 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { html, property, PropertyValues, customElement } from 'lit-element';
-import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings.js';
-import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
-import { installOfflineWatcher } from 'pwa-helpers/network.js';
-import { installRouter } from 'pwa-helpers/router.js';
+import { html, property, customElement } from 'lit-element';
 import { PageViewElement } from './page-view-element.js';
-import { updateMetadata } from 'pwa-helpers/metadata.js';
 
 // This element is connected to the Redux store.
-import { store, RootState } from '../store.js';
+import { store } from '../store.js';
 import { customCss } from './style';
+import "weightless/textfield";
+import "weightless/button";
 
 // These are the actions needed by this element.
 import {
-  navigate,
-  updateOffline,
-  updateDrawerState
+  login,
+  navigate
 } from '../actions/app.js';
-
-// The following line imports the type only - it will be removed by tsc so
-// another import for app-drawer.js is required below.
-
-// These are the elements needed by this element.
-import '@polymer/app-layout/app-drawer/app-drawer.js';
-import '@polymer/app-layout/app-header/app-header.js';
-import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
-import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 
 @customElement('login-page')
 export class LoginComponent extends PageViewElement {
   @property({type: Boolean})
   private _loggedIn: boolean = false;
-
-  @property({type: String})
-  private _page: string = '';
-
-  private appTitle : string = 'SIGA';
   
   static get styles() {
     return [customCss];
   }
 
   _logIn () {
-    this._loggedIn = (Math.random() > .5);
+    this._loggedIn = (Math.random() > .25);
     if (!this._loggedIn) {
         console.log('try again!');
+    } else {
+        store.dispatch(login({user:'Some name'}))   // El login
+        store.dispatch(navigate('/home'))           // Navegacion a pagina inicial
     }
-    store.dispatch(navigate('/home'))
   }
 
   protected render() {
+    /* (3) Implementar aca su componente con sus inputs, la logica de usuario debe pasar por redux para que se pueda
+     * hacer la actualizacion en la pagina inicial. En este caso usamod 'login' definido en actions/app */
     return html`
     <div class="centered">
-        <span id="logInButton" @click="${this._logIn}">
-            Click here to try to log in!
-        </span>
+        <wl-textfield label="Usuario"></wl-textfield>
+        <wl-textfield label="Contraseña" type="password"></wl-textfield>
+        <wl-button @click="${this._logIn}">Entrar</wl-button>
     </div>
     `;
-  }
-
-  constructor() {
-    super();
-    // To force all event listeners for gestures to be passive.
-    // See https://www.polymer-project.org/3.0/docs/devguide/settings#setting-passive-touch-gestures
-    setPassiveTouchGestures(true);
-  }
-
-  protected firstUpdated() {
-    installRouter((location) => store.dispatch(navigate(decodeURIComponent(location.pathname))));
-    installOfflineWatcher((offline) => store.dispatch(updateOffline(offline)));
-    installMediaQueryWatcher(`(min-width: 460px)`,
-        () => store.dispatch(updateDrawerState(false)));
-  }
-
-  protected updated(changedProps: PropertyValues) {
-    if (changedProps.has('_page')) {
-      const pageTitle = this.appTitle + ' - ' + this._page;
-      updateMetadata({
-        title: pageTitle,
-        description: pageTitle
-        // This object also takes an image property, that points to an img src.
-      });
-    }
-  }
-
-  stateChanged(state: RootState) {
-    this._page = state.app!.page;
   }
 }
