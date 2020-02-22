@@ -52,7 +52,7 @@ export class MainPage extends connect(store)(LitElement) {
   @property({type: String})
   private _page: string = '';
 
-  private appTitle : string = 'SIGA';
+  private appTitle : string = 'SIGA'; 
   
   static get styles() {
     return [customCss,

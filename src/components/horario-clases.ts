@@ -15,7 +15,7 @@ import { ButtonSharedStyles } from './button-shared-styles.js';
 import { ListaCursos} from '../reducers/cursos';
 import './horario-paralelo';
 import "weightless/expansion";
-import "weightless/icon";
+import "weightless/icon"; 
 
 @customElement('horario-clases')
 export class HorarioClases extends connect(store)(LitElement) {
@@ -45,7 +45,7 @@ export class HorarioClases extends connect(store)(LitElement) {
   }
   
   handleClick() {
-    console.log(this.cursos);
+    console.log("uwu");
   }
 
   protected render() {
@@ -72,7 +72,7 @@ export class HorarioClases extends connect(store)(LitElement) {
                   <td style="text-align:right;"> <wl-text> <strong> Cupos: </strong> ${item2.cupos}</wl-text> </td>
                 </tr>
               </table>
-              <horario-paralelo></horario-paralelo>
+              <horario-paralelo .ocupados=${item2.bloques}></horario-paralelo>
             </wl-expansion>
           `;
         })}

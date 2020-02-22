@@ -23,11 +23,56 @@ export type CursosAction = ActionGetCursos;
 type ThunkResult = ThunkAction<void, RootState, undefined, CursosAction>;
 
 const CURSOS_LIST = [
-  { "id": 1, "sigla": 'IWI131', "asignatura": 'Programación', "departamento": 'Informática', "creditos":3, "paralelos": [{ "id": 1, "profesor": 'Nelson Vega', "cupos": 20, "bloques": [] },
-  { "id": 2, "profesor": 'Moltedo', "cupos": 30, "bloques": [["1,1","C201"],["1,2","C201"]]}]},
-  { "id": 3, "sigla": 'FIS100', "asignatura": 'Introducción a la Física', "departamento": 'Física' , "creditos":3, "paralelos": [{"id": 1, "profesor": 'Hakobyan', "cupos": 50, "bloques": [["4,5","C232"]]}] },
-  { "id": 4, "sigla": 'MAT021' , "asignatura": 'Matemáticas I', "departamento": 'Matemáticas', "creditos":5, "paralelos": [{"id": 1, "profesor": 'La maravillosa Astudillo', "cupos": 25, "bloques": [["1,1","F106"]]}] },
-  { "id": 5, "sigla": 'MAT022' , "asignatura": 'Matemáticas II' , "departamento": 'Matemáticas' , "creditos":5, "paralelos": [{"id": 1, "profesor": 'El mismísimo TUMA', "cupos": 14, "bloques": [["6,6","P202"]]}] } 
+  { "id": 1, "sigla": 'IWI131', "asignatura": 'Programación', "departamento": 'Informática', "creditos":3, "paralelos": [{ "id": 1, "profesor": 'Nelson Vega', "cupos": 20, 
+  "bloques": [
+    ["A", "", "", "", ""],
+    ["", "A", "", "", ""],
+    ["", "", "A", "", ""],
+    ["", "", "", "A", ""],
+    ["", "", "", "", "A"],
+    ["", "", "", "A", ""],
+    ["", "", "A", "", ""]
+  ] },
+  { "id": 2, "profesor": 'Moltedo', "cupos": 30, 
+  "bloques": [
+    ["C201", "", "", "", ""],
+    ["C201", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", "P411"],
+    ["", "", "", "", "P411"]
+  ]}]},
+  { "id": 3, "sigla": 'FIS100', "asignatura": 'Introducción a la Física', "departamento": 'Física' , "creditos":3, "paralelos": [{"id": 1, "profesor": 'Hakobyan', "cupos": 50, 
+  "bloques": [
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""]
+  ]}]},
+  { "id": 4, "sigla": 'MAT021' , "asignatura": 'Matemáticas I', "departamento": 'Matemáticas', "creditos":5, "paralelos": [{"id": 1, "profesor": 'La maravillosa Astudillo', "cupos": 25, 
+  "bloques": [
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""]
+  ]}] },
+  { "id": 5, "sigla": 'MAT022' , "asignatura": 'Matemáticas II' , "departamento": 'Matemáticas' , "creditos":5, "paralelos": [{"id": 1, "profesor": 'El mismísimo TUMA', "cupos": 14, 
+  "bloques": [
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""]
+  ]}] } 
 ];
 
 export const getAllCursos: ActionCreator<ThunkResult> = () => (dispatch) => {
