@@ -51,28 +51,6 @@ export class HorarioClases extends connect(store)(LitElement) {
   protected render() {
     return html`
     <h2>Listado de Cursos </h2>
-    Buscar por:
-    <select>
-      <option>Seleccione búsqueda</option>
-      <option>Todas las asignaturas</option>
-      <option>Asignatura</option>
-      <option>Departamento</option>
-      <option>profesor</option>
-    </select>
-    Orden:
-    <select>
-    <option>Nombre</option>
-    <option>Sigla</option>
-    </select>
-    </select>
-    Asignatura:
-    <select>
-    <option>Seleccione asignatura</option>
-    <option>IWI 131</option>
-    <option>IWI FIS 100</option>
-    <option>MAT 021</option>
-    <option>MAT 022</option>
-    </select>
 
       ${Object.keys(this.cursos).map((key) => {
         const item = this.cursos[key];

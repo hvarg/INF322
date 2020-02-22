@@ -142,7 +142,7 @@ export class MainPage extends connect(store)(LitElement) {
            
         <div id="nav-bar" style="background-color:Gainsboro;"></div>
            
-        <div id="content">
+        <div id="content" style="overflow-y:scroll">
             <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
                  el nombre de la variable del componente (public) -->
             <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases>

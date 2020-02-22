@@ -12,12 +12,11 @@ import { LitElement, html, css, property, customElement } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store.js';
 import { ButtonSharedStyles } from './button-shared-styles.js';
-import { ListaCursos } from '../reducers/cursos';
 
 @customElement('horario-paralelo')
 export class HorarioParalelo extends connect(store)(LitElement) {
   @property({type: Object})
-  public cursos: ListaCursos = {};
+  public bloques: any = {};
 
   static get styles() {
     return [
@@ -69,7 +68,7 @@ export class HorarioParalelo extends connect(store)(LitElement) {
   
 
   handleClick() {
-    console.log(this.cursos);
+    console.log(this.bloques);
   }
 
   protected render() {
@@ -86,59 +85,59 @@ export class HorarioParalelo extends connect(store)(LitElement) {
         </tr>
         <tr>
           <th class="margen-i"> 1-2 <br> 08:00 - 09:30 </th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="1-1"></td>
+          <td id="1-2"></td>
+          <td id="1-3"></td>
+          <td id="1-4"></td>
+          <td id="1-5"></td>
         </tr>
         <tr>
           <th class="margen-i"> 3-4 <br> 09:45 - 11:15 </th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="2-1"></td>
+          <td id="2-2"></td>
+          <td id="2-3"></td>
+          <td id="2-4"></td>
+          <td id="2-5"></td>
         </tr>
         <tr>
           <th class="margen-i"> 5-6 <br> 11:30 - 13:00 </th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="3-1"></td>
+          <td id="3-2"></td>
+          <td id="3-3"></td>
+          <td id="3-4"></td>
+          <td id="3-5"></td>
         </tr>
         <tr>
           <th class="margen-i"> 7-8 <br> 14:00 - 15:30 </th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="4-1"></td>
+          <td id="4-2"></td>
+          <td id="4-3"></td>
+          <td id="4-4"></td>
+          <td id="4-5"></td>
         </tr>
         <tr>
           <th class="margen-i"> 9-10 <br> 15:40 - 17:10 </th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="5-1"></td>
+          <td id="5-2"></td>
+          <td id="5-3"></td>
+          <td id="5-4"></td>
+          <td id="5-5"></td>
         </tr>
         <tr>
           <th class="margen-i"> 11-12 <br> 17:20 - 18:50 </th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="6-1"></td>
+          <td id="6-2"></td>
+          <td id="6-3"></td>
+          <td id="6-4"></td>
+          <td id="6-5"></td>
         </tr>
         <tr>
           <th class="margen-i"> 13-14 <br> 19:00 - 20:30 </th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="7-1"></td>
+          <td id="7-2"></td>
+          <td id="7-3"></td>
+          <td id="7-4"></td>
+          <td id="7-5"></td>
         </tr>
       </table>
     `;
