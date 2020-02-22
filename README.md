@@ -5,6 +5,7 @@
 * Cada paralelo tiene un array llamado `bloques`, el cual tiene la siguiente estructura:
 
 `bloques:[
+
     ["", "", "", "", ""],
     ["", "", "", "", ""],
     ["", "", "", "", ""],
@@ -19,6 +20,7 @@ En cada celda respectiva, se debe ingresar el string con el identificador de la 
 Un ejemplo sería:
 
 `bloques:[
+
     ["P311", "", "", "", ""],
     ["P311", "", "", "", ""],
     ["P311", "", "", "", ""],
