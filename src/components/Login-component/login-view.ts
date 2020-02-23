@@ -91,6 +91,12 @@ export class LoginView extends connect(store)(LitElement) {
   public showMsgSubmit: string = "display:none";
 
   @property()
+  public existError: boolean = false;
+  
+  @property()
+  public classNameError: string = "submit-error";
+
+  @property()
   public submitErrorMessage: string = "";
   
   @query(".username")
@@ -124,18 +130,39 @@ export class LoginView extends connect(store)(LitElement) {
   }
 
   _logIn () {
-    if(this.userNameInput.value != ""){
-      this.userName = this.userNameInput.value;
-      if(this.passwordInput.value != ""){
+    this._validateUserNameField();
+    this._validatePasswordField();
+    if(!this.existError){
+        this.userName = this.userNameInput.value;
         this.password = this.passwordInput.value;
         store.dispatch(login(this.userName, this.password));
-      }
-    } else{
-      this.userNameInput.setAttribute("invalid",'');
-      this.showMsgSubmit = "";
-      this.submitErrorMessage = "Debes ingresar tu nombre de usuario";
     }
+}
+
+  _validateUserNameField(){
+        if(this.userNameInput.value == ""){
+                this.userNameInput.setAttribute("invalid",'');
+                this.showMsgSubmit = "";
+                this.existError = true;
+                this.submitErrorMessage = "Debes ingresar tu nombre de usuario";
+        } else{
+                this.existError = false;
+        }
   }
+
+  _validatePasswordField(){
+        if(this.passwordInput.value == ""){
+                this.passwordInput.setAttribute("invalid",'');
+                this.showMsgSubmit = "";
+                if(this.existError){
+                        this.submitErrorMessage += " y tu contraseña.";
+                }else{
+                        this.existError = true;
+                        this.submitErrorMessage = " Debes ingresar tu contraseña.";
+                }
+        }
+  }
+
   _showPassword(){
     if(this.passwordInputType == "text"){
       this.passwordInputType = "password";
@@ -160,17 +187,17 @@ export class LoginView extends connect(store)(LitElement) {
                         <span slot="title" style="text-align:center;">SISTEMA DE INFORMACIÓN DE GESTIÓN ACADÉMICA</span>
               </wl-nav>
                 <div id="content">
-                        <div class="card-container">
+                        <div class="card-container ${ this.existError ? this.classNameError : ''}">
                                         <wl-tab-group>
                                                 <wl-tab vertical checked>
                                                         <wl-icon slot="before">meeting_room</wl-icon>
                                                         <span>Entrar</span>
                                                 </wl-tab>
-                                                <wl-tab vertical>
+                                                <wl-tab vertical disabled>
                                                         <wl-icon slot="before">help</wl-icon>
                                                         <span>¿Qué es Siga?</span>
                                                 </wl-tab>
-                                                <wl-tab vertical>
+                                                <wl-tab vertical disabled>
                                                         <wl-icon slot="before">people_alt</wl-icon>
                                                         <span>Contacto</span>
                                                 </wl-tab>
@@ -180,7 +207,7 @@ export class LoginView extends connect(store)(LitElement) {
                                                                 <app-toolbar>Bienvenid@</app-toolbar>
                                                         </app-header>
                                                         <!--Warning message -->
-                                                        <div ?hidden="${this.showMsgSubmit}" style="width: 80%; align-self:center;">
+                                                        <div ?hidden="${this.showMsgSubmit}" style="width: 90%; align-self:center;">
                                                                 <wl-banner
                                                                         style="--banner-icon-color: #dc3545!important;; --banner-bg: #ff52524a;">
                                                                         <wl-icon slot="icon">error</wl-icon>
@@ -225,7 +252,7 @@ export class LoginView extends connect(store)(LitElement) {
                                                                 </div>
                                                         </div>
                                                         <div class="login-button">
-                                                                <wl-button class="btn-showPassword" @click="${this._logIn}" style="width:100%;">
+                                                                <wl-button class="btn-showPassword" @click="${this._logIn}">
                                                                         ${this.loginButtonText}</wl-button>
                                                         </div>
                                                 </wl-card>
@@ -238,6 +265,7 @@ export class LoginView extends connect(store)(LitElement) {
   }
   closeErrorBanner(): void {
     this.showMsgSubmit = "display:none";
+    this.existError = false;
   }
 
   protected firstUpdated() {
@@ -263,6 +291,7 @@ export class LoginView extends connect(store)(LitElement) {
     if(state.user.error !== ""){
       this.showMsgSubmit = "";
       this.submitErrorMessage = state.user.error.toString();
+      this.existError = true;
     }
   }
 }
