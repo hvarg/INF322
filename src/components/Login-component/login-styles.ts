@@ -109,7 +109,7 @@ export const customCss = css`
 
         .login-button{
                 display:flex;
-                width:35% !important; 
+                width:40% !important; 
                 align-self:center;
         }
         
@@ -128,6 +128,7 @@ export const customCss = css`
         
         .card-container{
                 width: 30%;
+                height: 60%;
                 position: absolute;
                 background-color: white;
                 display: inline-grid;
@@ -135,14 +136,17 @@ export const customCss = css`
                 border-width: thin;
                 border-style: solid;
                 border-color: #eee;
-                height: 60%;
                 grid-template-columns: 100%;
                 grid-template-rows: 16% 84%;
-                min-width: fit-content;
                 left: 48%;
                 top: 30%;
                 transform: translate(-48%,-30%);
         }
+
+        .submit-error.card-container{
+                        height: 72%;
+                }
+        } 
 
         .column{
                 flex: 100%;
@@ -155,5 +159,45 @@ export const customCss = css`
         .row-password{
                 width:80% !important;
         }
+
+
+  @media (min-width: 460px) {
+        h2 {
+          font-size: 36px;
+        }
+      }
+
+      @media (max-width: 1350px){
+                .card-container{
+                        width: 35%;
+                }
+        }
+
+        @media (max-width: 1200px){
+                .card-container{
+                        width: 40%;
+                }
+        }
+
+        @media (max-width: 1100px){
+                .card-container{
+                        width: 43%;
+                }
+        }
+
+
+      @media (max-width: 900px){
+                .card-container{
+                        width: calc(100% - 40%);
+                }
+      }
+
+
+      @media (max-width: 700px){
+        .card-container{
+                width: calc(100% - 25%);
+        }
+}
+
   
 `;
