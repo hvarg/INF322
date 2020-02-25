@@ -30,3 +30,5 @@ Un ejemplo sería:
     ["", "", "", "", ""]
 ]`
 Donde el paralelo del ramo tiene clases los días lunes en los bloques 1-2, 3-4 y 5-6 en la sala P311.
+
+**Observación:** este arreglo se encuentra en `src/actions/cursos.ts`
