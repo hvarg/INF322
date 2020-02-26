@@ -80,12 +80,6 @@ export class MainPage extends connect(store)(LitElement) {
           grid-template-rows: 80px calc(100% - 160px) 80px;
         }
 
-        .visible {
-            display: bloc;
-        }
-        
-        
-        
         #header {
           background-color: #0d1e52;
           text-align: left;
@@ -388,26 +382,7 @@ export class MainPage extends connect(store)(LitElement) {
    * subpropiedades de los objetos, pueden requerir una actualización usando this.requestUpdate();
    * Más info: https://polymer-library.polymer-project.org/3.0/docs/devguide/observers */
   protected render() {
-    /* Acá está la página principal, cada componente debería tener un lugar donde puedan probarlo. */
-    if(this._loggedIn && false)
-    {
-      switch (this._page)
-      {
-        case "Ramos":
-          return html`
-            `
-            break;
-        case "MiPerfil":
-          return html`
-            `
-          break;
-        default:
-          return html`
-          `
-      }  
-    }
-
-    //Mostrar login o página con contenido.
+    // Mostrar login o página con contenido.
     // Esta es la página principal, acá el contenido es variable, pero solo partes de el.
     return this._loggedIn ? html`
           <div id="main">
