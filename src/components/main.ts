@@ -54,6 +54,13 @@ export class MainPage extends connect(store)(LitElement) {
 
   @property({type: String})
   private _page: string = "Inicio";
+  @property({type: String})
+  private _mainPage: string = "";
+  @property({type: String})
+  private _subpage: string = "";
+
+  @property({type: String})
+  private _random: number = 1;
 
   private appTitle : string = 'Siga';
   
@@ -71,6 +78,10 @@ export class MainPage extends connect(store)(LitElement) {
           width: 100%;
           grid-template-columns: 300px calc(100% - 300px);
           grid-template-rows: 80px calc(100% - 160px) 80px;
+        }
+
+        .visible {
+            display: bloc;
         }
         
         
@@ -160,6 +171,19 @@ export class MainPage extends connect(store)(LitElement) {
         #menu li:hover > ul{
           display: block;
         }
+
+        #menu li[selected] > a {
+            background: red !important;
+        }
+
+        #menu li[selected] > ul {
+          display: block;
+        }
+
+        #menu li > ul[selected] {
+            background: red !important;
+        }
+
         #menu li ul li {
           list-style: circle;
         }
@@ -365,150 +389,44 @@ export class MainPage extends connect(store)(LitElement) {
    * Más info: https://polymer-library.polymer-project.org/3.0/docs/devguide/observers */
   protected render() {
     /* Acá está la página principal, cada componente debería tener un lugar donde puedan probarlo. */
-    if(this._loggedIn)
+    if(this._loggedIn && false)
     {
       switch (this._page)
       {
         case "Ramos":
           return html`
-          <div id="main">
-              <div id="header" style="vertical-align: middle;"> 
-                <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
-                <span id="logOutButton" @click="${this._logOut}">
-                  Cerrar Sesión
-                </span>
-                <span>
-                  <a id="home" href="/"><img src="images/manifest/home.png" width="45px" height="45px"></a>
-                </span>
-                <span id="box">               
-                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
-                </span>
-                <span id="search">
-                    <input type="search" value="Ingrese su búsqueda" id="miBusqueda" name="q">
-                    <button id="botonBusqueda">Buscar</button>
-                </span>
-
-                <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
-                <!--<div id="box">
-                  <search-box ></search-box> 
-                </div>  -->
-              </div>
-
-              <div id="nav-bar">
-                    <nav id="menu">
-                        <ul>
-                          <hr/>
-                          <li><a  href="/">Noticias</a></li>
-                          <hr/>
-                          <li><a  href="/Ramos">Ramos</a>
-                            <ul>
-                              <li><a href="">Busqueda de ramos</a></li>
-                              <li><a href="">Asignaturas escritas</a></li>
-                              <li><a href="">Inscripción</a></li>
-                            </ul>
-                          </li>
-                          <hr/>
-                          <li><a  href="/">Solicitudes Externas</a></li>
-                          <hr/>
-                          <li><a  href="/">Enlaces Externos</a></li>
-                          <hr/>
-                        </ul>
-                    </nav>
-              </div>
-
-              <div id="content">
-                  <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
-                       el nombre de la variable del componente (public) -->
-                  <horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases> 
-              </div>
-
-              <div id="footer">
-              </div>
-
-          </div>
             `
             break;
         case "MiPerfil":
           return html`
-          <div id="main">
-              <div id="header" style="vertical-align: middle;"> 
-                <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
-                <span id="logOutButton" @click="${this._logOut}">
-                  Cerrar Sesión
-                </span>
-                <span>
-                  <a id="home" href="/"><img src="images/manifest/home.png" width="45px" height="45px"></a>
-                </span>
-                <span id="box">               
-                  <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
-                </span>
-                <span id="search">
-                    <input type="search" value="Ingrese su búsqueda" id="miBusqueda" name="q">
-                    <button id="botonBusqueda">Buscar</button>
-                </span>
-
-                <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
-                <!--<div id="box">
-                  <search-box ></search-box> 
-                </div>  -->
-              </div>
-
-              <div id="nav-bar">
-                    <nav id="menu">
-                        <ul>
-                          <hr/>
-                          <li><a  href="/">Noticias</a></li>
-                          <hr/>
-                          <li><a  href="/Ramos">Ramos</a>
-                            <ul>
-                              <li><a href="">Busqueda de ramos</a></li>
-                              <li><a href="">Asignaturas escritas</a></li>
-                              <li><a href="">Inscripción</a></li>
-                            </ul>
-                          </li>
-                          <hr/>
-                          <li><a  href="/">Solicitudes Externas</a></li>
-                          <hr/>
-                          <li><a  href="/">Enlaces Externos</a></li>
-                          <hr/>
-                        </ul>
-                    </nav>
-              </div>
-
-              <div id="content">
-                  <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
-                       el nombre de la variable del componente (public) -->
-                  <perfil-alumno></perfil-alumno>
-              </div>
-
-              <div id="footer">
-              </div>
-
-          </div>
             `
           break;
         default:
           return html`
+          `
+      }  
+    }
+
+    //Mostrar login o página con contenido.
+    // Esta es la página principal, acá el contenido es variable, pero solo partes de el.
+    return this._loggedIn ? html`
           <div id="main">
               <div id="header" style="vertical-align: middle;"> 
                 <!--<a href="/"> <img src="images/manifest/flecha.jpg" onclick="this._logOut" height="40px" width="40px" title="USM"></a>-->
                 <span id="logOutButton" @click="${this._logOut}">
                   Cerrar Sesión
                 </span>
-                
-                <span id="search">
-                    <input type="search" value="Ingrese su búsqueda" id="miBusqueda" name="q">
-                    <button id="botonBusqueda">Buscar</button>
-                     
-                </span>
                 <span>
                   <a id="home" href="/"><img src="images/manifest/home.png" width="45px" height="45px"></a>
                 </span>
-                <span id="box">               
+                <span id="box">
                   <a id="linkPerfil" href="/MiPerfil"> <img src="images/manifest/perfil.png" width="100px" height="100px"></a>                  
                 </span>
-                
-                
+                <span id="search">
+                    <input type="search" value="Ingrese su búsqueda" id="miBusqueda" name="q">
+                    <button id="botonBusqueda">Buscar</button>
+                </span>
+
                 <!-- Intente poner el cuadro de busqueda pero queda fuera de la seccion de header. -->
                 <!--<div id="box">
                   <search-box ></search-box> 
@@ -519,54 +437,97 @@ export class MainPage extends connect(store)(LitElement) {
                     <nav id="menu">
                         <ul>
                           <hr/>
-                          <li><a ?selected="${this._page === 'Noticias'}" href="/">Noticias</a></li>
+                          <li ?selected=${this._mainPage === 'main'}>
+                            <a href="/">Noticias</a>
+                          </li>
                           <hr/>
-                          <li><a ?selected="${this._page === 'Ramos'}" href="/Ramos">Ramos</a>
+                          <li ?selected=${this._mainPage === 'Ramos'}>
+                            <a href="/Ramos">Ramos</a>
                             <ul>
-                              <li><a href="">Busqueda de ramos</a></li>
-                              <li><a href="">Asignaturas escritas</a></li>
-                              <li><a href="">Inscripción</a></li>
+                              <li ?selected="${this._subpage === 'Buscar'}">
+                                <a href="/Ramos/Buscar">Busqueda de ramos</a>
+                              </li>
+                              <li ?selected="${this._subpage === 'Ver'}">
+                                <a href="/Ramos/Ver">Asignaturas escritas</a>
+                              </li>
+                              <li ?selected="${this._subpage === 'Inscribir'}">
+                                <a href="/Ramos/Inscribir">Inscripción</a>
+                              </li>
                             </ul>
                           </li>
                           <hr/>
-                          <li><a  href="/">Solicitudes Externas</a></li>
+                          <li ?selected=${this._mainPage === 'Solicitudes'}>
+                            <a href="/Solicitudes">Solicitudes Externas</a>
+                          </li>
                           <hr/>
-                          <li><a  href="/">Enlaces Externos</a></li>
+                          <li ?selected=${this._mainPage === 'Enlaces'}>
+                            <a href="/Enlaces">Enlaces Externos</a>
+                          </li>
                           <hr/>
                         </ul>
                     </nav>
               </div>
 
               <div id="content">
-                  <view-notices></view-notices>
+                <div id="debug">
+                    <b>Page:</b> ${this._page},
+                    <b>MainPage:</b> ${this._mainPage},
+                    <b>Subpage:</b> ${this._subpage}
+                </div>
+                  <!-- ACA está la utilización del componente, para pasarle datos usen un punto '.' más
+                       el nombre de la variable del componente (public) 
+                       
+                       Acá tambien se implementa la lógica que decide que contenido será mostrado en el panel
+                       principal, lo que no es parte de "content" no cambia.
+                       -->
+                  ${this._mainPage === 'main' ? html`<view-notices></view-notices>` : ''}
+                  ${this._mainPage === 'MiPerfil' ? html`<perfil-alumno></perfil-alumno>` : ''}
+                  ${this._mainPage === 'Ramos' ? html`
+                    ${this._subpage === '' ? 
+                        html`<horario-clases class="component-margin" .cursos="${this._cursos}"></horario-clases>` : ''}
+                    ${this._subpage === 'Buscar'? html`Buscando...` : ''}
+                    ${this._subpage === 'Ver'? html`Mirando ramos...` : ''}
+                    ${this._subpage === 'Inscribir'? 
+                        html`Inscribiendo ramos...
+                        
+                            <!-- Acá un ejemplo de como modificar cosas, en @click estoy usando una función lambda,
+                            pero algo más complejo lo pueden definir en el componente y luego @click="{this._myFunc}"
+                            si myFunc no tiene argumentos. Si quieren mandar argumentos debe pasar por una lambda 
+                            primero como @click="{() => {this._myFunc(args...) }}"   -->
+                            <div style="background: blue; font-size: 2em; width:${100*this._random}%"
+                                @click="${() => {
+                                    this._random = Math.random();
+                                }}"
+                            > CLICKME </div>
+                        ` 
+                        : ''}
+                  `: ''}
               </div>
 
               <div id="footer">
               </div>
 
           </div>
-          `
-      }  
-    }
-    return html`
-      <img src="images/manifest/edA.png" class="image1" height=100%>
-        <div class="loginbox">
-        <img src="images/manifest/perfil.png" class="avatar">
-        <h1>Login USM</h1>
-            <p>Nombre de usuario</p>
-            <input type="text" name="username" id="username" placeholder="Ingresa tu nombre de usuario">
+        `
+        // Si no esta logeado, mostrar el log-in
+        : html`
+          <img src="images/manifest/edA.png" class="image1" height=100%>
+            <div class="loginbox">
+            <img src="images/manifest/perfil.png" class="avatar">
+            <h1>Login USM</h1>
+                <p>Nombre de usuario</p>
+                <input type="text" name="username" id="username" placeholder="Ingresa tu nombre de usuario">
 
-            <p>Contraseña</p>
-            <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña">
+                <p>Contraseña</p>
+                <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña">
 
-            <span id="logInButton" @click="${this._logIn}">
-            Login
-            </span><br>
+                <span id="logInButton" @click="${this._logIn}">
+                Login
+                </span><br>
 
-            <a href="#">¿Olvidaste tu contraseña?</a><br>
-            <a>¿No tienes cuenta?</a> <a href="#">Registrate ahora</a>
-        </div>
-    `
+                <a href="#">¿Olvidaste tu contraseña?</a><br>
+                <a>¿No tienes cuenta?</a> <a href="#">Registrate ahora</a>
+            </div>`
     }
   
 
@@ -610,6 +571,9 @@ export class MainPage extends connect(store)(LitElement) {
   /* Esta función se ejecuta cada vez que el state cambia, se usa para leer la memoria. */
   stateChanged(state: RootState) {
     this._page = state.app!.page;
+    let pages = this._page.split('/');
+    this._mainPage = pages[0];
+    this._subpage = pages.length > 1 ? pages[1] : '';
     this._cursos = state.cursos!.cursos;
   }
 }

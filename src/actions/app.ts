@@ -39,7 +39,10 @@ export const navigate: ActionCreator<ThunkResult> = (path: string) => (dispatch)
 };
 
 const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
-  switch(page) {
+  // Page es el PATH de la URI, se debe hacer split para tomar cada una:
+  let pages = page.split('/')
+  let mainPage = pages[0]
+  switch(mainPage) {
     case 'main':
       import('../components/main').then((_module) => {
         // Put code in here that you want to run every time when
@@ -48,13 +51,15 @@ const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
       break;
     case 'Ramos':
         import('../components/horario-clases').then((_module) => {
-
         });
         break;
     case 'MiPerfil':
       import('../components/perfil-alumno').then((_module) => {
 
       });
+      break;
+    case 'Solicitudes':
+    case 'Enlaces':
       break;
     default:
       page = 'view404';
